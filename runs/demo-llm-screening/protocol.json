@@ -1,0 +1,77 @@
+{
+  "title": "Large Language Models for Title and Abstract Screening in Systematic Reviews: A Systematic Review",
+  "objective": "To evaluate the accuracy of large language models (LLMs) in performing title and abstract screening for systematic reviews.",
+  "framework": "PICO",
+  "population": "Large language models (LLMs) used for screening titles and abstracts in systematic reviews.",
+  "intervention_or_concept": "Application of LLMs for title and abstract screening in systematic reviews.",
+  "comparator": "Traditional screening methods (e.g., manual screening by reviewers, rule-based screening tools).",
+  "outcomes": [
+    "Sensitivity of LLMs in identifying relevant studies.",
+    "Specificity of LLMs in excluding irrelevant studies.",
+    "Overall accuracy of LLMs in title and abstract screening.",
+    "Inter-rater agreement between LLMs and human reviewers.",
+    "Time efficiency of LLMs compared to traditional methods."
+  ],
+  "context": "Systematic reviews in health and social sciences where LLMs are used for title and abstract screening.",
+  "inclusion": [
+    {
+      "id": "I1",
+      "text": "Studies that evaluate the performance of large language models (LLMs) in title and abstract screening for systematic reviews."
+    },
+    {
+      "id": "I2",
+      "text": "Studies that report sensitivity, specificity, or overall accuracy metrics for LLMs in screening tasks."
+    },
+    {
+      "id": "I3",
+      "text": "Studies that compare LLMs with traditional screening methods (e.g., manual screening, rule-based tools)."
+    },
+    {
+      "id": "I4",
+      "text": "Studies published in peer-reviewed journals, conference proceedings, or grey literature in English."
+    },
+    {
+      "id": "I5",
+      "text": "Studies published from 2020 onwards."
+    }
+  ],
+  "exclusion": [
+    {
+      "id": "E1",
+      "text": "Studies that do not use LLMs for title and abstract screening (e.g., studies using only rule-based or manual screening)."
+    },
+    {
+      "id": "E2",
+      "text": "Studies that focus on full-text screening or data extraction rather than title and abstract screening."
+    },
+    {
+      "id": "E3",
+      "text": "Studies that do not report performance metrics (e.g., sensitivity, specificity, accuracy) for LLMs."
+    },
+    {
+      "id": "E4",
+      "text": "Studies that are not available in English."
+    },
+    {
+      "id": "E5",
+      "text": "Studies that are not peer-reviewed or are not published in the specified timeframe (2020 onwards)."
+    }
+  ],
+  "study_designs": [
+    "Randomized controlled trials (RCTs) comparing LLMs with traditional methods.",
+    "Quasi-experimental studies evaluating LLM performance.",
+    "Observational studies reporting LLM performance metrics.",
+    "Simulation studies or computational models evaluating LLM accuracy."
+  ],
+  "languages": [
+    "English"
+  ],
+  "rob_domains": [
+    "Dataset representativeness: Whether the training and test datasets are representative of the target population of systematic reviews.",
+    "Reference standard: Whether a gold standard (e.g., expert review) is used to assess LLM performance.",
+    "Leakage: Whether there is any data leakage between training and testing phases.",
+    "Reporting of metrics: Whether the study reports sensitivity, specificity, accuracy, and inter-rater agreement.",
+    "Reproducibility: Whether the study provides sufficient detail to reproduce the LLM screening process."
+  ],
+  "synthesis_plan": "A meta-analysis will be conducted to pool sensitivity, specificity, and accuracy metrics across studies. Subgroup analyses will be performed based on study design, LLM type, and screening context. Risk-of-bias assessments will be conducted using the Cochrane Risk of Bias 2 tool for RCTs and a modified version for other study designs. Narrative synthesis will be used to summarize findings on the accuracy and utility of LLMs in title and abstract screening for systematic reviews."
+}

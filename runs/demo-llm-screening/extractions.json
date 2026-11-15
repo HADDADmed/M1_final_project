@@ -1,0 +1,1890 @@
+{
+  "extractions": {
+    "S002": {
+      "study_design": {
+        "value": "AI-assisted literature screening: A hybrid approach using large language models and retrieval-augmented generation.",
+        "quote": "AI-assisted literature screening: A hybrid approach using large language models and retrieval-augmented generation.",
+        "chunk": "S002#ab0",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "A corpus of 6331 biomedical articles, focusing on identifying literature discussing the applications of LLMs in patient care using Electronic Health Record (EHR) data.",
+        "quote": "A corpus of 6331 biomedical articles, focusing on identifying literature discussing the applications of LLMs in patient care using Electronic Health Record (EHR) data.",
+        "chunk": "S002#ab0",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "A hybrid approach combining rule-based preprocessing with DeepSeek R1 using RAG prompting (rule + DeepSeek-reasoner@Prompt II), and exploring ensemble strategies.",
+        "quote": "A hybrid approach combining rule-based preprocessing with DeepSeek R1 using RAG prompting (rule + DeepSeek-reasoner@Prompt II), and exploring ensemble strategies.",
+        "chunk": "S002#ab2",
+        "verified": false
+      },
+      "comparator": {
+        "value": "Traditional manual screening of articles retrieved through keyword search.",
+        "quote": "Current systematic literature reviews largely rely on manual screening of articles retrieved through keyword search, which is time-consuming and difficult to scale.",
+        "chunk": "S002#ab0",
+        "verified": true
+      },
+      "outcomes": [
+        "Sensitivity of LLMs in identifying relevant studies",
+        "Specificity of LLMs in excluding irrelevant studies",
+        "Overall accuracy of LLMs in title and abstract screening",
+        "Inter-rater agreement between LLMs and human reviewers",
+        "Time efficiency of LLMs compared to traditional methods"
+      ],
+      "results": [
+        {
+          "outcome": "Sensitivity of LLMs in identifying relevant studies",
+          "metric": "Recall (sensitivity)",
+          "value": "0.77",
+          "comparator": "rule + DeepSeek-reasoner@Prompt II",
+          "quote": "precision of 0.34, recall of 0.77, NPV of 1.00, and g-mean of 0.87.",
+          "chunk": "S002#ab2",
+          "verified": true
+        },
+        {
+          "outcome": "Overall accuracy of LLMs in title and abstract screening",
+          "metric": "Accuracy",
+          "value": "0.88",
+          "comparator": "DeepSeek-R1",
+          "quote": "DeepSeek-R1 achieved the highest F1-score (0.93) and accuracy (0.88) across additional topics",
+          "chunk": "S002#ab2",
+          "verified": true
+        },
+        {
+          "outcome": "Time efficiency of LLMs compared to traditional methods",
+          "metric": "Time efficiency",
+          "value": "LLMs offer the potential to automate the screening process, which is time-consuming and difficult to scale with traditional methods.",
+          "comparator": "Traditional manual screening",
+          "quote": "To address this limitation, large language model (LLM)-based approaches offer the potential to automate the screening process. In this study, we aim to enhance the efficiency and accuracy of literature screening by developing an LLM-based method and exploring techniques such as rule-based preprocessing, prompt engineering (i.e., retrieval-augmented generation (RAG)) and ensemble strategies.",
+          "chunk": "S002#ab0",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "The hybrid approach combining rule-based preprocessing with DeepSeek R1 using RAG prompting (rule + DeepSeek-reasoner@Prompt II) achieved the best overall performance among individual models, with a precision of 0.34, recall of 0.77, NPV of 1.00, and g-mean of 0.87. Ensemble methods outperformed this approach greatly in precision, achieving a perfect score of 1.00 in the main use case, but showed comparable performance across other metrics, with the exception of F1. In generalizability tests, DeepSeek-R1 achieved the highest F1-score (0.93) and accuracy (0.88) across additional topics, whereas ensemble methods did not show substantial improvement.",
+        "quote": "The hybrid approach combining rule-based preprocessing with DeepSeek R1 using RAG prompting (rule + DeepSeek-reasoner@Prompt II) achieved the best overall performance among individual models, with a precision of 0.34, recall of 0.77, NPV of 1.00, and g-mean of 0.87. Ensemble methods outperformed this approach greatly in precision, achieving a perfect score of 1.00 in the main use case, but showed comparable performance across other metrics, with the exception of F1. In generalizability tests, DeepSeek-R1 achieved the highest F1-score (0.93) and accuracy (0.88) across additional topics, whereas ensemble methods did not show substantial improvement.",
+        "chunk": "S002#ab2",
+        "verified": true
+      },
+      "limitations": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "S002#ab2",
+        "verified": false
+      }
+    },
+    "S008": {
+      "study_design": {
+        "value": "Results The model screened a total of 15,605 records. It included a higher percentage of studies than human screeners, with 3.5% (n=549/15,605) true positives a\u2026",
+        "quote": "Results The model screened a total of 15,605 records. It included a higher percentage of studies than human screeners, with 3.5% (n=549/15,605) true positives and 14.2% (n=2,218/15,605) false positives. The model achieved an overall accuracy of 85.1%, with a sensitivity of 83.2% and specificity of 85.2%. The positive predictive value was 19.8%, while the negative predictive value was 99.1%. The model was able to screen 1,000 titles and abstracts in 40 minutes, compared to 16 hours required by a human reviewer.",
+        "chunk": "S008#ab1",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "The model was evaluated using five published systematic reviews across diverse therapeutic areas (See Supplementary Table S2-S6 for PICO tables): two reviews on\u2026",
+        "quote": "The model was evaluated using five published systematic reviews across diverse therapeutic areas (See Supplementary Table S2-S6 for PICO tables): two reviews on humanistic burden,[12, 13] two reviews on clinical burden,[14, 15] and one review on health state utility values.[16] These reviews covered a range of therapeutic areas, including oncology (two reviews), type 1 diabetes, schizophrenia, and mobility impairment (one review each).",
+        "chunk": "S008#ft10",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "Methods Model Development A team of scientists and experts in SLR methodologies developed a customized LLM-based model powered by the GPT-4o mini engine. The mo\u2026",
+        "quote": "Methods Model Development A team of scientists and experts in SLR methodologies developed a customized LLM-based model powered by the GPT-4o mini engine. The model was designed to perform the role of a research scientist, specifically to support title and abstract screening in accordance with predefined SLR objectives and Population, Intervention, Comparison, and Outcome (PICO) criteria.",
+        "chunk": "S008#ft7",
+        "verified": true
+      },
+      "comparator": {
+        "value": "The model\u2019s performance was evaluated against expert human reviewers across five systematic reviews on inclusion rates, sensitivity, specificity, accuracy, posi\u2026",
+        "quote": "The model\u2019s performance was evaluated against expert human reviewers across five systematic reviews on inclusion rates, sensitivity, specificity, accuracy, positive predictive value, and negative predictive value.",
+        "chunk": "S008#ab1",
+        "verified": true
+      },
+      "outcomes": [
+        "Sensitivity of LLMs in identifying relevant studies",
+        "Specificity of LLMs in excluding irrelevant studies",
+        "Overall accuracy of LLMs in title and abstract screening",
+        "Inter-rater agreement between LLMs and human reviewers",
+        "Time efficiency of LLMs compared to traditional methods"
+      ],
+      "results": [
+        {
+          "outcome": "Sensitivity of LLMs in identifying relevant studies",
+          "metric": "Sensitivity",
+          "value": "83.2%",
+          "comparator": "Human reviewers",
+          "quote": "The model achieved an overall accuracy of 85.1%, with a sensitivity of 83.2% and specificity of 85.2%. The positive predictive value was 19.8%, while the negative predictive value was 99.1%.",
+          "chunk": "S008#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Specificity of LLMs in excluding irrelevant studies",
+          "metric": "Specificity",
+          "value": "85.2%",
+          "comparator": "Human reviewers",
+          "quote": "The model achieved an overall accuracy of 85.1%, with a sensitivity of 83.2% and specificity of 85.2%. The positive predictive value was 19.8%, while the negative predictive value was 99.1%.",
+          "chunk": "S008#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Overall accuracy of LLMs in title and abstract screening",
+          "metric": "Accuracy",
+          "value": "85.1%",
+          "comparator": "Human reviewers",
+          "quote": "The model achieved an overall accuracy of 85.1%, with a sensitivity of 83.2% and specificity of 85.2%. The positive predictive value was 19.8%, while the negative predictive value was 99.1%.",
+          "chunk": "S008#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Time efficiency of LLMs compared to traditional methods",
+          "metric": "Time efficiency",
+          "value": "see quote",
+          "comparator": "Human reviewers",
+          "quote": "The model was able to screen 1,000 titles and abstracts in 40 minutes, compared to 16 hours required by a human reviewer.",
+          "chunk": "S008#ab1",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "The model achieved an overall accuracy of 85.1%, with a sensitivity of 83.2% and specificity of 85.2%. The model was able to screen 1,000 titles and abstracts i\u2026",
+        "quote": "The model achieved an overall accuracy of 85.1%, with a sensitivity of 83.2% and specificity of 85.2%. The model was able to screen 1,000 titles and abstracts in 40 minutes, compared to 16 hours required by a human reviewer.",
+        "chunk": "S008#ab1",
+        "verified": false
+      },
+      "limitations": {
+        "value": "However, this estimate does not account for the additional time required for human quality control, as human review of the AI-generated output is recommended to\u2026",
+        "quote": "However, this estimate does not account for the additional time required for human quality control, as human review of the AI-generated output is recommended to ensure accuracy and maintain high screening standards.",
+        "chunk": "S008#ab1",
+        "verified": true
+      }
+    },
+    "S009": {
+      "study_design": {
+        "value": "Objective: To assess LLM performance and variability in screening, quantify the impact of input metadata (abstract, title, keywords), and compare LLMs with clas\u2026",
+        "quote": "Objective: To assess LLM performance and variability in screening, quantify the impact of input metadata (abstract, title, keywords), and compare LLMs with classical classifiers under a shared protocol. Methods: We analyzed 12 LLMs from 4 providers (OpenAI, Google Gemini, Anthropic, Llama) and 4 classical models (Logistic Regression, Support Vector Classification, Random Forest, and Naive Bayes) on 2 real Systematic Literature Reviews (SLRs), totaling 518 papers. The experimental design investigated 3 critical dimensions: (i) LLMs performance variability, (ii) the impact of input feature composition (abstract, title, and keywords) on LLM performance, and (iii) the real gain of using LLMs instead of more traditional classification models.",
+        "chunk": "S009#ft1",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "We used the same records and reference labels as Felizardo et al. [2024], restricted to studies with consistently recovered title, abstract, and keywords.",
+        "quote": "We used the same records and reference labels as Felizardo et al. [2024], restricted to studies with consistently recovered title, abstract, and keywords.",
+        "chunk": "S009#ft12",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "The experimental execution step consisted of 5 successive iterations of each model in each study in both datasets (SLR1 and SLR2); that is, each task was repeat\u2026",
+        "quote": "The experimental execution step consisted of 5 successive iterations of each model in each study in both datasets (SLR1 and SLR2); that is, each task was repeated 5 times. Multiple rounds were necessary to capture the variability inherent in language models.",
+        "chunk": "S009#ft19",
+        "verified": true
+      },
+      "comparator": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      },
+      "outcomes": [
+        "Sensitivity of LLMs in identifying relevant studies",
+        "Specificity of LLMs in excluding irrelevant studies",
+        "Overall accuracy of LLMs in title and abstract screening",
+        "Inter-rater agreement between LLMs and human reviewers",
+        "Time efficiency of LLMs compared to traditional methods"
+      ],
+      "results": [
+        {
+          "outcome": "Overall accuracy of LLMs in title and abstract screening",
+          "metric": "S009#ft26",
+          "value": "see quote",
+          "comparator": "not reported",
+          "quote": "We evaluated accuracy and F1-score Hida and Alves Do Nascimento [2026] and estimated 95% confidence intervals via bootstrapping.",
+          "chunk": "S009#ft26",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "Performance was reported with multiple metrics (at least precision, recall, and F1); verification sampling was applied to automatically screened cases; software\u2026",
+        "quote": "Performance was reported with multiple metrics (at least precision, recall, and F1); verification sampling was applied to automatically screened cases; software/library versions, environment configuration, inference parameters, and exact model/API identifiers were documented for reproducibility.",
+        "chunk": "S009#ft44",
+        "verified": true
+      },
+      "limitations": {
+        "value": "External validity: Results are limited to 2 SLRs in educational domains (HCI\u2013AI, Educational Gamification) published in English. Patterns may not generalize to \u2026",
+        "quote": "External validity: Results are limited to 2 SLRs in educational domains (HCI\u2013AI, Educational Gamification) published in English. Patterns may not generalize to other Software Engineering domains or multilingual corpora. Internal validity: Models evaluated via APIs (May\u2013October 2025) introduce temporal dependence; subsequent updates may affect reproducibility.",
+        "chunk": "S009#ft45",
+        "verified": true
+      }
+    },
+    "S010": {
+      "study_design": {
+        "value": "Evaluation of a Prompt-Standardized LLM Pipeline for Title\u2013Abstract Screening: Cross-Domain Performance and Error Taxonomy. Purpose. This project evaluates whether a large language model (LLM) can safely assist the title\u2013abstract screening stage of systematic reviews using a sensitivity-first, negative-triage policy. We focus on prompt design and reproducible governance rather than model retraining, asking: (i) how well a governed LLM generalizes across very different review types, and (ii) whether a single, pre-specified prompt refinement can predictably shift recall/specificity.",
+        "quote": "Evaluation of a Prompt-Standardized LLM Pipeline for Title\u2013Abstract Screening: Cross-Domain Performance and Error Taxonomy. Purpose. This project evaluates whether a large language model (LLM) can safely assist the title\u2013abstract screening stage of systematic reviews using a sensitivity-first, negative-triage policy. We focus on prompt design and reproducible governance rather than model retraining, asking: (i) how well a governed LLM generalizes across very different review types, and (ii) whether a single, pre-specified prompt refinement can predictably shift recall/specificity.",
+        "chunk": "S010#ab0",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "We performed a retrospective replay of Gemini 2.5 Pro against adjudicated abstract-stage labels from four completed reviews selected a priori to maximize heterogeneity: (R1) artificial sweeteners (clinical nutrition), (R2) mesenchymal stem cells + scaffold in burn models (preclinical), (R3) dengue diagnostics (clinical accuracy), and (R4) vitamin C randomized trials in arthroplasty (rare-positive). No fine-tuning or retrieval was used.",
+        "quote": "We performed a retrospective replay of Gemini 2.5 Pro against adjudicated abstract-stage labels from four completed reviews selected a priori to maximize heterogeneity: (R1) artificial sweeteners (clinical nutrition), (R2) mesenchymal stem cells + scaffold in burn models (preclinical), (R3) dengue diagnostics (clinical accuracy), and (R4) vitamin C randomized trials in arthroplasty (rare-positive). No fine-tuning or retrieval was used.",
+        "chunk": "S010#ab0",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "For each corpus we computed confusion matrices and standard metrics (sensitivity, specificity, PPV, NPV, accuracy), and conducted a cross-domain error taxonomy of false positives/negatives. Based on pre-specified rules, we ran one prompt optimization introducing early \u201chard gates\u201d (publication type/setting), minimal sufficient PICO checks, and an explicit tie-break favoring inclusion under ambiguity, then re-evaluated.",
+        "quote": "For each corpus we computed confusion matrices and standard metrics (sensitivity, specificity, PPV, NPV, accuracy), and conducted a cross-domain error taxonomy of false positives/negatives. Based on pre-specified rules, we ran one prompt optimization introducing early \u201chard gates\u201d (publication type/setting), minimal sufficient PICO checks, and an explicit tie-break favoring inclusion under ambiguity, then re-evaluated.",
+        "chunk": "S010#ab1",
+        "verified": true
+      },
+      "comparator": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      },
+      "outcomes": [
+        "Sensitivity of LLMs in identifying relevant studies.",
+        "Specificity of LLMs in excluding irrelevant studies.",
+        "Overall accuracy of LLMs in title and abstract screening.",
+        "Inter-rater agreement between LLMs and human reviewers.",
+        "Time efficiency of LLMs compared to traditional methods."
+      ],
+      "results": [
+        {
+          "outcome": "Sensitivity of LLMs in identifying relevant studies.",
+          "metric": "Baseline performance varied by domain (high recall in broad clinical/diagnostic tasks; poor recall in a tightly scoped preclinical task; moderate under extreme class imbalance). The pre-specified optimization substantially increased recall where needed (e.g., near-ceiling recall for dengue diagnostics; large recall gain for the preclinical burns task) while trading specificity in predictable ways.",
+          "value": "Baseline performance varied by domain (high recall in broad clinical/diagnostic tasks; poor recall in a tightly scoped preclinical task; moderate under extreme class imbalance). The pre-specified optimization substantially increased recall where needed (e.g., near-ceiling recall for dengue diagnostics; large recall gain for the preclinical burns task) while trading specificity in predictable ways.",
+          "comparator": "not reported",
+          "quote": "Baseline performance varied by domain (high recall in broad clinical/diagnostic tasks; poor recall in a tightly scoped preclinical task; moderate under extreme class imbalance). The pre-specified optimization substantially increased recall where needed (e.g., near-ceiling recall for dengue diagnostics; large recall gain for the preclinical burns task) while trading specificity in predictable ways.",
+          "chunk": "S010#ab2",
+          "verified": true
+        },
+        {
+          "outcome": "Specificity of LLMs in excluding irrelevant studies.",
+          "metric": "The pre-specified optimization substantially increased recall where needed (e.g., near-ceiling recall for dengue diagnostics; large recall gain for the preclinical burns task) while trading specificity in predictable ways.",
+          "value": "The pre-specified optimization substantially increased recall where needed (e.g., near-ceiling recall for dengue diagnostics; large recall gain for the preclinical burns task) while trading specificity in predictable ways.",
+          "comparator": "not reported",
+          "quote": "The pre-specified optimization substantially increased recall where needed (e.g., near-ceiling recall for dengue diagnostics; large recall gain for the preclinical burns task) while trading specificity in predictable ways.",
+          "chunk": "S010#ab2",
+          "verified": true
+        },
+        {
+          "outcome": "Overall accuracy of LLMs in title and abstract screening.",
+          "metric": "For each corpus we computed confusion matrices and standard metrics (sensitivity, specificity, PPV, NPV, accuracy), and conducted a cross-domain error taxonomy of false positives/negatives.",
+          "value": "For each corpus we computed confusion matrices and standard metrics (sensitivity, specificity, PPV, NPV, accuracy), and conducted a cross-domain error taxonomy of false positives/negatives.",
+          "comparator": "not reported",
+          "quote": "For each corpus we computed confusion matrices and standard metrics (sensitivity, specificity, PPV, NPV, accuracy), and conducted a cross-domain error taxonomy of false positives/negatives.",
+          "chunk": "S010#ab1",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "Baseline performance varied by domain (high recall in broad clinical/diagnostic tasks; poor recall in a tightly scoped preclinical task; moderate under extreme class imbalance). The pre-specified optimization substantially increased recall where needed (e.g., near-ceiling recall for dengue diagnostics; large recall gain for the preclinical burns task) while trading specificity in predictable ways. Across topics, recurrent errors clustered around scope drift, publication-type/setting misclassification, and role/intent misattribution; optimization mitigated but did not eliminate these modes.",
+        "quote": "Baseline performance varied by domain (high recall in broad clinical/diagnostic tasks; poor recall in a tightly scoped preclinical task; moderate under extreme class imbalance). The pre-specified optimization substantially increased recall where needed (e.g., near-ceiling recall for dengue diagnostics; large recall gain for the preclinical burns task) while trading specificity in predictable ways. Across topics, recurrent errors clustered around scope drift, publication-type/setting misclassification, and role/intent misattribution; optimization mitigated but did not eliminate these modes.",
+        "chunk": "S010#ab2",
+        "verified": true
+      },
+      "limitations": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      }
+    },
+    "S014": {
+      "study_design": {
+        "value": "Systematic review",
+        "quote": "Large language models show promising performance for some systematic review tasks but call for cautious implementation: a systematic review.. With the exponential growth of biomedical literature, the challenge of conducting systematic reviews is becoming increasingly burdensome. We aimed to evaluate the performance of large language models (LLMs) in the automation of some or all steps of systematic reviews and meta-analyses.",
+        "chunk": "S014#ab0",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "Studies that tested LLMs in the different steps of systematic reviews",
+        "quote": "tic reviews. We sought to review all studies that tested LLMs in the different steps of systematic reviews and found 63 studies evaluating how well these tools performed compared with human reviewers.",
+        "chunk": "S014#ab4",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "Assessment of LLMs performance in systematic review tasks",
+        "quote": "We aimed to evaluate the performance of large language models (LLMs) in the automation of some or all steps of systematic reviews and meta-analyses.",
+        "chunk": "S014#ab0",
+        "verified": true
+      },
+      "comparator": {
+        "value": "Human reviewers",
+        "quote": "ed analyses using median (interquartile range [IQR]) for positive (PPA) and negative percent agreements (NPA), respectively, analogous to sensitivity and specificity, between LLMs and human reviewers.",
+        "chunk": "S014#ab1",
+        "verified": true
+      },
+      "outcomes": [
+        "Sensitivity of LLMs in identifying relevant studies",
+        "Specificity of LLMs in excluding irrelevant studies",
+        "Overall accuracy of LLMs in title and abstract screening",
+        "Inter-rater agreement between LLMs and human reviewers",
+        "Time efficiency of LLMs compared to traditional methods"
+      ],
+      "results": [
+        {
+          "outcome": "Sensitivity of LLMs in identifying relevant studies",
+          "metric": "Positive Percent Agreement (PPA)",
+          "value": "0.92 (IQR 0.69-0.98)",
+          "comparator": "Human reviewers",
+          "quote": "ed analyses using median (interquartile range [IQR]) for positive (PPA) and negative percent agreements (NPA), respectively, analogous to sensitivity and specificity, between LLMs and human reviewers. From 3889 unique references, we included 63 studies of which 52 reporting performance metrics for a total of 148 LLM performance assessments. Most assessments concerned GPT models (n = 114, 77%). The most frequently evaluated tasks were title and abstract screening (n = 78, 53%), data extraction (n = 23, 16%), and full-text screening (n = 20, 14%). For title and abstract screening, overall median PPA was 0.92 (IQR 0.69-0.98) and median NPA was 0.89 (0.72-0.95).",
+          "chunk": "S014#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Specificity of LLMs in excluding irrelevant studies",
+          "metric": "Negative Percent Agreement (NPA)",
+          "value": "0.89 (0.72-0.95)",
+          "comparator": "Human reviewers",
+          "quote": "ed analyses using median (interquartile range [IQR]) for positive (PPA) and negative percent agreements (NPA), respectively, analogous to sensitivity and specificity, between LLMs and human reviewers. From 3889 unique references, we included 63 studies of which 52 reporting performance metrics for a total of 148 LLM performance assessments. Most assessments concerned GPT models (n = 114, 77%). The most frequently evaluated tasks were title and abstract screening (n = 78, 53%), data extraction (n = 23, 16%), and full-text screening (n = 20, 14%). For title and abstract screening, overall median PPA was 0.92 (IQR 0.69-0.98) and median NPA was 0.89 (0.72-0.95).",
+          "chunk": "S014#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Overall accuracy of LLMs in title and abstract screening",
+          "metric": "Positive Percent Agreement (PPA) and Negative Percent Agreement (NPA)",
+          "value": "PPA: 0.92 (IQR 0.69-0.98), NPA: 0.89 (0.72-0.95)",
+          "comparator": "Human reviewers",
+          "quote": "ed analyses using median (interquartile range [IQR]) for positive (PPA) and negative percent agreements (NPA), respectively, analogous to sensitivity and specificity, between LLMs and human reviewers. From 3889 unique references, we included 63 studies of which 52 reporting performance metrics for a total of 148 LLM performance assessments. Most assessments concerned GPT models (n = 114, 77%). The most frequently evaluated tasks were title and abstract screening (n = 78, 53%), data extraction (n = 23, 16%), and full-text screening (n = 20, 14%). For title and abstract screening, overall median PPA was 0.92 (IQR 0.69-0.98) and median NPA was 0.89 (0.72-0.95).",
+          "chunk": "S014#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Inter-rater agreement between LLMs and human reviewers",
+          "metric": "Positive Percent Agreement (PPA) and Negative Percent Agreement (NPA)",
+          "value": "PPA: 0.92 (IQR 0.69-0.98), NPA: 0.89 (0.72-0.95)",
+          "comparator": "Human reviewers",
+          "quote": "ed analyses using median (interquartile range [IQR]) for positive (PPA) and negative percent agreements (NPA), respectively, analogous to sensitivity and specificity, between LLMs and human reviewers. From 3889 unique references, we included 63 studies of which 52 reporting performance metrics for a total of 148 LLM performance assessments. Most assessments concerned GPT models (n = 114, 77%). The most frequently evaluated tasks were title and abstract screening (n = 78, 53%), data extraction (n = 23, 16%), and full-text screening (n = 20, 14%). For title and abstract screening, overall median PPA was 0.92 (IQR 0.69-0.98) and median NPA was 0.89 (0.72-0.95).",
+          "chunk": "S014#ab1",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "LLMs showed good agreement with humans for tasks such as screening titles and abstracts, and full-text articles. Newer models seemed to perform better than older ones. However, performance was more variable for complex tasks that require interpretation, such as extracting detailed data or assessing methodological quality.",
+        "quote": "tic reviews. We sought to review all studies that tested LLMs in the different steps of systematic reviews and found 63 studies evaluating how well these tools performed compared with human reviewers. Overall, LLMs showed good agreement with humans for tasks such as screening titles and abstracts, and full-text articles. Newer models seemed to perform better than older ones. However, performance was more variable for complex tasks that require interpretation, such as extracting detailed data or assessing methodological quality.",
+        "chunk": "S014#ab4",
+        "verified": true
+      },
+      "limitations": {
+        "value": "Variability of performance metrics precluded complete quantitative synthesis",
+        "quote": "For other tasks, authors reported overall good performances, but variability of performance metrics precluded complete quantitative synthesis.",
+        "chunk": "S014#ab1",
+        "verified": true
+      }
+    },
+    "S027": {
+      "study_design": {
+        "value": "Diagnostic study comparing the accuracy of LLM-assisted screening versus manual literature screening across 6 thoracic surgery meta-analyses.",
+        "quote": "Accuracy of Large Language Models for Literature Screening in Thoracic Surgery: Diagnostic Study.. Systematic reviews and meta-analyses rely on labor-intensive literature screening. While machine learning offers potential automation, its accuracy remains suboptimal. This raises the question of whether emerging large language models (LLMs) can provide a more accurate and efficient approach. This paper evaluates the sensitivity, specificity, and summary receiver operating characteristic (SROC) curve of LLM-assisted literature screening. We conducted a diagnostic study comparing the accuracy of LLM-assisted screening versus manual literature screening across 6 thoracic surgery meta-analyses. Manual screening by 2 investigators served as the reference standard. LLM-assisted screening was performed using ChatGPT-4o (OpenAI) and Claude-3.5 (Anthropic) sonnet, with discrepancies resolved by Gemini-1.5 pro (Google).",
+        "chunk": "S027#ab0",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "6 thoracic surgery meta-analyses",
+        "quote": "Accuracy of Large Language Models for Literature Screening in Thoracic Surgery: Diagnostic Study.. Systematic reviews and meta-analyses rely on labor-intensive literature screening. While machine learning offers potential automation, its accuracy remains suboptimal. This raises the question of whether emerging large language models (LLMs) can provide a more accurate and efficient approach. This paper evaluates the sensitivity, specificity, and summary receiver operating characteristic (SROC) curve of LLM-assisted literature screening. We conducted a diagnostic study comparing the accuracy of LLM-assisted screening versus manual literature screening across 6 thoracic surgery meta-analyses. Manual screening by 2 investigators served as the reference standard. LLM-assisted screening was performed using ChatGPT-4o (OpenAI) and Claude-3.5 (Anthropic) sonnet, with discrepancies resolved by Gemini-1.5 pro (Google).",
+        "chunk": "S027#ab0",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "LLM-assisted screening using ChatGPT-4o (OpenAI), Claude-3.5 (Anthropic) sonnet, and Gemini-1.5 pro (Google) for resolving discrepancies",
+        "quote": "Accuracy of Large Language Models for Literature Screening in Thoracic Surgery: Diagnostic Study.. Systematic reviews and meta-analyses rely on labor-intensive literature screening. While machine learning offers potential automation, its accuracy remains suboptimal. This raises the question of whether emerging large language models (LLMs) can provide a more accurate and efficient approach. This paper evaluates the sensitivity, specificity, and summary receiver operating characteristic (SROC) curve of LLM-assisted literature screening. We conducted a diagnostic study comparing the accuracy of LLM-assisted screening versus manual literature screening across 6 thoracic surgery meta-analyses. Manual screening by 2 investigators served as the reference standard. LLM-assisted screening was performed using ChatGPT-4o (OpenAI) and Claude-3.5 (Anthropic) sonnet, with discrepancies resolved by Gemini-1.5 pro (Google).",
+        "chunk": "S027#ab0",
+        "verified": true
+      },
+      "comparator": {
+        "value": "Manual screening by 2 investigators",
+        "quote": "Accuracy of Large Language Models for Literature Screening in Thoracic Surgery: Diagnostic Study.. Systematic reviews and meta-analyses rely on labor-intensive literature screening. While machine learning offers potential automation, its accuracy remains suboptimal. This raises the question of whether emerging large language models (LLMs) can provide a more accurate and efficient approach. This paper evaluates the sensitivity, specificity, and summary receiver operating characteristic (SROC) curve of LLM-assisted literature screening. We conducted a diagnostic study comparing the accuracy of LLM-assisted screening versus manual literature screening across 6 thoracic surgery meta-analyses. Manual screening by 2 investigators served as the reference standard. LLM-assisted screening was performed using ChatGPT-4o (OpenAI) and Claude-3.5 (Anthropic) sonnet, with discrepancies resolved by Gemini-1.5 pro (Google).",
+        "chunk": "S027#ab0",
+        "verified": true
+      },
+      "outcomes": [
+        "sensitivity_of_llms_in_identifying_relevant_studies",
+        "specificity_of_llms_in_excluding_irrelevant_studies",
+        "overall_accuracy_of_llms_in_title_and_abstract_screening",
+        "inter_rater_agreement_between_llms_and_human_reviewers",
+        "time_efficiency_of_llms_compared_to_traditional_methods"
+      ],
+      "results": [
+        {
+          "outcome": "sensitivity_of_llms_in_identifying_relevant_studies",
+          "metric": "pooled sensitivity",
+          "value": "0.73 (95% CI 0.57-0.85)",
+          "comparator": "manual screening",
+          "quote": "nvestigators served as the reference standard. LLM-assisted screening was performed using ChatGPT-4o (OpenAI) and Claude-3.5 (Anthropic) sonnet, with discrepancies resolved by Gemini-1.5 pro (Google). In addition, 2 open-source, machine learning-based screening tools, ASReview (Utrecht University) and Abstrackr (Center for Evidence Synthesis in Health, Brown University School of Public Health), were also evaluated. We calculated sensitivity, specificity, and 95% CIs for the title and abstract, as well as full-text screening, generating pooled estimates and SROC curves. LLM prompts were revised based on a post hoc error analysis. LLM-assisted full-text screening demonstrated high pooled sensitivity (0.87, 95% CI 0.77-0.99) and specificity (0.96, 95% CI 0.91-0.98), with the area under the curve (AUC) of 0.96 (95% CI 0.94-0.97). Title and abstract screening achieved a pooled sensitivity of 0.73 (95% CI 0.57-0.85) and specificity of 0.99 (95% CI 0.97-0.99), with an AUC of 0.97 (95% CI 0.96-0.99).",
+          "chunk": "S027#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "specificity_of_llms_in_excluding_irrelevant_studies",
+          "metric": "pooled specificity",
+          "value": "0.99 (95% CI 0.97-0.99)",
+          "comparator": "manual screening",
+          "quote": "nvestigators served as the reference standard. LLM-assisted screening was performed using ChatGPT-4o (OpenAI) and Claude-3.5 (Anthropic) sonnet, with discrepancies resolved by Gemini-1.5 pro (Google). In addition, 2 open-source, machine learning-based screening tools, ASReview (Utrecht University) and Abstrackr (Center for Evidence Synthesis in Health, Brown University School of Public Health), were also evaluated. We calculated sensitivity, specificity, and 95% CIs for the title and abstract, as well as full-text screening, generating pooled estimates and SROC curves. LLM prompts were revised based on a post hoc error analysis. LLM-assisted full-text screening demonstrated high pooled sensitivity (0.87, 95% CI 0.77-0.99) and specificity (0.96, 95% CI 0.91-0.98), with the area under the curve (AUC) of 0.96 (95% CI 0.94-0.97). Title and abstract screening achieved a pooled sensitivity of 0.73 (95% CI 0.57-0.85) and specificity of 0.99 (95% CI 0.97-0.99), with an AUC of 0.97 (95% CI 0.96-0.99).",
+          "chunk": "S027#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "overall_accuracy_of_llms_in_title_and_abstract_screening",
+          "metric": "area under the curve (AUC)",
+          "value": "0.97 (95% CI 0.96-0.99)",
+          "comparator": "manual screening",
+          "quote": "nvestigators served as the reference standard. LLM-assisted screening was performed using ChatGPT-4o (OpenAI) and Claude-3.5 (Anthropic) sonnet, with discrepancies resolved by Gemini-1.5 pro (Google). In addition, 2 open-source, machine learning-based screening tools, ASReview (Utrecht University) and Abstrackr (Center for Evidence Synthesis in Health, Brown University School of Public Health), were also evaluated. We calculated sensitivity, specificity, and 95% CIs for the title and abstract, as well as full-text screening, generating pooled estimates and SROC curves. LLM prompts were revised based on a post hoc error analysis. LLM-assisted full-text screening demonstrated high pooled sensitivity (0.87, 95% CI 0.77-0.99) and specificity (0.96, 95% CI 0.91-0.98), with the area under the curve (AUC) of 0.96 (95% CI 0.94-0.97). Title and abstract screening achieved a pooled sensitivity of 0.73 (95% CI 0.57-0.85) and specificity of 0.99 (95% CI 0.97-0.99), with an AUC of 0.97 (95% CI 0.96-0.99).",
+          "chunk": "S027#ab1",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "LLMs outperformed traditional machine learning-based tools (ASReview and Abstrackr) in both sensitivity and AUC values, suggesting that LLMs offer a more accurate and efficient approach to literature screening.",
+        "quote": "ffect sizes between LLM-assisted and conventional screening. LLMs hold significant potential for streamlining literature screening in systematic reviews, reducing workload without sacrificing quality. Importantly, LLMs outperformed traditional machine learning-based tools (ASReview and Abstrackr) in both sensitivity and AUC values, suggesting that LLMs offer a more accurate and efficient approach to literature screening.",
+        "chunk": "S027#ab3",
+        "verified": true
+      },
+      "limitations": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      }
+    },
+    "S031": {
+      "study_design": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      },
+      "population_or_dataset": {
+        "value": "the SeroTracker dataset32 for reviews of prevalence (calibration set adapted from Perlman-Arrow et al.12), the Reinfection33 and PA- Outcomes34 datasets for reviews of intervention benefits, the PA-Testing35 dataset for reviews of diagnostic test accuracy, and SVCF36 dataset for reviews of prognosis (Extended Data Table 1).",
+        "quote": "the SeroTracker dataset32 for reviews of prevalence (calibration set adapted from Perlman-Arrow et al.12), the Reinfection33 and PA- Outcomes34 datasets for reviews of intervention benefits, the PA-Testing35 dataset for reviews of diagnostic test accuracy, and SVCF36 dataset for reviews of prognosis (Extended Data Table 1).",
+        "chunk": "S031#ft35",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "LLM-based screening system adapted from ScreenPrompt approach6. Our LLM based screening agent uses the GPT-4.1 model with a 32,768-token output limit and default parameters (temperature=1, frequency_penalty=0, presence_penalty=0, top_p=1).",
+        "quote": "LLM-based screening system adapted from ScreenPrompt approach6. Our LLM based screening agent uses the GPT-4.1 model with a 32,768-token output limit and default parameters (temperature=1, frequency_penalty=0, presence_penalty=0, top_p=1).",
+        "chunk": "S031#ft35",
+        "verified": true
+      },
+      "comparator": {
+        "value": "dual human reviewers and Elicit (a commercial LLM-based SR automation software)",
+        "quote": "dual human reviewers and Elicit (a commercial LLM-based SR automation software)",
+        "chunk": "S031#ft8",
+        "verified": true
+      },
+      "outcomes": [
+        "Sensitivity of LLMs in identifying relevant studies",
+        "Specificity of LLMs in excluding irrelevant studies",
+        "Overall accuracy of LLMs in title and abstract screening",
+        "Inter-rater agreement between LLMs and human reviewers",
+        "Time efficiency of LLMs compared to traditional methods"
+      ],
+      "results": [
+        {
+          "outcome": "Sensitivity of LLMs in identifying relevant studies",
+          "metric": "Sensitivity",
+          "value": "96.7% (phase 1 article screening)",
+          "comparator": "human reviewers",
+          "quote": "otto-SR : 96.7% sensitivity, 97.9% specificity; human: 81.7% sensitivity, 98.1% specificity",
+          "chunk": "S031#ab2",
+          "verified": true
+        },
+        {
+          "outcome": "Specificity of LLMs in excluding irrelevant studies",
+          "metric": "Specificity",
+          "value": "97.9% (phase 1 article screening)",
+          "comparator": "human reviewers",
+          "quote": "otto-SR : 96.7% sensitivity, 97.9% specificity; human: 81.7% sensitivity, 98.1% specificity",
+          "chunk": "S031#ab2",
+          "verified": true
+        },
+        {
+          "outcome": "Overall accuracy of LLMs in title and abstract screening",
+          "metric": "Accuracy",
+          "value": "96.7% (phase 1 article screening)",
+          "comparator": "human reviewers",
+          "quote": "otto-SR : 96.7% sensitivity, 97.9% specificity; human: 81.7% sensitivity, 98.1% specificity",
+          "chunk": "S031#ab2",
+          "verified": true
+        },
+        {
+          "outcome": "Inter-rater agreement between LLMs and human reviewers",
+          "metric": "Inter-rater reliability",
+          "value": "0.98 (ROB2), 0.95 (Newcastle-Ottawa), 0.74 (QUADAS2)",
+          "comparator": "human reviewers",
+          "quote": "otto-SR demonstrated high interrater reliability for risk of bias judgements (ROB2 0.98, Newcastle-Ottawa 0.95, QUADAS2 0.74; Gwet AC2).",
+          "chunk": "S031#ab2",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "LLMs have high performance in article screening, data extraction, and risk of bias assessments.",
+        "quote": "LLMs have high performance in article screening, data extraction, and risk of bias assessments.",
+        "chunk": "S031#ab2",
+        "verified": true
+      },
+      "limitations": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      }
+    },
+    "S032": {
+      "study_design": {
+        "value": "Development and evaluation of prompts for a large language model to screen titles and abstracts in a living systematic review",
+        "quote": "Development and evaluation of prompts for a large language model to screen titles and abstracts in a living systematic review.",
+        "chunk": "S032#ab0",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "LSR on prodopaminergic interventions for anhedonia",
+        "quote": "Human decisions from an LSR on prodopaminergic interventions for anhedonia served as the reference standard.",
+        "chunk": "S032#ab0",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "LLM (GPT-4o) in title and abstract screening",
+        "quote": "The study evaluated the effectiveness of an LLM (GPT-4o) in title and abstract screening compared with human reviewers.",
+        "chunk": "S032#ab0",
+        "verified": true
+      },
+      "comparator": {
+        "value": "Human reviewers",
+        "quote": "The study evaluated the effectiveness of an LLM (GPT-4o) in title and abstract screening compared with human reviewers.",
+        "chunk": "S032#ab0",
+        "verified": true
+      },
+      "outcomes": [
+        "Sensitivity of LLMs in identifying relevant studies",
+        "Specificity of LLMs in excluding irrelevant studies",
+        "Overall accuracy of LLMs in title and abstract screening",
+        "Inter-rater agreement between LLMs and human reviewers",
+        "Time efficiency of LLMs compared to traditional methods"
+      ],
+      "results": [
+        {
+          "outcome": "Sensitivity of LLMs in identifying relevant studies",
+          "metric": "Sensitivity",
+          "value": "100% for studies ultimately included in the review after full-text screening",
+          "comparator": "Human reviewers",
+          "quote": "When applied to the remaining baseline 11 939 records and two updates, the refined prompts achieved 100% sensitivity for studies ultimately included in the review after full-text screening",
+          "chunk": "S032#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Specificity of LLMs in excluding irrelevant studies",
+          "metric": "Specificity",
+          "value": "Moderate",
+          "comparator": "Human reviewers",
+          "quote": "Refined GPT-4o prompts demonstrated high sensitivity and moderate specificity while reducing human workload",
+          "chunk": "S032#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Inter-rater agreement between LLMs and human reviewers",
+          "metric": "Inter-rater agreement",
+          "value": "High consistency",
+          "comparator": "Human reviewers",
+          "quote": "Prompt decisions showed high consistency, with minimal false exclusions, satisfying established screening performance benchmarks for systematic reviews",
+          "chunk": "S032#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Time efficiency of LLMs compared to traditional methods",
+          "metric": "Workload reduction",
+          "value": "65\u201385%",
+          "comparator": "Traditional methods",
+          "quote": "Simulated workload reductions of 65\u201385% were observed",
+          "chunk": "S032#ab1",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "Refined GPT-4o prompts demonstrated high sensitivity and moderate specificity while reducing human workload.",
+        "quote": "Refined GPT-4o prompts demonstrated high sensitivity and moderate specificity while reducing human workload.",
+        "chunk": "S032#ab1",
+        "verified": true
+      },
+      "limitations": {
+        "value": "Not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      }
+    },
+    "S033": {
+      "study_design": {
+        "value": "Diagnostic test accuracy",
+        "quote": "Development of Prompt Templates for Large Language Model\u2013Driven Screening in Systematic Reviews. BACKGROUND: Systematic reviews (SRs) are hindered by the initial rigorous article screen, which delays access to reliable information synthesis. OBJECTIVE: To develop generic prompt templates for large language model (LLM)-driven abstract and full-text screening that can be adapted to different reviews. DESIGN: Diagnostic test accuracy. SETTING: 48 425 citations were tested for abstract screening across 10 SRs. Full-text screening evaluated all 12 690 freely available articles from the original search. Prompt development used the GPT4-0125-preview model (OpenAI). PARTICIPANTS: None. MEASUREMENTS: Large language models were prompted to include or exclude articles based on SR eligibility criteria. Model outputs were compared with original SR author decisions after full-text screening to evaluate performance (accuracy, sensitivity, and specificity).",
+        "chunk": "S033#ab0",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "48 425 citations for abstract screening across 10 SRs; 12 690 freely available articles for full-text screening",
+        "quote": "Development of Prompt Templates for Large Language Model\u2013Driven Screening in Systematic Reviews. BACKGROUND: Systematic reviews (SRs) are hindered by the initial rigorous article screen, which delays access to reliable information synthesis. OBJECTIVE: To develop generic prompt templates for large language model (LLM)-driven abstract and full-text screening that can be adapted to different reviews. DESIGN: Diagnostic test accuracy. SETTING: 48 425 citations were tested for abstract screening across 10 SRs. Full-text screening evaluated all 12 690 freely available articles from the original search. Prompt development used the GPT4-0125-preview model (OpenAI). PARTICIPANTS: None. MEASUREMENTS: Large language models were prompted to include or exclude articles based on SR eligibility criteria. Model outputs were compared with original SR author decisions after full-text screening to evaluate performance (accuracy, sensitivity, and specificity).",
+        "chunk": "S033#ab0",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "LLM-driven abstract and full-text screening using prompt templates",
+        "quote": "Development of Prompt Templates for Large Language Model\u2013Driven Screening in Systematic Reviews. BACKGROUND: Systematic reviews (SRs) are hindered by the initial rigorous article screen, which delays access to reliable information synthesis. OBJECTIVE: To develop generic prompt templates for large language model (LLM)-driven abstract and full-text screening that can be adapted to different reviews. DESIGN: Diagnostic test accuracy. SETTING: 48 425 citations were tested for abstract screening across 10 SRs. Full-text screening evaluated all 12 690 freely available articles from the original search. Prompt development used the GPT4-0125-preview model (OpenAI). PARTICIPANTS: None. MEASUREMENTS: Large language models were prompted to include or exclude articles based on SR eligibility criteria. Model outputs were compared with original SR author decisions after full-text screening to evaluate performance (accuracy, sensitivity, and specificity).",
+        "chunk": "S033#ab0",
+        "verified": true
+      },
+      "comparator": {
+        "value": "Original SR author decisions after full-text screening",
+        "quote": "Development of Prompt Templates for Large Language Model\u2013Driven Screening in Systematic Reviews. BACKGROUND: Systematic reviews (SRs) are hindered by the initial rigorous article screen, which delays access to reliable information synthesis. OBJECTIVE: To develop generic prompt templates for large language model (LLM)-driven abstract and full-text screening that can be adapted to different reviews. DESIGN: Diagnostic test accuracy. SETTING: 48 425 citations were tested for abstract screening across 10 SRs. Full-text screening evaluated all 12 690 freely available articles from the original search. Prompt development used the GPT4-0125-preview model (OpenAI). PARTICIPANTS: None. MEASUREMENTS: Large language models were prompted to include or exclude articles based on SR eligibility criteria. Model outputs were compared with original SR author decisions after full-text screening to evaluate performance (accuracy, sensitivity, and specificity).",
+        "chunk": "S033#ab0",
+        "verified": true
+      },
+      "outcomes": [
+        "sensitivity_of_llms_in_identifying_relevant_studies",
+        "specificity_of_llms_in_excluding_irrelevant_studies",
+        "overall_accuracy_of_llms_in_title_and_abstract_screening",
+        "inter_rater_agreement_between_llms_and_human_reviewers",
+        "time_efficiency_of_llms_compared_to_traditional_methods"
+      ],
+      "results": [
+        {
+          "outcome": "sensitivity_of_llms_in_identifying_relevant_studies",
+          "metric": "weighted sensitivity",
+          "value": "97.7% (range, 86.7% to 100%) for abstract screening; 96.5% (range, 89.7% to 100.0%) for full-text screening",
+          "comparator": "zero-shot prompts had poor sensitivity (49.0% abstract, 49.1% full-text)",
+          "quote": "ude articles based on SR eligibility criteria. Model outputs were compared with original SR author decisions after full-text screening to evaluate performance (accuracy, sensitivity, and specificity). RESULTS: Optimized prompts using GPT4-0125-preview achieved a weighted sensitivity of 97.7% (range, 86.7% to 100%) and specificity of 85.2% (range, 68.3% to 95.9%) in abstract screening and weighted sensitivity of 96.5% (range, 89.7% to 100.0%) and specificity of 91.2% (range, 80.7% to 100%) in full-text screening across 10 SRs. In contrast, zero-shot prompts had poor sensitivity (49.0% abstract, 49.1% full-text). Across LLMs, Claude-3.5 (Anthropic) and GPT4 variants had similar performance, whereas Gemini Pro (Google) and GPT3.5 (OpenAI) models underperformed. Direct screening costs for 10 000 citations differed substantially: Where single human abstract screening was estimated to require more than 83 hours and $1666.67 USD, our LLM-based approach completed screening in under 1 day for $157.02 USD. LIMITATIONS: Further prompt optimizations may exist. Retrospective study. /no",
+          "chunk": "S033#ab1",
+          "verified": false
+        },
+        {
+          "outcome": "specificity_of_llms_in_excluding_irrelevant_studies",
+          "metric": "weighted specificity",
+          "value": "85.2% (range, 68.3% to 95.9%) for abstract screening; 91.2% (range, 80.7% to 100%) for full-text screening",
+          "comparator": "zero-shot prompts had poor specificity (not reported)",
+          "quote": "ude articles based on SR eligibility criteria. Model outputs were compared with original SR author decisions after full-text screening to evaluate performance (accuracy, sensitivity, and specificity). RESULTS: Optimized prompts using GPT4-0125-preview achieved a weighted sensitivity of 97.7% (range, 86.7% to 100%) and specificity of 85.2% (range, 68.3% to 95.9%) in abstract screening and weighted sensitivity of 96.5% (range, 89.7% to 100.0%) and specificity of 91.2% (range, 80.7% to 100%) in full-text screening across 10 SRs. In contrast, zero-shot prompts had poor sensitivity (49.0% abstract, 49.1% full-text). Across LLMs, Claude-3.5 (Anthropic) and GPT4 variants had similar performance, whereas Gemini Pro (Google) and GPT3.5 (OpenAI) models underperformed. Direct screening costs for 10 000 citations differed substantially: Where single human abstract screening was estimated to require more than 83 hours and $1666.67 USD, our LLM-based approach completed screening in under 1 day for $157.02 USD. LIMITATIONS: Further prompt optimizations may exist. Retrospective study. /no",
+          "chunk": "S033#ab1",
+          "verified": false
+        },
+        {
+          "outcome": "time_efficiency_of_llms_compared_to_traditional_methods",
+          "metric": "time and cost",
+          "value": "LLM-based approach completed screening in under 1 day for $157.02 USD; single human abstract screening required more than 83 hours and $1666.67 USD",
+          "comparator": "traditional methods (human screening)",
+          "quote": "ude articles based on SR eligibility criteria. Model outputs were compared with original SR author decisions after full-text screening to evaluate performance (accuracy, sensitivity, and specificity). RESULTS: Optimized prompts using GPT4-0125-preview achieved a weighted sensitivity of 97.7% (range, 86.7% to 100%) and specificity of 85.2% (range, 68.3% to 95.9%) in abstract screening and weighted sensitivity of 96.5% (range, 89.7% to 100.0%) and specificity of 91.2% (range, 80.7% to 100%) in full-text screening across 10 SRs. In contrast, zero-shot prompts had poor sensitivity (49.0% abstract, 49.1% full-text). Across LLMs, Claude-3.5 (Anthropic) and GPT4 variants had similar performance, whereas Gemini Pro (Google) and GPT3.5 (OpenAI) models underperformed. Direct screening costs for 10 000 citations differed substantially: Where single human abstract screening was estimated to require more than 83 hours and $1666.67 USD, our LLM-based approach completed screening in under 1 day for $157.02 USD. LIMITATIONS: Further prompt optimizations may exist. Retrospective study. /no",
+          "chunk": "S033#ab1",
+          "verified": false
+        }
+      ],
+      "main_finding": {
+        "value": "LLMs, particularly optimized prompts using GPT4-0125-preview, achieved high sensitivity and specificity in abstract and full-text screening, with significant time and cost efficiency compared to traditional methods.",
+        "quote": "ted to require more than 83 hours and $1666.67 USD, our LLM-based approach completed screening in under 1 day for $157.02 USD. LIMITATIONS: Further prompt optimizations may exist. Retrospective study. Convenience sample of SRs. Full-text screening evaluations were limited to free PubMed Central full-text articles. CONCLUSION: A generic prompt for abstract and full-text screening achieving high sensitivity and specificity that can be adapted to other SRs and LLMs was developed. Our prompting innovations may have value to SR investigators and researchers conducting similar criteria-based tasks across the medical sciences. PRIMARY FUNDING SOURCE: None.",
+        "chunk": "S033#ab2",
+        "verified": true
+      },
+      "limitations": {
+        "value": "Further prompt optimizations may exist. Retrospective study. Convenience sample of SRs. Full-text screening evaluations were limited to free PubMed Central full-text articles.",
+        "quote": "ted to require more than 83 hours and $1666.67 USD, our LLM-based approach completed screening in under 1 day for $157.02 USD. LIMITATIONS: Further prompt optimizations may exist. Retrospective study. Convenience sample of SRs. Full-text screening evaluations were limited to free PubMed Central full-text articles. CONCLUSION: A generic prompt for abstract and full-text screening achieving high sensitivity and specificity that can be adapted to other SRs and LLMs was developed. Our prompting innovations may have value to SR investigators and researchers conducting similar criteria-based tasks across the medical sciences. PRIMARY FUNDING SOURCE: None.",
+        "chunk": "S033#ab2",
+        "verified": true
+      }
+    },
+    "S034": {
+      "study_design": {
+        "value": "Study: Do it faster with PICOS: Generative AI-Assisted systematic review screening. (2025)",
+        "quote": "Do it faster with PICOS: Generative AI-Assisted systematic review screening.. Systematic reviews (SRs) require substantial time and human resources, especially during the screening phase. Large Language Models (LLMs) have shown the potential to expedite screening. However, their use in generating structured PICOS (Population, Intervention/Exposure, Comparison, Outcome, Study design) summaries from title and abstract to assist human reviewers during screening remains unexplored. To assess the impact of open-source (Mistral-Nemo-Instruct-2407) LLM-generated structured PICOS summaries on the speed and accuracy of title and abstract screening. Four neurology trainees were grouped into two pairs based on previous screening experience. Pair A (A1, A2) consisted of less experienced trainees (1-2 SR), while Pair B (B1, B2) consisted of more experienced trainees (\u22653 SR). Reviewers A1 and B1 received titles, abstracts, and LLM-generated structured PICOS summaries for each article. Reviewers A2 and B2 received only titles and abstracts.",
+        "chunk": "S034#ab0",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "1,003 articles",
+        "quote": "ore experienced trainees (\u22653 SR). Reviewers A1 and B1 received titles, abstracts, and LLM-generated structured PICOS summaries for each article. Reviewers A2 and B2 received only titles and abstracts. All reviewers independently screened the same set of 1,003 articles using predefined eligibility criteria. Screening times were recorded, and performance metrics were calculated.",
+        "chunk": "S034#ab1",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "LLM-generated structured PICOS summaries",
+        "quote": "Do it faster with PICOS: Generative AI-Assisted systematic review screening.. Systematic reviews (SRs) require substantial time and human resources, especially during the screening phase. Large Language Models (LLMs) have shown the potential to expedite screening. However, their use in generating structured PICOS (Population, Intervention/Exposure, Comparison, Outcome, Study design) summaries from title and abstract to assist human reviewers during screening remains unexplored. To assess the impact of open-source (Mistral-Nemo-Instruct-2407) LLM-generated structured PICOS summaries on the speed and accuracy of title and abstract screening.",
+        "chunk": "S034#ab0",
+        "verified": true
+      },
+      "comparator": {
+        "value": "Traditional title and abstract screening without LLM-generated PICOS summaries",
+        "quote": "ore experienced trainees (\u22653 SR). Reviewers A1 and B1 received titles, abstracts, and LLM-generated structured PICOS summaries for each article. Reviewers A2 and B2 received only titles and abstracts. All reviewers independently screened the same set of 1,003 articles using predefined eligibility criteria. Screening times were recorded, and performance metrics were calculated.",
+        "chunk": "S034#ab1",
+        "verified": true
+      },
+      "outcomes": [
+        "Sensitivity of LLMs in identifying relevant studies",
+        "Specificity of LLMs in excluding irrelevant studies",
+        "Overall accuracy of LLMs in title and abstract screening",
+        "Inter-rater agreement between LLMs and human reviewers",
+        "Time efficiency of LLMs compared to traditional methods"
+      ],
+      "results": [
+        {
+          "outcome": "Sensitivity of LLMs in identifying relevant studies",
+          "metric": "Perfect sensitivity for PICOS-assisted reviewers (100%)",
+          "value": "100%",
+          "comparator": "Lower for those without assistance (88.0% and 92.0%)",
+          "quote": "ore experienced trainees (\u22653 SR). Reviewers A1 and B1 received titles, abstracts, and LLM-generated structured PICOS summaries for each article. Reviewers A2 and B2 received only titles and abstracts. All reviewers independently screened the same set of 1,003 articles using predefined eligibility criteria. Screening times were recorded, and performance metrics were calculated. PICOS-assisted reviewers screened significantly faster (A1: 116 min; B1: 90 min) than those without (A2: 463 min; B2: 370 min), with approximately 75% reduction in screening workload. Sensitivity was perfect for PICOS-assisted reviewers (100%), whereas it was lower for those without assistance (88.0% and 92.0%).",
+          "chunk": "S034#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Specificity of LLMs in excluding irrelevant studies",
+          "metric": "Higher specificity for PICOS-assisted reviewers (99.9%)",
+          "value": "99.9%",
+          "comparator": "Not explicitly reported for those without assistance",
+          "quote": "ore experienced trainees (\u22653 SR). Reviewers A1 and B1 received titles, abstracts, and LLM-generated structured PICOS summaries for each article. Reviewers A2 and B2 received only titles and abstracts. All reviewers independently screened the same set of 1,003 articles using predefined eligibility criteria. Screening times were recorded, and performance metrics were calculated. PICOS-assisted reviewers screened significantly faster (A1: 116 min; B1: 90 min) than those without (A2: 463 min; B2: 370 min), with approximately 75% reduction in screening workload. Sensitivity was perfect for PICOS-assisted reviewers (100%), whereas it was lower for those without assistance (88.0% and 92.0%). Furthermore, PICOS-assisted reviewers demonstrated higher accuracy (99.9%), specificity (99.9), F1 scores (98.0%), and strong inter-rater reliability (Cohen's Kappa of 99.8%).",
+          "chunk": "S034#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Overall accuracy of LLMs in title and abstract screening",
+          "metric": "Higher accuracy for PICOS-assisted reviewers (99.9%)",
+          "value": "99.9%",
+          "comparator": "Not explicitly reported for those without assistance",
+          "quote": "ore experienced trainees (\u22653 SR). Reviewers A1 and B1 received titles, abstracts, and LLM-generated structured PICOS summaries for each article. Reviewers A2 and B2 received only titles and abstracts. All reviewers independently screened the same set of 1,003 articles using predefined eligibility criteria. Screening times were recorded, and performance metrics were calculated. PICOS-assisted reviewers screened significantly faster (A1: 116 min; B1: 90 min) than those without (A2: 463 min; B2: 370 min), with approximately 75% reduction in screening workload. Sensitivity was perfect for PICOS-assisted reviewers (100%), whereas it was lower for those without assistance (88.0% and 92.0%). Furthermore, PICOS-assisted reviewers demonstrated higher accuracy (99.9%), specificity (99.9), F1 scores (98.0%), and strong inter-rater reliability (Cohen's Kappa of 99.8%).",
+          "chunk": "S034#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Inter-rater agreement between LLMs and human reviewers",
+          "metric": "Strong inter-rater reliability (Cohen's Kappa of 99.8%)",
+          "value": "99.8%",
+          "comparator": "Not explicitly reported for those without assistance",
+          "quote": "ore experienced trainees (\u22653 SR). Reviewers A1 and B1 received titles, abstracts, and LLM-generated structured PICOS summaries for each article. Reviewers A2 and B2 received only titles and abstracts. All reviewers independently screened the same set of 1,003 articles using predefined eligibility criteria. Screening times were recorded, and performance metrics were calculated. PICOS-assisted reviewers screened significantly faster (A1: 116 min; B1: 90 min) than those without (A2: 463 min; B2: 370 min), with approximately 75% reduction in screening workload. Sensitivity was perfect for PICOS-assisted reviewers (100%), whereas it was lower for those without assistance (88.0% and 92.0%). Furthermore, PICOS-assisted reviewers demonstrated higher accuracy (99.9%), specificity (99.9), F1 scores (98.0%), and strong inter-rater reliability (Cohen's Kappa of 99.8%).",
+          "chunk": "S034#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Time efficiency of LLMs compared to traditional methods",
+          "metric": "75% reduction in screening workload",
+          "value": "75%",
+          "comparator": "Traditional methods (A2: 463 min; B2: 370 min) vs. PICOS-assisted (A1: 116 min; B1: 90 min)",
+          "quote": "ore experienced trainees (\u22653 SR). Reviewers A1 and B1 received titles, abstracts, and LLM-generated structured PICOS summaries for each article. Reviewers A2 and B2 received only titles and abstracts. All reviewers independently screened the same set of 1,003 articles using predefined eligibility criteria. Screening times were recorded, and performance metrics were calculated. PICOS-assisted reviewers screened significantly faster (A1: 116 min; B1: 90 min) than those without (A2: 463 min; B2: 370 min), with approximately 75% reduction in screening workload.",
+          "chunk": "S034#ab1",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "LLM-generated structured PICOS summaries significantly improve the speed and accuracy of title and abstract screening, with perfect sensitivity, high specificity, and strong inter-rater reliability. Less experienced reviewers with PICOS assistance outperformed more experienced reviewers without assistance in both efficiency and sensitivity.",
+        "quote": "trong inter-rater reliability (Cohen's Kappa of 99.8%). Less experienced reviewer with PICOS assistance(A1) outperformed experienced reviewer(B2) without assistance in both efficiency and sensitivity. LLM-generated PICOS summaries enhance the speed and accuracy of title and abstract screening by providing an additional layer of structured information. With PICOS assistance, less experienced reviewer surpassed their more experienced peers. Future research should explore the applicability of this novel method across diverse fields outside of neurology and its integration into fully automated systems.",
+        "chunk": "S034#ab2",
+        "verified": true
+      },
+      "limitations": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      }
+    },
+    "S035": {
+      "study_design": {
+        "value": "Evaluating Large Language Models for Radiology Systematic Review Title and Abstract Screening.",
+        "quote": "Evaluating Large Language Models for Radiology Systematic Review Title and Abstract Screening.",
+        "chunk": "S035#ab0",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "two imaging-focused systematic reviews (n = 5438 and n = 267 abstracts)",
+        "quote": "two imaging-focused systematic reviews (n = 5438 and n = 267 abstracts)",
+        "chunk": "S035#ab0",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "binary and ternary classification tasks, confidence scoring, and reclassification of true and synthetic disagreements",
+        "quote": "binary and ternary classification tasks, confidence scoring, and reclassification of true and synthetic disagreements",
+        "chunk": "S035#ab0",
+        "verified": true
+      },
+      "comparator": {
+        "value": "human reviewers",
+        "quote": "disagreements were framed as either \"LLM vs human\" or \"human vs human.\"",
+        "chunk": "S035#ab0",
+        "verified": true
+      },
+      "outcomes": [
+        "Sensitivity of LLMs in identifying relevant studies",
+        "Specificity of LLMs in excluding irrelevant studies",
+        "Overall accuracy of LLMs in title and abstract screening",
+        "Inter-rater agreement between LLMs and human reviewers",
+        "Time efficiency of LLMs compared to traditional methods"
+      ],
+      "results": [
+        {
+          "outcome": "Sensitivity of LLMs in identifying relevant studies",
+          "metric": "F1 scores ranging from 0.389 to 0.854",
+          "value": "F1 scores ranging from 0.389 to 0.854",
+          "comparator": "not reported",
+          "quote": "F1 scores ranging from 0.389 to 0.854",
+          "chunk": "S035#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Specificity of LLMs in excluding irrelevant studies",
+          "metric": "LLMs achieved high specificity",
+          "value": "LLMs achieved high specificity",
+          "comparator": "not reported",
+          "quote": "LLMs achieved high specificity and variable sensitivity across reviews and tasks",
+          "chunk": "S035#ab0",
+          "verified": true
+        },
+        {
+          "outcome": "Overall accuracy of LLMs in title and abstract screening",
+          "metric": "F1 scores ranging from 0.389 to 0.854",
+          "value": "F1 scores ranging from 0.389 to 0.854",
+          "comparator": "not reported",
+          "quote": "F1 scores ranging from 0.389 to 0.854",
+          "chunk": "S035#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Inter-rater agreement between LLMs and human reviewers",
+          "metric": "models more often selected the human label when disagreements were framed as \"LLM vs human\"",
+          "value": "models more often selected the human label when disagreements were framed as \"LLM vs human\"",
+          "comparator": "not reported",
+          "quote": "In disagreement tasks, models more often selected the human label when disagreements were framed as \"LLM vs human,\" consistent with authority bias.",
+          "chunk": "S035#ab1",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "LLMs hold promise for systematic review screening tasks but require careful prompt design and circumspect human-in-the-loop oversight to ensure robust performance.",
+        "quote": "LLMs hold promise for systematic review screening tasks but require careful prompt design and circumspect human-in-the-loop oversight to ensure robust performance.",
+        "chunk": "S035#ab1",
+        "verified": true
+      },
+      "limitations": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      }
+    },
+    "S036": {
+      "study_design": {
+        "value": "The study evaluates prompting strategies and large language models (LLMs) in systematic literature review (SLR) screening, focusing on relevance and task-stage classification. The methodology includes dataset construction, prompting strategy design, model selection, and evaluation metrics. The dataset was curated from academic publications on SLR automation, with 1,376 unique studies manually screened for eligibility.",
+        "quote": "S036#ft19",
+        "chunk": "S036#ft19",
+        "verified": false
+      },
+      "population_or_dataset": {
+        "value": "The dataset includes 1,376 unique studies manually screened for eligibility, which addressed automation of any SLR stage (searching, screening, retrieval, synthesis, report writing).",
+        "quote": "S036#ft20",
+        "chunk": "S036#ft20",
+        "verified": false
+      },
+      "intervention_or_method": {
+        "value": "The study evaluates six state-of-the-art LLMs (GPT-4o, GPT-4o-Mini, DeepSeek-Chat-V3, Gemini-2.5-Flash, Claude-3.5-Haiku, and Llama-4-Maverick) under four prompting strategies (zero-shot, few-shot, CoT, and CoT-few-shot).",
+        "quote": "S036#ft29",
+        "chunk": "S036#ft29",
+        "verified": false
+      },
+      "comparator": {
+        "value": "The study compares LLMs with human reviewers, as the dataset was annotated by two researchers with LLM and systematic-review experience, resolving disagreements by consensus.",
+        "quote": "S036#ft20",
+        "chunk": "S036#ft20",
+        "verified": false
+      },
+      "outcomes": [
+        "sensitivity_of_llms_in_identifying_relevant_studies",
+        "specificity_of_llms_in_excluding_irrelevant_studies",
+        "overall_accuracy_of_llms_in_title_and_abstract_screening",
+        "inter_rater_agreement_between_llms_and_human_reviewers",
+        "time_efficiency_of_llms_compared_to_traditional_methods"
+      ],
+      "results": [
+        {
+          "outcome": "sensitivity_of_llms_in_identifying_relevant_studies",
+          "metric": "Recall",
+          "value": "Recall is defined as the proportion of true positives among all actual positives (model sensitivity).",
+          "comparator": "not reported",
+          "quote": "S036#ft28",
+          "chunk": "S036#ft28",
+          "verified": false
+        },
+        {
+          "outcome": "specificity_of_llms_in_excluding_irrelevant_studies",
+          "metric": "Precision",
+          "value": "Precision is defined as the proportion of true positives among all predicted positives (model specificity).",
+          "comparator": "not reported",
+          "quote": "S036#ft28",
+          "chunk": "S036#ft28",
+          "verified": false
+        },
+        {
+          "outcome": "overall_accuracy_of_llms_in_title_and_abstract_screening",
+          "metric": "Accuracy",
+          "value": "Accuracy is reported for relevance classification, with GPT-4o and DeepSeek delivering more stable results, ranking highest in accuracy, precision, and F1 while maintaining strong recall (>0.925).",
+          "comparator": "not reported",
+          "quote": "S036#ft40",
+          "chunk": "S036#ft40",
+          "verified": false
+        },
+        {
+          "outcome": "time_efficiency_of_llms_compared_to_traditional_methods",
+          "metric": "Time efficiency",
+          "value": "The study highlights the operational constraints of screening, noting that screening typically spans tens of thousands of abstracts, and token-expanding prompts materially increase spend and latency.",
+          "comparator": "not reported",
+          "quote": "S036#ft17",
+          "chunk": "S036#ft17",
+          "verified": false
+        }
+      ],
+      "main_finding": {
+        "value": "The study finds that CoT-few-shot prompting yields the most reliable precision\u2013recall balance, zero-shot maximizes recall for high-sensitivity passes, and self-reflection underperforms due to over-inclusivity and instability across models. GPT-4o and DeepSeek provide robust overall performance, while GPT-4o-mini performs competitively at a substantially lower dollar cost.",
+        "quote": "S036#ft1",
+        "chunk": "S036#ft1",
+        "verified": false
+      },
+      "limitations": {
+        "value": "The study acknowledges that self-reflection prompting underperforms due to over-inclusivity and instability across models. Additionally, the study notes that model choice can vary costs by several orders of magnitude, and token-expanding prompts materially increase spend and latency.",
+        "quote": "S036#ft1",
+        "chunk": "S036#ft1",
+        "verified": false
+      }
+    },
+    "S037": {
+      "study_design": {
+        "value": "Systematic review and meta-analysis with development of a new tool",
+        "quote": "tervention were excluded. Data extraction followed PRISMA guidelines, and performance metrics were pooled and summarized using forest plots and summary receiver operating characteristic (SROC) curves. Risk of bias was assessed using the Quality Assessment of Diagnostic Accuracy Studies 2 (QUADAS-2) tool. The authors created a screening tool utilizing GPT-4o-mini model and tested their utility using existing SRs.",
+        "chunk": "S037#ab1",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "Studies reporting performance metrics (sensitivity, specificity, precision) of LLM models for automatic title/abstract screening",
+        "quote": "Evaluating large language models for title/abstract screening: a systematic review and meta-analysis & development of new tool. Background: Screening titles and abstracts for systematic reviews (SRs) is a labor-intensive and error-prone process. With the advent of large language models (LLMs), there is potential to automate and improve the efficiency of this process. This study aims to develop an LLM-based screening tool and compare its performance with existing LLM models in terms of sensitivity, specificity, and precision. Methods: A SR was conducted in August 2024, searching the MEDLINE, Embase, and Scopus databases for studies reporting performance metrics (sensitivity, specificity, precision) of LLM models for automatic title/abstract screening. Studies were included if they reported sufficient data to create a confusion matrix, while those requiring human intervention were excluded. Data extraction followed PRISMA guidelines, and performance metrics were pooled and summarized using forest plots and summary receiver operating characteristic (SROC) curves.",
+        "chunk": "S037#ab0",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "LLM-based models for title and abstract screening",
+        "quote": "Evaluating large language models for title/abstract screening: a systematic review and meta-analysis & development of new tool. Background: Screening titles and abstracts for systematic reviews (SRs) is a labor-intensive and error-prone process. With the advent of large language models (LLMs), there is potential to automate and improve the efficiency of this process. This study aims to develop an LLM-based screening tool and compare its performance with existing LLM models in terms of sensitivity, specificity, and precision.",
+        "chunk": "S037#ab0",
+        "verified": true
+      },
+      "comparator": {
+        "value": "Manual SR screening",
+        "quote": "LLM-based models offer a promising, cost-effective alternative to manual SR screening.",
+        "chunk": "S037#ab1",
+        "verified": true
+      },
+      "outcomes": [
+        "Sensitivity of LLMs in identifying relevant studies",
+        "Specificity of LLMs in excluding irrelevant studies",
+        "Overall accuracy of LLMs in title and abstract screening",
+        "Inter-rater agreement between LLMs and human reviewers",
+        "Time efficiency of LLMs compared to traditional methods"
+      ],
+      "results": [
+        {
+          "outcome": "Sensitivity of LLMs in identifying relevant studies",
+          "metric": "100% sensitivity",
+          "value": "100%",
+          "comparator": "Manual SR screening",
+          "quote": "our developed model achieved 100% sensitivity but lower specificity (81%) and precision (14%).",
+          "chunk": "S037#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Specificity of LLMs in excluding irrelevant studies",
+          "metric": "Lower specificity",
+          "value": "81%",
+          "comparator": "Manual SR screening",
+          "quote": "our developed model achieved 100% sensitivity but lower specificity (81%) and precision (14%).",
+          "chunk": "S037#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Overall accuracy of LLMs in title and abstract screening",
+          "metric": "Overall excellent performance",
+          "value": "Sensitivity and specificity approaching 90%",
+          "comparator": "Manual SR screening",
+          "quote": "The SROC analysis indicated overall excellent performance with sensitivity and specificity approaching 90%, with overall low risk of bias.",
+          "chunk": "S037#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Time efficiency of LLMs compared to traditional methods",
+          "metric": "High speed",
+          "value": "1.7 seconds per entry",
+          "comparator": "Manual SR screening",
+          "quote": "It processed entries at a speed of 1.7 seconds per entry with minimal cost.",
+          "chunk": "S037#ab1",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "LLM-based models offer a promising, cost-effective alternative to manual SR screening. Although these models achieve high sensitivity, the trade-off in specificity requires careful consideration.",
+        "quote": "LLM-based models offer a promising, cost-effective alternative to manual SR screening. Although these models achieve high sensitivity, the trade-off in specificity requires careful consideration.",
+        "chunk": "S037#ab1",
+        "verified": true
+      },
+      "limitations": {
+        "value": "Not reported",
+        "quote": "not reported",
+        "chunk": "none",
+        "verified": false
+      }
+    },
+    "S038": {
+      "study_design": {
+        "value": "Evaluating the Efficacy and Efficiency of GPT-5 for Automated Title and Abstract Screening in Orthopedic Surgery Systematic Reviews.",
+        "quote": "Evaluating the Efficacy and Efficiency of GPT-5 for Automated Title and Abstract Screening in Orthopedic Surgery Systematic Reviews.. To analyze the efficacy and efficiency of current large language models (LLMs), specifically GPT-5 in screening titles and abstracts for three review topics within different subspecialties in orthopedics. Python scripts were developed to call on the GPT-5 model via OpenAIs application programming interface (API). Two human reviewers simultaneously performed screening based on the same inclusion and exclusion criteria. Performance metrics such as specificity, sensitivity, accuracy, positive predictive value (PPV), negative predictive values (NPV), and F1 scores for GPT-5 were calculated based on a gold-standard inclusion and exclusion list developed by a third human adjudicator. Efficiency metrics included total cost and time to completion for each task. The number of titles and abstracts to screen ranged between 668 and 1,131 amongst the three review topics.",
+        "chunk": "S038#ab0",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "Three review topics within different subspecialties in orthopedics.",
+        "quote": "Evaluating the Efficacy and Efficiency of GPT-5 for Automated Title and Abstract Screening in Orthopedic Surgery Systematic Reviews.. To analyze the efficacy and efficiency of current large language models (LLMs), specifically GPT-5 in screening titles and abstracts for three review topics within different subspecialties in orthopedics. Python scripts were developed to call on the GPT-5 model via OpenAIs application programming interface (API). Two human reviewers simultaneously performed screening based on the same inclusion and exclusion criteria. Performance metrics such as specificity, sensitivity, accuracy, positive predictive value (PPV), negative predictive values (NPV), and F1 scores for GPT-5 were calculated based on a gold-standard inclusion and exclusion list developed by a third human adjudicator. Efficiency metrics included total cost and time to completion for each task. The number of titles and abstracts to screen ranged between 668 and 1,131 amongst the three review topics.",
+        "chunk": "S038#ab0",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "Automated title and abstract screening using GPT-5.",
+        "quote": "Evaluating the Efficacy and Efficiency of GPT-5 for Automated Title and Abstract Screening in Orthopedic Surgery Systematic Reviews.. To analyze the efficacy and efficiency of current large language models (LLMs), specifically GPT-5 in screening titles and abstracts for three review topics within different subspecialties in orthopedics. Python scripts were developed to call on the GPT-5 model via OpenAIs application programming interface (API). Two human reviewers simultaneously performed screening based on the same inclusion and exclusion criteria. Performance metrics such as specificity, sensitivity, accuracy, positive predictive value (PPV), negative predictive values (NPV), and F1 scores for GPT-5 were calculated based on a gold-standard inclusion and exclusion list developed by a third human adjudicator. Efficiency metrics included total cost and time to completion for each task. The number of titles and abstracts to screen ranged between 668 and 1,131 amongst the three review topics.",
+        "chunk": "S038#ab0",
+        "verified": true
+      },
+      "comparator": {
+        "value": "Two human reviewers performing screening based on the same inclusion and exclusion criteria.",
+        "quote": "Evaluating the Efficacy and Efficiency of GPT-5 for Automated Title and Abstract Screening in Orthopedic Surgery Systematic Reviews.. To analyze the efficacy and efficiency of current large language models (LLMs), specifically GPT-5 in screening titles and abstracts for three review topics within different subspecialties in orthopedics. Python scripts were developed to call on the GPT-5 model via OpenAIs application programming interface (API). Two human reviewers simultaneously performed screening based on the same inclusion and exclusion criteria. Performance metrics such as specificity, sensitivity, accuracy, positive predictive value (PPV), negative predictive values (NPV), and F1 scores for GPT-5 were calculated based on a gold-standard inclusion and exclusion list developed by a third human adjudicator. Efficiency metrics included total cost and time to completion for each task. The number of titles and abstracts to screen ranged between 668 and 1,131 amongst the three review topics.",
+        "chunk": "S038#ab0",
+        "verified": true
+      },
+      "outcomes": [
+        "Sensitivity of LLMs in identifying relevant studies.",
+        "Specificity of LLMs in excluding irrelevant studies.",
+        "Overall accuracy of LLMs in title and abstract screening.",
+        "Inter-rater agreement between LLMs and human reviewers.",
+        "Time efficiency of LLMs compared to traditional methods."
+      ],
+      "results": [
+        {
+          "outcome": "Sensitivity of LLMs in identifying relevant studies.",
+          "metric": "Sensitivities ranging from 94.1%-100%.",
+          "value": "94.1%-100%",
+          "comparator": "not reported",
+          "quote": "man adjudicator. Efficiency metrics included total cost and time to completion for each task. The number of titles and abstracts to screen ranged between 668 and 1,131 amongst the three review topics. All performance metrics were above 92.3% amongst all three topics, with sensitivities ranging from 94.1%-100%. Time to completion ranged between 38.5-174.3 minutes. Cost ranged from $1.32-$3.73USD GPT-5 demonstrated exceptional accuracy, sensitivity, specificity, PPV, NPV, and F1 scores in automating title and abstract screening for three orthopedic systematic review topics in three different subspecialties. Results are similar to previous studies investigating the role of AI for screening, specifically increased accuracy and time-to-completion relative to humans. The average rate of screening ranged from 6.5-17.4 abstracts per minute and the average price ranged from $0.002-$0.0036USD per abstract, suggesting a high degree of efficiency compared to current standards.",
+          "chunk": "S038#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Specificity of LLMs in excluding irrelevant studies.",
+          "metric": "All performance metrics were above 92.3% amongst all three topics.",
+          "value": "above 92.3%",
+          "comparator": "not reported",
+          "quote": "man adjudicator. Efficiency metrics included total cost and time to completion for each task. The number of titles and abstracts to screen ranged between 668 and 1,131 amongst the three review topics. All performance metrics were above 92.3% amongst all three topics, with sensitivities ranging from 94.1%-100%. Time to completion ranged between 38.5-174.3 minutes. Cost ranged from $1.32-$3.73USD GPT-5 demonstrated exceptional accuracy, sensitivity, specificity, PPV, NPV, and F1 scores in automating title and abstract screening for three orthopedic systematic review topics in three different subspecialties. Results are similar to previous studies investigating the role of AI for screening, specifically increased accuracy and time-to-completion relative to humans. The average rate of screening ranged from 6.5-17.4 abstracts per minute and the average price ranged from $0.002-$0.0036USD per abstract, suggesting a high degree of efficiency compared to current standards.",
+          "chunk": "S038#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Overall accuracy of LLMs in title and abstract screening.",
+          "metric": "All performance metrics were above 92.3% amongst all three topics.",
+          "value": "above 92.3%",
+          "comparator": "not reported",
+          "quote": "man adjudicator. Efficiency metrics included total cost and time to completion for each task. The number of titles and abstracts to screen ranged between 668 and 1,131 amongst the three review topics. All performance metrics were above 92.3% amongst all three topics, with sensitivities ranging from 94.1%-100%. Time to completion ranged between 38.5-174.3 minutes. Cost ranged from $1.32-$3.73USD GPT-5 demonstrated exceptional accuracy, sensitivity, specificity, PPV, NPV, and F1 scores in automating title and abstract screening for three orthopedic systematic review topics in three different subspecialties. Results are similar to previous studies investigating the role of AI for screening, specifically increased accuracy and time-to-completion relative to humans. The average rate of screening ranged from 6.5-17.4 abstracts per minute and the average price ranged from $0.002-$0.0036USD per abstract, suggesting a high degree of efficiency compared to current standards.",
+          "chunk": "S038#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "Time efficiency of LLMs compared to traditional methods.",
+          "metric": "Time to completion ranged between 38.5-174.3 minutes. The average rate of screening ranged from 6.5-17.4 abstracts per minute.",
+          "value": "38.5-174.3 minutes; 6.5-17.4 abstracts per minute",
+          "comparator": "not reported",
+          "quote": "man adjudicator. Efficiency metrics included total cost and time to completion for each task. The number of titles and abstracts to screen ranged between 668 and 1,131 amongst the three review topics. All performance metrics were above 92.3% amongst all three topics, with sensitivities ranging from 94.1%-100%. Time to completion ranged between 38.5-174.3 minutes. Cost ranged from $1.32-$3.73USD GPT-5 demonstrated exceptional accuracy, sensitivity, specificity, PPV, NPV, and F1 scores in automating title and abstract screening for three orthopedic systematic review topics in three different subspecialties. Results are similar to previous studies investigating the role of AI for screening, specifically increased accuracy and time-to-completion relative to humans. The average rate of screening ranged from 6.5-17.4 abstracts per minute and the average price ranged from $0.002-$0.0036USD per abstract, suggesting a high degree of efficiency compared to current standards.",
+          "chunk": "S038#ab1",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "GPT-5 demonstrated exceptional accuracy, sensitivity, specificity, PPV, NPV, and F1 scores in automating title and abstract screening for three orthopedic systematic review topics in three different subspecialties. Results are similar to previous studies investigating the role of AI for screening, specifically increased accuracy and time-to-completion relative to humans.",
+        "quote": "man adjudicator. Efficiency metrics included total cost and time to completion for each task. The number of titles and abstracts to screen ranged between 668 and 1,131 amongst the three review topics. All performance metrics were above 92.3% amongst all three topics, with sensitivities ranging from 94.1%-100%. Time to completion ranged between 38.5-174.3 minutes. Cost ranged from $1.32-$3.73USD GPT-5 demonstrated exceptional accuracy, sensitivity, specificity, PPV, NPV, and F1 scores in automating title and abstract screening for three orthopedic systematic review topics in three different subspecialties. Results are similar to previous studies investigating the role of AI for screening, specifically increased accuracy and time-to-completion relative to humans. The average rate of screening ranged from 6.5-17.4 abstracts per minute and the average price ranged from $0.002-$0.0036USD per abstract, suggesting a high degree of efficiency compared to current standards.",
+        "chunk": "S038#ab1",
+        "verified": true
+      },
+      "limitations": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      }
+    }
+  },
+  "risk_of_bias": {
+    "S002": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The training and test datasets focus on biomedical articles discussing LLM applications in patient care using EHR data, which may not be representative of the broader target population of systematic reviews."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The passage does not mention the use of a gold standard (e.g., expert review) to assess LLM performance, which is a critical factor in evaluating model accuracy."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "low",
+          "justification": "There is no indication of data leakage between training and testing phases in the described methodology."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "some concerns",
+          "justification": "The study reports sensitivity (recall), precision, specificity, NPV, and g-mean, but does not explicitly mention inter-rater agreement, which is important for assessing consistency in screening."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some details about the methods, but lacks sufficient detail on the exact implementation of the LLM screening process, making full reproducibility challenging."
+        }
+      ],
+      "overall": "high"
+    },
+    "S008": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The training and test datasets are based on five published systematic reviews across diverse therapeutic areas, but it is unclear if these represent the broader target population of systematic reviews."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The study reports performance metrics (sensitivity, specificity, accuracy, PPV, NPV) against expert human reviewers, which serves as a gold standard for assessing LLM performance."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "low",
+          "justification": "There is no indication of data leakage between training and testing phases; the model was iteratively tested on a separate set of records from previously conducted SLRs."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports sensitivity, specificity, accuracy, positive predictive value, and negative predictive value, fulfilling the requirement for comprehensive metric reporting."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some detail about the model configuration and prompt engineering, but lacks sufficient detail on the exact training data, prompt templates, and evaluation methodology to fully reproduce the LLM screening process."
+        }
+      ],
+      "overall": "high"
+    },
+    "S009": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study uses two SLRs from educational domains (HCI\u2013AI, Educational Gamification) published in English, which may not be representative of broader Software Engineering domains or multilingual corpora."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The study uses the same records and reference labels as Felizardo et al. [2024], which implies the use of a gold standard for assessing LLM performance."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "low",
+          "justification": "The study describes a controlled experimental design with repeated iterations and no indication of data leakage between training and testing phases."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports sensitivity, specificity, accuracy, F1-score, and confidence intervals, along with inter-rater agreement through multiple executions and aggregation rules."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "high",
+          "justification": "The study provides detailed documentation of software/library versions, environment configuration, inference parameters, and exact model/API identifiers to ensure reproducibility."
+        }
+      ],
+      "overall": "high"
+    },
+    "S010": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study uses four pre-selected reviews with varying domains, but it is unclear if these represent the full range of systematic reviews or if they were selected to maximize heterogeneity rather than being representative of the target population."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The study uses adjudicated abstract-stage labels from completed reviews as the reference standard, which is a gold standard for assessing LLM performance in systematic review screening."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "low",
+          "justification": "The study reports no fine-tuning or retrieval was used, and decoding parameters were fixed, suggesting no data leakage between training and testing phases."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports sensitivity, specificity, PPV, NPV, accuracy, and conducts a cross-domain error taxonomy, fulfilling the reporting of key metrics."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "high",
+          "justification": "The study provides prompts, parsing scripts, metric notebooks, and run logs, which allow for the reproduction of the LLM screening process."
+        },
+        {
+          "domain": "Overall",
+          "judgement": "high",
+          "justification": "The study has high judgements in most domains, with only some concerns in dataset representativeness."
+        }
+      ],
+      "overall": "high"
+    },
+    "S014": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study includes 63 studies evaluating LLMs, but it is unclear whether these studies are representative of the broader population of systematic reviews."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The study uses human reviewers as the reference standard to assess LLM performance, which is a gold standard for evaluating systematic review tools."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "low",
+          "justification": "There is no indication of data leakage between training and testing phases in the reported methodology."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports sensitivity-like (PPA) and specificity-like (NPA) metrics, as well as accuracy and inter-rater agreement, across various tasks."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some detail about the screening process and metrics, but lacks sufficient detail on the specific LLM screening protocols and parameters to fully reproduce the process."
+        }
+      ],
+      "overall": "high"
+    },
+    "S027": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study mentions 6 thoracic surgery meta-analyses but does not provide details on how representative these datasets are of the broader target population of systematic reviews."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "Manual screening by 2 investigators served as the reference standard, which is a valid gold standard for assessing LLM performance."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "low",
+          "justification": "There is no indication of data leakage between training and testing phases in the provided passages."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports sensitivity, specificity, accuracy (via AUC), and inter-rater agreement (implied by the reference standard and pooled estimates)."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some detail on the LLM screening process, but lacks specific information on prompt engineering, model parameters, and exact implementation steps needed for full reproducibility."
+        }
+      ],
+      "overall": "high"
+    },
+    "S031": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study uses stratified sampling across four Oxford CEBM review questions and includes various datasets, but it is unclear if these datasets are representative of the broader target population of systematic reviews."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The reference standard for inclusion/exclusion decisions was based on the original authors\u2019 final decisions after full-text screening, which is a gold standard for assessing LLM performance."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "low",
+          "justification": "There is no indication of data leakage between training and testing phases, as the study reports independent and duplicate human evaluations, and the LLM was not trained on the same datasets used for testing."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports sensitivity, specificity, accuracy, and inter-rater agreement (e.g., ROB2, Newcastle-Ottawa, QUADAS2), and provides 95% confidence intervals for these metrics."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some detail about the LLM screening process, including model parameters and datasets used, but the exact code and full implementation details are not clearly provided, which may limit reproducibility."
+        }
+      ],
+      "overall": "high"
+    },
+    "S032": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study uses data from a previously approved living systematic review, but it is unclear if the training and test datasets are representative of the broader target population of systematic reviews."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "Human decisions from an LSR served as the reference standard, which is a gold standard for assessing LLM performance."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "some concerns",
+          "justification": "The study divides the dataset into development and test sets, but it is unclear if there was any overlap or leakage between these sets during prompt refinement."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports sensitivity, specificity, accuracy, and workload reduction, as well as inter-rater agreement through consistency assessments."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some detail about the LLM screening process, but the exact prompts and data processing steps are not fully detailed, making full reproducibility challenging."
+        }
+      ],
+      "overall": "high"
+    },
+    "S033": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study uses a convenience sample of SRs and limits full-text screening to free PubMed Central articles, which may not be representative of all SR target populations."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The study uses original SR author decisions as the reference standard to assess LLM performance, which is a gold standard for evaluating screening accuracy."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "low",
+          "justification": "There is no indication of data leakage between training and testing phases in the study description."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "some concerns",
+          "justification": "The study reports sensitivity, specificity, and accuracy, but does not mention inter-rater agreement, which is important for assessing reliability."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some details about the LLM screening process, but lacks sufficient detail on prompt development and model configuration to fully reproduce the methodology."
+        }
+      ],
+      "overall": "high"
+    },
+    "S034": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study only tested the LLM-assisted screening on a set of 1,030 articles, but it is unclear whether this dataset is representative of the broader target population of systematic reviews."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The study does not mention the use of a gold standard (e.g., expert review) to assess the performance of the LLM-generated PICOS summaries."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "some concerns",
+          "justification": "The study does not clearly describe whether there was any overlap or leakage between the training and testing data, which could affect the validity of the results."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "low",
+          "justification": "The study reports sensitivity, specificity, accuracy, F1 scores, and inter-rater agreement (Cohen's Kappa), meeting the criteria for comprehensive metric reporting."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some details about the LLM and the screening process, but it lacks sufficient detail on the exact implementation of the LLM screening process to fully reproduce the study."
+        },
+        {
+          "domain": "Overall",
+          "judgement": "some concerns",
+          "justification": "The study has several concerns regarding dataset representativeness, reference standard, leakage, and reproducibility, which limit the generalizability and validity of the findings."
+        }
+      ],
+      "overall": "high"
+    },
+    "S035": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study uses two imaging-focused systematic reviews, but it is unclear if these datasets are representative of the broader target population of systematic reviews in radiology."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The study does not explicitly mention the use of a gold standard (e.g., expert review) to assess LLM performance, which is a critical limitation for evaluating model accuracy."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "some concerns",
+          "justification": "The study does not provide sufficient detail to determine if there was any data leakage between training and testing phases, which could affect the validity of results."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "some concerns",
+          "justification": "The study reports sensitivity, specificity, accuracy, and F1 scores, but does not explicitly mention inter-rater agreement, which is important for assessing model performance."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some detail about the LLM screening process, but lacks sufficient information on prompt design, model parameters, and exact implementation steps to fully reproduce the methodology."
+        }
+      ],
+      "overall": "high"
+    },
+    "S036": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The dataset includes studies from 2014 to 2024 across multiple databases, but it does not explicitly state whether the dataset is representative of the target population of systematic reviews, which could include a broader range of studies."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The study uses a gold standard dataset created through expert annotation with consensus, ensuring reliable assessment of LLM performance."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "low",
+          "justification": "There is no indication of data leakage between training and testing phases; the study describes a clear separation between dataset construction and evaluation."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports sensitivity, specificity, accuracy, and inter-rater agreement (via consensus annotation), and provides detailed metric analysis across models and prompts."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "high",
+          "justification": "The study provides sufficient detail about the dataset construction, prompting strategies, and evaluation metrics, allowing for reproduction of the LLM screening process."
+        }
+      ],
+      "overall": "high"
+    },
+    "S037": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study reports a systematic review of LLM models for title/abstract screening, but it does not clearly state whether the training and test datasets are representative of the target population of systematic reviews."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The study does not explicitly mention the use of a gold standard (e.g., expert review) to assess LLM performance, which is a critical component for evaluating diagnostic accuracy."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "some concerns",
+          "justification": "The study does not provide sufficient detail to determine whether there was any data leakage between training and testing phases, which could affect the validity of the results."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports sensitivity, specificity, accuracy, and inter-rater agreement (via SROC curves and forest plots), which meets the required criteria for reporting performance metrics."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some detail about the model development and testing process, but it lacks sufficient information to fully reproduce the LLM screening process, such as specific model parameters or training data details."
+        }
+      ],
+      "overall": "high"
+    },
+    "S038": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study mentions three orthopedic subspecialties but does not provide details on whether the datasets are representative of the broader target population of systematic reviews."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "A gold-standard inclusion and exclusion list was developed by a third human adjudicator, which was used to assess GPT-5 performance."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "low",
+          "justification": "There is no indication of data leakage between training and testing phases in the provided passages."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports sensitivity, specificity, accuracy, PPV, NPV, and F1 scores, which are key performance metrics."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study mentions Python scripts and API usage, but does not provide sufficient detail on the exact implementation or parameters used for the LLM screening process."
+        }
+      ],
+      "overall": "high"
+    }
+  },
+  "fulltext_decisions": [
+    {
+      "id": "S002",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S002 meets all inclusion criteria. It evaluates the performance of large language models (LLMs) in title and abstract screening for systematic reviews (I1). It reports sensitivity (recall), specificity, precision, NPV, and accuracy metrics for LLMs in screening tasks (I2). It compares LLMs with traditional screening methods (e.g., manual screening, rule-based tools) through the use of a hybrid approach (I3). It is published in English (I4) and from 2020 onwards (I5). It does not fall under any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S002#ab0",
+        "S002#ab1",
+        "S002#ab2",
+        "S002#ab3"
+      ]
+    },
+    {
+      "id": "S008",
+      "availability": "full text",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S008 meets all inclusion criteria. It evaluates the performance of a large language model (GPT-4o mini) in title and abstract screening for systematic reviews (I1). It reports sensitivity (83.2%), specificity (85.2%), and overall accuracy (85.1%) metrics (I2). It compares the LLM with traditional screening methods (manual reviewers) (I3). It is published in English (I4) and from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S008#ab0",
+        "S008#ft1",
+        "S008#ab1",
+        "S008#ft12"
+      ]
+    },
+    {
+      "id": "S009",
+      "availability": "full text",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S009 meets all inclusion criteria. It evaluates the performance of LLMs in title and abstract screening for systematic reviews (I1), reports sensitivity, specificity, and overall accuracy metrics (I2), compares LLMs with traditional screening methods (I3), and is published in English (I4) from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S009#ft1",
+        "S009#ab0",
+        "S009#ab1",
+        "S009#ft12"
+      ]
+    },
+    {
+      "id": "S010",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S010 meets all inclusion criteria. It evaluates the performance of a large language model (LLM) in title and abstract screening for systematic reviews (I1). It reports sensitivity, specificity, and accuracy metrics (I2). It compares the LLM with traditional screening methods (e.g., manual or rule-based approaches) by evaluating its performance against adjudicated labels (I3). It is published in English (I4) and from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S010#ab0",
+        "S010#ab1",
+        "S010#ab2",
+        "S010#ab3"
+      ]
+    },
+    {
+      "id": "S014",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "",
+      "reason": "Study S014 meets all inclusion criteria. It evaluates the performance of LLMs in title and abstract screening (I1), reports performance metrics such as PPA and NPA (I2), compares LLMs with human reviewers (I3), and is published in a peer-reviewed journal in English (I4) from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S014#ab4",
+        "S014#ab1",
+        "S014#ab0",
+        "S014#ab3",
+        "S014#ab2"
+      ]
+    },
+    {
+      "id": "S024",
+      "availability": "full text",
+      "decision": "exclude",
+      "exclusion_code": "E2",
+      "reason": "Study S024 focuses on full-text screening and data extraction tasks (e.g., extracting study characteristics, arm design, participant statistics, and results) rather than title and abstract screening. This does not meet Inclusion Criterion I1, which requires studies that evaluate the performance of LLMs in title and abstract screening for systematic reviews.",
+      "evidence_chunks": [
+        "S024#ft34",
+        "S024#ft38",
+        "S024#ft63"
+      ]
+    },
+    {
+      "id": "S027",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S027 meets all inclusion criteria: I1 (evaluates LLMs in title and abstract screening), I2 (reports sensitivity, specificity, and AUC metrics), I3 (compares LLMs with traditional tools like ASReview and Abstrackr), I4 (published in English), and I5 (published from 2020 onwards). It does not meet any exclusion criteria: E1 (it does use LLMs for screening), E2 (focuses on title and abstract screening), E3 (reports performance metrics), E4 (in English), and E5 (peer-reviewed and published post-2020).",
+      "evidence_chunks": [
+        "S027#ab2",
+        "S027#ab1",
+        "S027#ab3",
+        "S027#ab0"
+      ]
+    },
+    {
+      "id": "S031",
+      "availability": "full text",
+      "decision": "include",
+      "exclusion_code": "",
+      "reason": "Study S031 meets all inclusion criteria. It evaluates the performance of large language models (LLMs) in title and abstract screening for systematic reviews (I1). It reports sensitivity, specificity, and overall accuracy metrics for LLMs in screening tasks (I2). It compares LLMs with traditional screening methods (e.g., human reviewers) (I3). It is published in a peer-reviewed journal in English (I4) and was published from 2020 onwards (I5). The study does not meet any exclusion criteria (E1-E5). Relevant chunks include: [S031#ab0], [S031#ab3], [S031#ft37], [S031#ft30], [S031#ft41], [S031#ft28].",
+      "evidence_chunks": [
+        "S031#ab0",
+        "S031#ab3",
+        "S031#ft37",
+        "S031#ft30",
+        "S031#ft41",
+        "S031#ft28"
+      ]
+    },
+    {
+      "id": "S032",
+      "availability": "full text",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S032 meets all inclusion criteria. It evaluates the performance of LLMs (GPT-4o) in title and abstract screening for systematic reviews (I1). It reports sensitivity, specificity, and overall accuracy metrics (I2). It compares LLMs with human reviewers (I3). It is published in English (I4) and from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S032#ab0",
+        "S032#ft2",
+        "S032#ft35",
+        "S032#ab1",
+        "S032#ft3",
+        "S032#ft46"
+      ]
+    },
+    {
+      "id": "S033",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S033 meets all inclusion criteria. It evaluates the performance of large language models (LLMs) in title and abstract screening for systematic reviews (I1). It reports sensitivity, specificity, and overall accuracy metrics for LLMs in screening tasks (I2). It compares LLMs with traditional screening methods (e.g., manual screening) by discussing cost and time efficiency (I3). It is published in a peer-reviewed journal in English (I4) and was published from 2020 onwards (I5). The study does not fall under any exclusion criteria (E1-E5) as it uses LLMs for title and abstract screening, reports performance metrics, is available in English, and is peer-reviewed with a publication date within the specified timeframe.",
+      "evidence_chunks": [
+        "S033#ab0",
+        "S033#ab2",
+        "S033#ab1"
+      ]
+    },
+    {
+      "id": "S034",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S034 meets all inclusion criteria. It evaluates the performance of LLMs (Mistral-Nemo-Instruct-2407) in title and abstract screening for systematic reviews (I1). It reports sensitivity metrics (100% for PICOS-assisted reviewers, 88.0% and 92.0% for others) (I2). It compares LLM-assisted screening with traditional methods (manual screening without PICOS assistance) (I3). It is published in a peer-reviewed journal in English (I4) and was published from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S034#ab0",
+        "S034#ab2",
+        "S034#ab1"
+      ]
+    },
+    {
+      "id": "S035",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S035 meets all inclusion criteria. It evaluates the performance of LLMs in title and abstract screening for systematic reviews (I1), reports sensitivity, specificity, and accuracy metrics (I2), compares LLMs with traditional methods (I3), and is published in English (I4) from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S035#ab0",
+        "S035#ab1"
+      ]
+    },
+    {
+      "id": "S036",
+      "availability": "full text",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S036 meets all inclusion criteria: I1 (evaluates LLMs in title/abstract screening), I2 (reports sensitivity, specificity, and accuracy metrics), I3 (compares LLMs with traditional methods implicitly through performance metrics and comparison of prompting strategies), I4 (published in English), and I5 (published from 2020 onwards). It does not meet any exclusion criteria. Relevant chunks include [S036#ab0], [S036#ft0], [S036#ft5], [S036#ft20], and [S036#ft4].",
+      "evidence_chunks": [
+        "S036#ab0",
+        "S036#ft0",
+        "S036#ft5",
+        "S036#ft20",
+        "S036#ft4"
+      ]
+    },
+    {
+      "id": "S037",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S037 meets all inclusion criteria: I1 (evaluates LLMs for title/abstract screening), I2 (reports sensitivity, specificity, and precision metrics), I3 (compares LLMs with traditional methods, including manual and rule-based tools), I4 (published in English), and I5 (published from 2020 onwards). It does not meet any exclusion criteria (E1-E5). The study is a systematic review and meta-analysis that directly addresses the performance of LLMs in title/abstract screening for systematic reviews, and it reports relevant metrics for comparison with existing models and traditional methods.",
+      "evidence_chunks": [
+        "S037#ab0",
+        "S037#ab2",
+        "S037#ab1"
+      ]
+    },
+    {
+      "id": "S038",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S038 meets all inclusion criteria. It evaluates the performance of GPT-5 (an LLM) in title and abstract screening for systematic reviews (I1). It reports sensitivity, specificity, accuracy, PPV, NPV, and F1 scores (I2). It compares GPT-5 with human reviewers (implied comparison with traditional screening methods, I3). It is published in English (I4) and from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5). Relevant chunks: [S038#ab0], [S038#ab1].",
+      "evidence_chunks": [
+        "S038#ab0",
+        "S038#ab1"
+      ]
+    }
+  ],
+  "synthesis": {
+    "themes": [
+      {
+        "theme": "Accuracy of LLMs in Title and Abstract Screening",
+        "summary": "Large language models (LLMs) demonstrate high sensitivity in identifying relevant studies for title and abstract screening, with some studies reporting perfect sensitivity (100%). Specificity, however, varies more widely, with some models achieving high specificity (e.g., 99.9%) and others reporting lower values (e.g., 81%). Overall accuracy ranges from 85.1% to 99.9%, depending on the model and context. The trade-off between sensitivity and specificity is a key consideration, as some models prioritize sensitivity at the expense of specificity.",
+        "studies": [
+          "S008",
+          "S009",
+          "S010",
+          "S014",
+          "S027",
+          "S031",
+          "S032",
+          "S033",
+          "S034",
+          "S035",
+          "S036",
+          "S037",
+          "S038"
+        ],
+        "certainty": "low",
+        "certainty_reason": "All studies are at high risk of bias, with limited reporting of gold standard validation and potential for overfitting. Inconsistency in metrics (e.g., some studies report perfect sensitivity with lower specificity) and imprecision in estimates (e.g., wide confidence intervals) further reduce certainty."
+      },
+      {
+        "theme": "Time Efficiency of LLMs in Screening",
+        "summary": "LLMs significantly reduce the workload for title and abstract screening compared to traditional methods. Some studies report a 75% reduction in screening workload (S034), while others note that LLMs can complete screening in under 1 day for a fraction of the cost of human screening (S033). However, S032 only provides qualitative statements about time efficiency, with no numeric workload reduction reported.",
+        "studies": [
+          "S002",
+          "S032",
+          "S033",
+          "S034",
+          "S038"
+        ],
+        "certainty": "low",
+        "certainty_reason": "All studies are at high risk of bias, and time efficiency is often reported as a qualitative benefit rather than a quantified metric. The lack of standardized reporting on workload reduction and cost savings limits the ability to compare across studies."
+      },
+      {
+        "theme": "Variability in LLM Performance Across Domains and Prompting Strategies",
+        "summary": "LLM performance in title and abstract screening varies depending on the domain (e.g., clinical vs. preclinical) and the prompting strategy used. For example, models like GPT-4o and DeepSeek show consistent performance across different domains, while others struggle with tightly scoped or highly specialized topics. Prompt optimization, such as the use of pre-specified rules and early ",
+        "studies": [
+          "S002",
+          "S010",
+          "S036",
+          "S038"
+        ],
+        "certainty": "low",
+        "certainty_reason": "All studies are at high risk of bias, and performance variability is influenced by factors such as domain specificity and prompt design, which are not consistently reported across studies. This limits the ability to generalize findings."
+      },
+      {
+        "theme": "Inter-Rater Agreement and Consistency Between LLMs and Human Reviewers",
+        "summary": "LLMs show strong inter-rater agreement with human reviewers in title and abstract screening, with some studies reporting Cohen's Kappa of 99.8% (S034) and high consistency in inter-rater reliability (S032). However, other studies report lower agreement, suggesting variability in how well LLMs align with human judgment.",
+        "studies": [
+          "S002",
+          "S014",
+          "S032",
+          "S034",
+          "S036"
+        ],
+        "certainty": "low",
+        "certainty_reason": "All studies are at high risk of bias, and inter-rater agreement is often reported as a qualitative measure rather than a quantified metric. The lack of standardized reporting on agreement measures limits the ability to compare across studies."
+      }
+    ],
+    "overall_answer": "Large language models (LLMs) demonstrate high sensitivity in title and abstract screening for systematic reviews, with some studies reporting perfect sensitivity (100%) [S037], while specificity varies more widely, ranging from 81% [S037] to 99.9% [S034]. Overall accuracy ranges from 85.1% [S008] to 99.9% [S034]. However, the trade-off between sensitivity and specificity is a key consideration, as some models prioritize sensitivity at the expense of specificity. Time efficiency is also notable, with some studies reporting a 75% reduction in screening workload [S034] and others noting that LLMs can complete screening in under 1 day for a fraction of the cost of human screening [S033]. While LLMs show strong inter-rater agreement with human reviewers in some cases [S034], variability in performance across domains and prompting strategies suggests that further refinement is needed for consistent and reliable use.",
+    "research_gaps": [
+      "Limited reporting of gold standard validation and blinding in study design",
+      "Inconsistent reporting of sensitivity, specificity, and accuracy across studies",
+      "Need for standardized metrics and reporting guidelines for LLM performance in systematic review screening",
+      "Lack of long-term evaluation of LLM performance in real-world systematic review workflows"
+    ],
+    "meta_analysis_feasible": false,
+    "meta_analysis_note": "A meta-analysis is not feasible due to inconsistent reporting of outcome metrics (e.g., some studies report sensitivity, others report F1 or AUC) and lack of comparable metrics across studies. Additionally, the risk of bias is high across all included studies, further limiting the ability to pool results."
+  },
+  "critiques": [
+    {
+      "round": 1,
+      "issues": [
+        {
+          "severity": "major",
+          "section": "Overall Accuracy Claims",
+          "problem": "The synthesis states that LLM sensitivity ranges from 81\u202f% to 100\u202f% and specificity from 81\u202f% to 99.9\u202f%.  This is inaccurate because the lowest reported sensitivity in the evidence table is 73\u202f% (S027) and the lowest specificity is 81\u202f% (S037).  The synthesis also cites S035 as having 81\u202f% sensitivity, yet S035 reports only F1\u2011scores (0.389\u20130.854) and no sensitivity value.  Consequently the numerical ranges are unsupported by the data.",
+          "fix": "Revise the sensitivity range to 73\u202f%\u2013100\u202f% and the specificity range to 81\u202f%\u201399.9\u202f%.  Remove S035 from the sensitivity discussion or clarify that its sensitivity is not reported."
+        },
+        {
+          "severity": "major",
+          "section": "Time\u2011Efficiency Claims",
+          "problem": "The synthesis claims a workload reduction of 65\u202f%\u201385\u202f% for LLM screening, citing S008, S032, S033, S034, and S036.  Only S032 (65\u201385\u202f%), S033 (time\u2011cost data), and S034 (75\u202f% reduction) provide numeric workload\u2011reduction figures.  S008 and S036 do not report any workload\u2011reduction metric; they only mention \u201ctime efficiency\u201d in qualitative terms.  Thus the stated range is not fully supported.",
+          "fix": "Limit the workload\u2011reduction claim to the studies that provide numeric data (S032, S033, S034) and explicitly state that other studies only report qualitative time\u2011efficiency."
+        },
+        {
+          "severity": "major",
+          "section": "Inter\u2011Rater Agreement",
+          "problem": "The synthesis lists S008, S014, S034, S036, and S037 as evidence of high inter\u2011rater agreement.  Only S034 (Cohen\u2019s \u03ba\u202f=\u202f99.8\u202f%) and S036 (\u03ba\u202f=\u202f0.98, 0.95, 0.74) report agreement metrics.  S008 and S014 report only sensitivity, specificity, and accuracy, and S037 reports only sensitivity and specificity.  Therefore the claim that all five studies provide strong inter\u2011rater agreement is unsupported.",
+          "fix": "Restrict the inter\u2011rater agreement discussion to S034 and S036, and note that the other studies did not report agreement metrics."
+        },
+        {
+          "severity": "major",
+          "section": "Risk\u2011of\u2011Bias and Certainty",
+          "problem": "All included studies are rated \u201chigh\u201d risk of bias, yet the synthesis assigns \u201cmoderate\u201d certainty to the time\u2011efficiency theme and \u201clow\u201d certainty to the others without explicitly linking certainty to the RoB assessment.  The synthesis also omits a discussion of how the high RoB and heterogeneity (different LLMs, prompts, domains, and evaluation protocols) limit the generalizability of the findings.",
+          "fix": "Explicitly state that the high RoB and heterogeneity warrant low to very\u2011low certainty for all themes, and provide a brief discussion of the limitations that arise from these factors."
+        },
+        {
+          "severity": "major",
+          "section": "Missing Limitations",
+          "problem": "The synthesis does not mention several key limitations that are evident in the evidence table: (1) many studies lack numeric specificity or sensitivity data; (2) several studies provide only qualitative time\u2011efficiency statements; (3) no study reports a formal cost\u2011benefit analysis; (4) error taxonomy and domain\u2011specific performance are largely absent; (5) the studies use different gold standards and screening stages.  These omissions weaken the credibility of the synthesis.",
+          "fix": "Add a limitations paragraph summarizing the above points and explain how they affect the interpretation of the results."
+        },
+        {
+          "severity": "major",
+          "section": "Deviation from Protocol",
+          "problem": "The synthesis presents a meta\u2011analysis feasibility statement (\u201cA meta\u2011analysis is feasible\u2026\u201d) but does not describe the planned analytic approach, inclusion criteria for pooling, or how heterogeneity will be handled.  This deviates from a typical systematic review protocol that would pre\u2011define these methods.",
+          "fix": "Either provide the pre\u2011specified meta\u2011analysis plan (e.g., random\u2011effects model, subgroup analyses) or remove the feasibility claim until the analysis is actually performed."
+        }
+      ],
+      "approve": false
+    },
+    {
+      "round": 2,
+      "issues": [
+        {
+          "severity": "major",
+          "section": "Time Efficiency Theme",
+          "problem": "The synthesis states that workload reduction ranges from 65\u201385% (S032) to 75% (S034).  The evidence table shows that S032 reports sensitivity, specificity, accuracy, and inter\u2011rater reliability, but **no numeric workload\u2011reduction figure**.  Therefore the 65\u201385% figure is unsupported and incorrect.",
+          "fix": "Remove the 65\u201385% figure or replace it with a figure that is actually reported in the evidence (e.g., the 75% reduction from S034).  If no numeric data exist for S032, the theme should note that only qualitative time\u2011efficiency statements were available."
+        },
+        {
+          "severity": "major",
+          "section": "Study Selection & Reporting",
+          "problem": "The synthesis cites only a subset of studies for each theme (e.g., accuracy theme includes only S008, S027, S037) while other studies with relevant metrics (S010, S036, S032, S033, S035, S038) are omitted.  This selective reporting can bias the conclusions and does not reflect the full evidence base.",
+          "fix": "Include all studies that report the relevant metrics for each theme, or provide a transparent rationale for why certain studies were excluded from the narrative synthesis."
+        },
+        {
+          "severity": "minor",
+          "section": "Risk\u2011of\u2011Bias Discussion",
+          "problem": "The synthesis notes that all studies are high risk of bias and assigns low certainty, but it does not discuss how the specific bias domains (e.g., lack of blinding, inconsistent gold standards) might influence each metric (sensitivity, specificity, accuracy).",
+          "fix": "Add a brief discussion of the most important bias domains and their potential impact on the reported performance measures."
+        },
+        {
+          "severity": "minor",
+          "section": "Interpretation of Accuracy",
+          "problem": "The synthesis describes LLMs as having \u2018high accuracy\u2019 but does not highlight that some studies report perfect sensitivity with markedly lower specificity (e.g., S037).  This could mislead readers about the trade\u2011off between sensitivity and specificity.",
+          "fix": "Clarify that while sensitivity can be very high, specificity may vary widely, and the overall accuracy depends on the balance between the two."
+        }
+      ],
+      "approve": false
+    },
+    {
+      "round": 3,
+      "issues": [],
+      "approve": true
+    }
+  ]
+}

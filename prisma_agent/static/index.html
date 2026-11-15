@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRISMA-Agent: agentic systematic reviews</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/vendor/rough.js"></script>
+<script src="/static/vendor/marked.umd.js"></script>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand">
+      <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M4 4h16M6 9h12M8.5 14h7M11 19h2"/></svg></div>
+      <div><b>PRISMA-Agent</b><small>agentic systematic reviews</small></div>
+    </div>
+    <button class="nav on" data-view="review"><svg viewBox="0 0 24 24"><path d="M5 4h10l4 4v12H5z"/><path d="M9 12h6M9 16h4"/></svg>Review</button>
+    <button class="nav" data-view="arch"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4.5a2 2 0 0 1 2 2V14"/></svg>Architecture</button>
+    <button class="nav" data-view="docs"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/></svg>Docs</button>
+    <button class="nav" data-view="eval"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Evaluation</button>
+    <div class="runs" id="runs"><h5>Reviews</h5></div>
+    <div class="grow"></div>
+    <div class="sidestat">
+      <div><span class="dot on"></span>qwen3:8b · gpt-oss:20b</div>
+      <div><span class="dot on"></span>OpenAlex · PubMed · arXiv · S2</div>
+      <div><span class="dot on"></span>100% local inference</div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ================= REVIEW ================= -->
+    <section class="view on" id="v-review"><div class="wrap">
+      <div id="start">
+        <div class="eyebrow">New systematic review</div>
+        <h1>Ask a research question. Get a PRISMA&nbsp;2020 review.</h1>
+        <p class="lead">Eight specialised agents write the protocol, search four scholarly databases, screen every record twice, read the full texts through a hybrid RAG index, extract verified evidence, appraise bias, synthesise, criticise and write the manuscript. You approve the critical decisions.</p>
+        <div class="card newrev">
+          <textarea id="question" placeholder="e.g. How accurate are large language models at title and abstract screening for systematic reviews?"></textarea>
+          <div class="examples">
+            <button>How accurate are large language models at title and abstract screening for systematic reviews?</button>
+            <button>Does retrieval-augmented generation reduce hallucinations of large language models?</button>
+            <button>Effectiveness of deep learning for diabetic retinopathy detection from fundus images</button>
+          </div>
+          <div class="opts">
+            <label>Oversight <select id="hitl"><option value="human">Human-in-the-loop</option><option value="auto">Fully autonomous</option></select></label>
+            <label>Records / query <input id="mpq" type="number" value="25" min="5" max="100" style="width:64px"></label>
+            <label>Full-text budget <input id="mft" type="number" value="20" min="3" max="60" style="width:64px"></label>
+            <label>From year <input id="yf" type="number" value="2020" style="width:74px"></label>
+            <span style="flex:1"></span>
+            <button class="btn accent" id="go">Start review →</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="runview" style="display:none">
+        <div class="head">
+          <div><div class="eyebrow" id="rv-id"></div><h1 id="rv-q"></h1></div>
+          <span class="status" id="rv-status"></span>
+        </div>
+        <div class="stepper" id="stepper"></div>
+        <div id="hitl-panel"></div>
+        <div class="grid2">
+          <div>
+            <div class="tabs" id="tabs"></div>
+            <div id="panels"></div>
+          </div>
+          <div class="card feed"><h4>Agent activity · audit trail</h4><div id="feed"></div></div>
+        </div>
+      </div>
+    </div></section>
+
+    <!-- ================= ARCHITECTURE ================= -->
+    <section class="view" id="v-arch"><div class="page" style="max-width:1140px">
+      <div class="eyebrow">Architecture</div>
+      <h1>Eight agents, one auditable graph</h1>
+      <p class="lead">PRISMA-Agent is a <b>LangGraph state machine</b>. Every PRISMA stage is a node that reads and writes one typed, checkpointed state. A coordinator routes between stages, humans can intervene at two checkpoints, and every decision is written to an append-only audit trail.</p>
+      <h2>1 · System overview</h2>
+      <div class="card diagram"><svg id="d-system" viewBox="0 0 1100 500"></svg></div>
+      <h2>2 · The agent workflow (LangGraph)</h2>
+      <p class="muted">Solid arrows are fixed edges; dashed arrows are decisions made at run time by the coordinator, the critic or a human.</p>
+      <div class="card diagram"><svg id="d-graph" viewBox="0 0 1100 560"></svg></div>
+      <h2>3 · Hybrid RAG for full texts</h2>
+      <div class="card diagram"><svg id="d-rag" viewBox="0 0 1100 330"></svg></div>
+      <h2>The agents</h2>
+      <div class="cards" id="agent-cards"></div>
+    </div></section>
+
+    <!-- ================= DOCS ================= -->
+    <section class="view" id="v-docs"><div class="page">
+      <div class="eyebrow">Documentation</div>
+      <h1>Stack, methods and API</h1>
+      <p class="lead">What each technology does here, why it was chosen, and where to find it in the code.</p>
+      <h2>Technologies</h2>
+      <div class="cards" id="techs"></div>
+      <h2>Run it</h2>
+<pre class="block">ollama pull qwen3:8b && ollama pull gpt-oss:20b && ollama pull nomic-embed-text
+python3.11 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+uvicorn prisma_agent.server:app --port 8000                 # web app → http://127.0.0.1:8000
+python -m prisma_agent.cli run "your question" --hitl human  # terminal, same pipeline
+python -m prisma_agent.mcp_server                           # expose the pipeline as MCP tools
+pytest                                                      # tests</pre>
+      <h2>HTTP API</h2>
+      <table class="t"><thead><tr><th>Endpoint</th><th>Purpose</th></tr></thead><tbody>
+        <tr><td class="mono">POST /api/reviews</td><td>Start a review <code>{question, hitl, max_per_query, max_fulltext, year_from}</code></td></tr>
+        <tr><td class="mono">GET /api/reviews/{id}/events</td><td>Server-Sent Events: the audit trail, replayed then live</td></tr>
+        <tr><td class="mono">GET /api/reviews/{id}/state</td><td>Checkpointed state (protocol, records, decisions, evidence, synthesis) + pending human decision</td></tr>
+        <tr><td class="mono">POST /api/reviews/{id}/resume</td><td>Answer a human-in-the-loop interrupt and resume the graph</td></tr>
+        <tr><td class="mono">GET /runs/{id}/{file}</td><td>Artefacts: report.md / .docx, references.bib, CSVs, figures, trace.jsonl, manifest.json</td></tr>
+      </tbody></table>
+    </div></section>
+
+    <!-- ================= EVALUATION ================= -->
+    <section class="view" id="v-eval"><div class="page" style="max-width:1140px">
+      <div class="eyebrow">Evaluation</div>
+      <h1>Is it rigorous, and is it faster?</h1>
+      <p class="lead">Measured on the end-to-end demonstration run: completeness (PRISMA 2020 checklist), accuracy (verified quotes, known-item recall), inter-agent consistency (Cohen's κ, reproducibility) and time saved compared with a manual review.</p>
+      <div id="eval-body"><div class="empty-note">Loading…</div></div>
+    </div></section>
+  </main>
+</div>
+<script src="/static/diagrams.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

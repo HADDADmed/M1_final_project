@@ -1,0 +1,85 @@
+{
+  "run_id": "20261115-145329-does-retrieval-augmented-generation-redu",
+  "created": "2026-11-15 15:01:55",
+  "config": {
+    "question": "Does retrieval-augmented generation reduce hallucinations of large language models?",
+    "sources": [
+      "openalex",
+      "pubmed",
+      "arxiv",
+      "semanticscholar"
+    ],
+    "max_per_query": 10,
+    "year_from": 2020,
+    "worker_model": "qwen3:8b",
+    "judge_model": "gpt-oss:latest",
+    "embed_model": "nomic-embed-text",
+    "seed": 42,
+    "temperature": 0.0,
+    "max_fulltext": 5,
+    "hitl": "human",
+    "max_critic_rounds": 2
+  },
+  "config_fingerprint": "ceb3c5936a33",
+  "model_digests": {
+    "nomic-embed-text:latest": "0a109f422b47",
+    "qwen3:8b": "500a1f067a9f",
+    "gpt-oss:latest": "17052f91a42e"
+  },
+  "packages": {
+    "langgraph": "1.2.22",
+    "langchain-core": "1.8.0",
+    "langchain-ollama": "1.1.0",
+    "faiss-cpu": "1.16.0",
+    "flashrank": "0.2.10",
+    "pymupdf": "2.1"
+  },
+  "timings_seconds": {
+    "protocol": 6.9,
+    "search_strategy_r1": 2.1,
+    "retrieval": 16.3,
+    "ta_screening": 238.8,
+    "conflict_resolution": 0.0,
+    "fulltext": 10.3,
+    "extraction_appraisal": 61.5,
+    "synthesis_r0": 8.0,
+    "critic_r1": 21.0,
+    "synthesis_r1": 9.2,
+    "critic_r2": 21.8
+  },
+  "prisma": {
+    "identified": {
+      "openalex": 30,
+      "pubmed": 3,
+      "arxiv": 10,
+      "semanticscholar": 10
+    },
+    "identified_total": 53,
+    "duplicates": 7,
+    "screened": 46,
+    "excluded_ta": 15,
+    "sought": 5,
+    "not_retrieved": 26,
+    "abstract_only": 3,
+    "assessed": 5,
+    "excluded_ft": 0,
+    "reasons": {},
+    "included": 5
+  },
+  "metrics": {
+    "records_screened": 46,
+    "included": 5,
+    "cohen_kappa": 0.044,
+    "conflicts": 15,
+    "quote_grounding_rate": 1.0,
+    "prisma_checklist_coverage": 1.0,
+    "critic_rounds": 2,
+    "critic_approved": true,
+    "llm_calls": 119,
+    "llm_seconds": 1038.5,
+    "pipeline_minutes": 6.6,
+    "manual_estimate_hours": 9.9,
+    "manual_estimate_basis": "2 reviewers \u00d7 (0.5 min per abstract + 10 min per full text + 45 min per extraction/appraisal)"
+  },
+  "prisma_checklist_coverage": 1.0
+}

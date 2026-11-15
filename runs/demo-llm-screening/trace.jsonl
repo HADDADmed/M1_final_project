@@ -1,0 +1,629 @@
+{"t": 0.006, "ts": "14:22:50", "kind": "run", "agent": "cli", "status": "start", "question": "How accurate are large language models at title and abstract screening for systematic reviews?", "fingerprint": "be3976e3db92"}
+{"t": 0.039, "ts": "14:22:50", "kind": "stage", "agent": "planner", "status": "start", "title": "Protocol definition"}
+{"t": 4.781, "ts": "14:22:55", "kind": "llm_call", "agent": "planner", "model": "qwen3:8b", "seconds": 4.73, "in_tokens": 203, "out_tokens": 898}
+{"t": 4.782, "ts": "14:22:55", "kind": "decision", "agent": "planner", "what": "protocol", "detail": {"title": "Large Language Models for Title and Abstract Screening in Systematic Reviews: A Systematic Review", "objective": "To evaluate the accuracy of large language models (LLMs) in performing title and abstract screening for systematic reviews.", "framework": "PICO", "population": "Large language models (LLMs) used for screening titles and abstracts in systematic reviews.", "intervention_or_concept": "Application of LLMs for title and abstract screening in systematic reviews.", "comparator": "Traditional screening methods (e.g., manual screening by reviewers, rule-based screening tools).", "outcomes": ["Sensitivity of LLMs in identifying relevant studies.", "Specificity of LLMs in excluding irrelevant studies.", "Overall accuracy of LLMs in title and abstract screening.", "Inter-rater agreement between LLMs and human reviewers.", "Time efficiency of LLMs compared to traditional methods."], "context": "Systematic reviews in health and social sciences where LLMs are used for title and abstract screening.", "inclusion": [{"id": "I1", "text": "Studies that evaluate the performance of large language models (LLMs) in title and abstract screening for systematic reviews."}, {"id": "I2", "text": "Studies that report sensitivity, specificity, or overall accuracy metrics for LLMs in screening tasks."}, {"id": "I3", "text": "Studies that compare LLMs with traditional screening methods (e.g., manual screening, rule-based tools)."}, {"id": "I4", "text": "Studies published in peer-reviewed journals, conference proceedings, or grey literature in English."}, {"id": "I5", "text": "Studies published from 2020 onwards."}], "exclusion": [{"id": "E1", "text": "Studies that do not use LLMs for title and abstract screening (e.g., studies using only rule-based or manual screening)."}, {"id": "E2", "text": "Studies that focus on full-text screening or data extraction rather than title and abstract screening."}, {"id": "E3", "text": "Studies that do not report performance metrics (e.g., sensitivity, specificity, accuracy) for LLMs."}, {"id": "E4", "text": "Studies that are not available in English."}, {"id": "E5", "text": "Studies that are not peer-reviewed or are not published in the specified timeframe (2020 onwards)."}], "study_designs": ["Randomized controlled trials (RCTs) comparing LLMs with traditional methods.", "Quasi-experimental studies evaluating LLM performance.", "Observational studies reporting LLM performance metrics.", "Simulation studies or computational models evaluating LLM accuracy."], "languages": ["English"], "rob_domains": ["Dataset representativeness: Whether the training and test datasets are representative of the target population of systematic reviews.", "Reference standard: Whether a gold standard (e.g., expert review) is used to assess LLM performance.", "Leakage: Whether there is any data leakage between training and testing phases.", "Reporting of metrics: Whether the study reports sensitivity, specificity, accuracy, and inter-rater agreement.", "Reproducibility: Whether the study provides sufficient detail to reproduce the LLM screening process."], "synthesis_plan": "A meta-analysis will be conducted to pool sensitivity, specificity, and accuracy metrics across studies. Subgroup analyses will be performed based on study design, LLM type, and screening context. Risk-of-bias assessments will be conducted using the Cochrane Risk of Bias 2 tool for RCTs and a modified version for other study designs. Narrative synthesis will be used to summarize findings on the accuracy and utility of LLMs in title and abstract screening for systematic reviews."}}
+{"t": 4.783, "ts": "14:22:55", "kind": "hitl", "agent": "auto", "status": "done", "what": "protocol approval", "approved": true, "note": "auto-approve mode (logged)"}
+{"t": 4.784, "ts": "14:22:55", "kind": "stage", "agent": "search_strategist", "status": "start", "title": "Search strategy (round 1)"}
+{"t": 6.8, "ts": "14:22:57", "kind": "llm_call", "agent": "search_strategist", "model": "qwen3:8b", "seconds": 2.01, "in_tokens": 182, "out_tokens": 367}
+{"t": 6.801, "ts": "14:22:57", "kind": "decision", "agent": "search_strategist", "what": "search strategy", "detail": {"concepts": [{"concept": "Large Language Models", "terms": ["Large Language Models", "LLMs", "Transformer-based models", "Deep learning models", "Natural Language Processing (NLP) models", "Pre-trained language models", "BERT", "GPT", "RoBERTa", "T5", "LLM"], "mesh": []}, {"concept": "Systematic Review Screening", "terms": ["Systematic review screening", "Title and abstract screening", "Study selection", "Literature screening", "Study inclusion/exclusion", "Systematic review process", "Study screening"], "mesh": []}, {"concept": "Accuracy and Performance Metrics", "terms": ["Accuracy", "Sensitivity", "Specificity", "Precision", "Recall", "F1 score", "Inter-rater agreement", "Kappa statistic", "Agreement", "Performance metrics"], "mesh": []}], "keyword_queries": ["Large Language Models AND systematic review screening", "LLMs AND title abstract screening accuracy", "NLP models AND study selection performance"], "rationale": "These concept blocks and keyword queries are designed to capture the core elements of the review question: the use of LLMs in the context of systematic review screening, and the evaluation of their performance. The keyword queries are structured to prioritize relevance and are suitable for use in search engines or databases like PubMed, Google Scholar, or Web of Science.", "compiled": {"boolean": ["(\"Large Language Models\" OR \"LLMs\" OR \"Transformer-based models\" OR \"Deep learning models\" OR \"Natural Language Processing (NLP) models\" OR \"Pre-trained language models\" OR \"BERT\" OR \"GPT\" OR \"RoBERTa\" OR \"T5\" OR \"LLM\") AND (\"Systematic review screening\" OR \"Title and abstract screening\" OR \"Study selection\" OR \"Literature screening\" OR \"Study inclusion/exclusion\" OR \"Systematic review process\" OR \"Study screening\") AND (\"Accuracy\" OR \"Sensitivity\" OR \"Specificity\" OR \"Precision\" OR \"Recall\" OR \"F1 score\" OR \"Inter-rater agreement\" OR \"Kappa statistic\" OR \"Agreement\" OR \"Performance metrics\")"], "pubmed": ["(\"Large Language Models\"[tiab] OR \"LLMs\"[tiab] OR \"Transformer-based models\"[tiab] OR \"Deep learning models\"[tiab] OR \"Natural Language Processing (NLP) models\"[tiab] OR \"Pre-trained language models\"[tiab]) AND (\"Systematic review screening\"[tiab] OR \"Title and abstract screening\"[tiab] OR \"Study selection\"[tiab] OR \"Literature screening\"[tiab] OR \"Study inclusion/exclusion\"[tiab] OR \"Systematic review process\"[tiab]) AND (\"Accuracy\"[tiab] OR \"Sensitivity\"[tiab] OR \"Specificity\"[tiab] OR \"Precision\"[tiab] OR \"Recall\"[tiab] OR \"F1 score\"[tiab])"], "arxiv": ["(all:\"Large Language Models\" OR all:LLMs OR all:\"Transformer-based models\" OR all:\"Deep learning models\") AND (all:\"Systematic review screening\" OR all:\"Title and abstract screening\" OR all:\"Study selection\" OR all:\"Literature screening\") AND (all:Accuracy OR all:Sensitivity OR all:Specificity OR all:Precision)"], "openalex": ["Large Language Models AND systematic review screening", "LLMs AND title abstract screening accuracy", "NLP models AND study selection performance"], "semanticscholar": ["Large Language Models AND systematic review screening", "LLMs AND title abstract screening accuracy"]}}}
+{"t": 6.802, "ts": "14:22:57", "kind": "stage", "agent": "retrieval", "status": "start", "title": "Multi-source retrieval & deduplication"}
+{"t": 6.806, "ts": "14:22:57", "kind": "tool", "agent": "retrieval", "tool": "search_openalex", "query": "Large Language Models AND systematic review screening", "hits": 25}
+{"t": 6.808, "ts": "14:22:57", "kind": "tool", "agent": "retrieval", "tool": "search_openalex", "query": "LLMs AND title abstract screening accuracy", "hits": 25}
+{"t": 6.81, "ts": "14:22:57", "kind": "tool", "agent": "retrieval", "tool": "search_openalex", "query": "NLP models AND study selection performance", "hits": 25}
+{"t": 6.816, "ts": "14:22:57", "kind": "tool", "agent": "retrieval", "tool": "search_pubmed", "query": "(\"Large Language Models\"[tiab] OR \"LLMs\"[tiab] OR \"Transformer-based models\"[tiab] OR \"Deep learning models\"[tiab] OR \"Natural Language Processing (NLP) models\"[tiab] OR \"Pre-trained language models\"[tiab]) AND (\"Systematic review screening\"[tiab] OR \"Title and abstract screening\"[tiab] OR \"Study selection\"[tiab] OR \"Literature screening\"[tiab] OR \"Study inclusion/exclusion\"[tiab] OR \"Systematic review process\"[tiab]) AND (\"Accuracy\"[tiab] OR \"Sensitivity\"[tiab] OR \"Specificity\"[tiab] OR \"Precision\"[tiab] OR \"Recall\"[tiab] OR \"F1 score\"[tiab])", "hits": 25}
+{"t": 6.817, "ts": "14:22:57", "kind": "tool", "agent": "retrieval", "tool": "search_arxiv", "query": "(all:\"Large Language Models\" OR all:LLMs OR all:\"Transformer-based models\" OR all:\"Deep learning models\") AND (all:\"Systematic review screening\" OR all:\"Title and abstract screening\" OR all:\"Study selection\" OR all:\"Literature screening\") AND (all:Accuracy OR all:Sensitivity OR all:Specificity OR all:Precision)", "hits": 23}
+{"t": 19.142, "ts": "14:23:10", "kind": "tool", "agent": "retrieval", "tool": "search_semanticscholar", "query": "Large Language Models AND systematic review screening", "hits": 0, "error": "semanticscholar: request failed after 3 attempts"}
+{"t": 30.798, "ts": "14:23:21", "kind": "tool", "agent": "retrieval", "tool": "search_semanticscholar", "query": "LLMs AND title abstract screening accuracy", "hits": 0, "error": "semanticscholar: request failed after 3 attempts"}
+{"t": 30.811, "ts": "14:23:21", "kind": "decision", "agent": "retrieval", "what": "deduplication", "identified": 123, "unique": 115, "duplicates": 8, "examples": [{"kept": "Accuracy of Large Language Models for Literature Screening in Thoracic Surgery: ", "dropped_source": "openalex", "reason": "same DOI"}, {"kept": "Performance of a Large Language Model in Screening Citations.", "dropped_source": "openalex", "reason": "same DOI"}, {"kept": "Performance of a Large Language Model in Screening Citations.", "dropped_source": "openalex", "reason": "same DOI"}, {"kept": "Evaluating the effectiveness of large language models in abstract screening: a c", "dropped_source": "openalex", "reason": "same DOI"}, {"kept": "Transforming literature screening: The emerging role of large language models in", "dropped_source": "openalex", "reason": "same DOI"}]}
+{"t": 30.812, "ts": "14:23:21", "kind": "coordinator", "agent": "coordinator", "decision": "proceed to screening", "reason": "115 unique records"}
+{"t": 30.812, "ts": "14:23:21", "kind": "stage", "agent": "screener", "status": "start", "title": "Title/abstract screening: 115 records × 2 reviewers"}
+{"t": 33.482, "ts": "14:23:24", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 2.64, "in_tokens": 591, "out_tokens": 444}
+{"t": 34.956, "ts": "14:23:25", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 4.12, "in_tokens": 601, "out_tokens": 232}
+{"t": 36.998, "ts": "14:23:27", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.16, "in_tokens": 889, "out_tokens": 329}
+{"t": 39.198, "ts": "14:23:30", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.36, "in_tokens": 881, "out_tokens": 373}
+{"t": 40.93, "ts": "14:23:31", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.44, "in_tokens": 591, "out_tokens": 296}
+{"t": 40.931, "ts": "14:23:31", "kind": "screening", "agent": "screeners", "id": "S001", "a": "include", "b": "include", "title": "A Reproducible Optimisation Protocol for Calibrating Prompt-Based Large Language Model Wor"}
+{"t": 42.892, "ts": "14:23:33", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.93, "in_tokens": 601, "out_tokens": 323}
+{"t": 44.773, "ts": "14:23:35", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.77, "in_tokens": 889, "out_tokens": 310}
+{"t": 46.481, "ts": "14:23:37", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.28, "in_tokens": 881, "out_tokens": 289}
+{"t": 46.482, "ts": "14:23:37", "kind": "screening", "agent": "screeners", "id": "S002", "a": "include", "b": "include", "title": "AI-assisted literature screening: A hybrid approach using large language models and retrie"}
+{"t": 48.16, "ts": "14:23:39", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.22, "in_tokens": 550, "out_tokens": 292}
+{"t": 49.101, "ts": "14:23:40", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.21, "in_tokens": 690, "out_tokens": 150}
+{"t": 49.102, "ts": "14:23:40", "kind": "screening", "agent": "screeners", "id": "S004", "a": "exclude", "b": "exclude", "title": "Ada-RS: Adaptive Rejection Sampling for Selective Thinking"}
+{"t": 50.09, "ts": "14:23:41", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.32, "in_tokens": 978, "out_tokens": 160}
+{"t": 50.091, "ts": "14:23:41", "kind": "screening", "agent": "screeners", "id": "S003", "a": "include", "b": "exclude", "title": "Accuracy of the large language model ChatGPT in adult emergency department triage: a syste"}
+{"t": 51.484, "ts": "14:23:42", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 5.0, "in_tokens": 719, "out_tokens": 229}
+{"t": 53.265, "ts": "14:23:44", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.1, "in_tokens": 550, "out_tokens": 302}
+{"t": 55.556, "ts": "14:23:46", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.45, "in_tokens": 615, "out_tokens": 380}
+{"t": 57.426, "ts": "14:23:48", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.33, "in_tokens": 768, "out_tokens": 335}
+{"t": 59.5, "ts": "14:23:50", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.01, "in_tokens": 719, "out_tokens": 332}
+{"t": 60.618, "ts": "14:23:51", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.35, "in_tokens": 638, "out_tokens": 183}
+{"t": 60.619, "ts": "14:23:51", "kind": "screening", "agent": "screeners", "id": "S005", "a": "exclude", "b": "exclude", "title": "An overview of artificial intelligence approaches for automating evidence synthesis."}
+{"t": 61.931, "ts": "14:23:52", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.37, "in_tokens": 615, "out_tokens": 206}
+{"t": 61.932, "ts": "14:23:52", "kind": "screening", "agent": "screeners", "id": "S007", "a": "include", "b": "exclude", "title": "Automated Analysis Framework for Multilingual Climate-Health Literature Based on Multi-Age"}
+{"t": 63.234, "ts": "14:23:54", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 5.81, "in_tokens": 856, "out_tokens": 205}
+{"t": 64.394, "ts": "14:23:55", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 4.89, "in_tokens": 808, "out_tokens": 175}
+{"t": 64.396, "ts": "14:23:55", "kind": "screening", "agent": "screeners", "id": "S006", "a": "exclude", "b": "exclude", "title": "AutoSOTA: An End-to-End Automated Research System for State-of-the-Art AI Model Discovery"}
+{"t": 66.255, "ts": "14:23:57", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 5.63, "in_tokens": 720, "out_tokens": 306}
+{"t": 68.258, "ts": "14:23:59", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.32, "in_tokens": 895, "out_tokens": 339}
+{"t": 69.846, "ts": "14:24:00", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.6, "in_tokens": 768, "out_tokens": 224}
+{"t": 71.813, "ts": "14:24:02", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.41, "in_tokens": 722, "out_tokens": 322}
+{"t": 73.455, "ts": "14:24:04", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.19, "in_tokens": 720, "out_tokens": 245}
+{"t": 74.554, "ts": "14:24:05", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.29, "in_tokens": 895, "out_tokens": 153}
+{"t": 74.559, "ts": "14:24:05", "kind": "screening", "agent": "screeners", "id": "S010", "a": "include", "b": "include", "title": "Evaluation of a Prompt-Standardized LLM Pipeline for Title–Abstract Screening: Cross-Domai"}
+{"t": 75.946, "ts": "14:24:06", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.1, "in_tokens": 856, "out_tokens": 185}
+{"t": 75.948, "ts": "14:24:06", "kind": "screening", "agent": "screeners", "id": "S008", "a": "include", "b": "include", "title": "Automating Screening of Titles and Abstracts in Systematic Reviews: An Assessment of GPT-4"}
+{"t": 77.547, "ts": "14:24:08", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.72, "in_tokens": 722, "out_tokens": 239}
+{"t": 77.548, "ts": "14:24:08", "kind": "screening", "agent": "screeners", "id": "S011", "a": "exclude", "b": "exclude", "title": "Evaluation of large language model-generated information in diabetes health patient educat"}
+{"t": 78.65, "ts": "14:24:09", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.19, "in_tokens": 808, "out_tokens": 175}
+{"t": 78.652, "ts": "14:24:09", "kind": "screening", "agent": "screeners", "id": "S009", "a": "include", "b": "include", "title": "Beyond Accuracy: LLM Variability in Evidence Screening for Software Engineering SLRs"}
+{"t": 80.721, "ts": "14:24:11", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.15, "in_tokens": 645, "out_tokens": 349}
+{"t": 82.669, "ts": "14:24:13", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.71, "in_tokens": 602, "out_tokens": 326}
+{"t": 84.576, "ts": "14:24:15", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.02, "in_tokens": 1009, "out_tokens": 333}
+{"t": 86.37, "ts": "14:24:17", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.71, "in_tokens": 664, "out_tokens": 294}
+{"t": 88.349, "ts": "14:24:19", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.62, "in_tokens": 645, "out_tokens": 330}
+{"t": 88.35, "ts": "14:24:19", "kind": "screening", "agent": "screeners", "id": "S012", "a": "include", "b": "include", "title": "Fine-Tuning A Large Language Model for Systematic Review Screening"}
+{"t": 90.14, "ts": "14:24:21", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.46, "in_tokens": 602, "out_tokens": 318}
+{"t": 91.557, "ts": "14:24:22", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.97, "in_tokens": 1009, "out_tokens": 224}
+{"t": 91.558, "ts": "14:24:22", "kind": "screening", "agent": "screeners", "id": "S014", "a": "include", "b": "include", "title": "Large language models show promising performance for some systematic review tasks but call"}
+{"t": 93.486, "ts": "14:24:24", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.11, "in_tokens": 664, "out_tokens": 310}
+{"t": 95.833, "ts": "14:24:26", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.48, "in_tokens": 613, "out_tokens": 364}
+{"t": 96.992, "ts": "14:24:27", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.85, "in_tokens": 691, "out_tokens": 174}
+{"t": 96.993, "ts": "14:24:27", "kind": "screening", "agent": "screeners", "id": "S013", "a": "exclude", "b": "exclude", "title": "Large language models meet NLP: a survey"}
+{"t": 98.919, "ts": "14:24:29", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.35, "in_tokens": 578, "out_tokens": 317}
+{"t": 99.878, "ts": "14:24:30", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.39, "in_tokens": 753, "out_tokens": 148}
+{"t": 99.879, "ts": "14:24:30", "kind": "screening", "agent": "screeners", "id": "S015", "a": "exclude", "b": "exclude", "title": "Not All Queries Need Rewriting: When Prompt-Only LLM Refinement Helps and Hurts Dense Retr"}
+{"t": 100.972, "ts": "14:24:31", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 5.14, "in_tokens": 701, "out_tokens": 175}
+{"t": 103.311, "ts": "14:24:34", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.31, "in_tokens": 774, "out_tokens": 385}
+{"t": 105.179, "ts": "14:24:36", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.25, "in_tokens": 578, "out_tokens": 309}
+{"t": 107.319, "ts": "14:24:38", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.43, "in_tokens": 451, "out_tokens": 361}
+{"t": 109.445, "ts": "14:24:40", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.46, "in_tokens": 613, "out_tokens": 304}
+{"t": 109.449, "ts": "14:24:40", "kind": "screening", "agent": "screeners", "id": "S016", "a": "include", "b": "include", "title": "SciLitBench: Benchmark and Design Principles for LLM-Powered Systematic Literature Reviews"}
+{"t": 111.557, "ts": "14:24:42", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.24, "in_tokens": 774, "out_tokens": 320}
+{"t": 111.558, "ts": "14:24:42", "kind": "screening", "agent": "screeners", "id": "S018", "a": "exclude", "b": "exclude", "title": "Selective Prediction and Uncertainty-Aware Referral for Pap Smear Classification"}
+{"t": 112.652, "ts": "14:24:43", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.47, "in_tokens": 667, "out_tokens": 164}
+{"t": 112.656, "ts": "14:24:43", "kind": "screening", "agent": "screeners", "id": "S017", "a": "exclude", "b": "exclude", "title": "Selective Knowledge Edit Reversal via Gated Singular Vector Shrinkage"}
+{"t": 114.487, "ts": "14:24:45", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.16, "in_tokens": 451, "out_tokens": 274}
+{"t": 114.489, "ts": "14:24:45", "kind": "screening", "agent": "screeners", "id": "S019", "a": "include", "b": "include", "title": "Single-model, multi-model and human-in-the-loop large language model configurations for ev"}
+{"t": 116.614, "ts": "14:24:47", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.15, "in_tokens": 601, "out_tokens": 352}
+{"t": 118.634, "ts": "14:24:49", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.07, "in_tokens": 826, "out_tokens": 355}
+{"t": 120.805, "ts": "14:24:51", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.14, "in_tokens": 920, "out_tokens": 348}
+{"t": 122.746, "ts": "14:24:53", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.25, "in_tokens": 580, "out_tokens": 324}
+{"t": 124.251, "ts": "14:24:55", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.63, "in_tokens": 601, "out_tokens": 236}
+{"t": 124.252, "ts": "14:24:55", "kind": "screening", "agent": "screeners", "id": "S020", "a": "include", "b": "exclude", "title": "Systematic Literature Reviews With Two Multi-Agentic Systems And Human-In-The-Loop"}
+{"t": 125.609, "ts": "14:24:56", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.97, "in_tokens": 914, "out_tokens": 214}
+{"t": 126.796, "ts": "14:24:57", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.98, "in_tokens": 920, "out_tokens": 177}
+{"t": 126.797, "ts": "14:24:57", "kind": "screening", "agent": "screeners", "id": "S022", "a": "exclude", "b": "exclude", "title": "Utility of Generative Artificial Intelligence in Orthopaedic Surgery Patient Education Mat"}
+{"t": 128.138, "ts": "14:24:59", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.37, "in_tokens": 580, "out_tokens": 197}
+{"t": 128.139, "ts": "14:24:59", "kind": "screening", "agent": "screeners", "id": "S023", "a": "exclude", "b": "exclude", "title": "A Report on the llms evaluating the high school questions"}
+{"t": 130.239, "ts": "14:25:01", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 5.98, "in_tokens": 623, "out_tokens": 351}
+{"t": 131.959, "ts": "14:25:02", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.34, "in_tokens": 826, "out_tokens": 274}
+{"t": 131.96, "ts": "14:25:02", "kind": "screening", "agent": "screeners", "id": "S021", "a": "include", "b": "include", "title": "TiAb Review Plugin: A Browser-Based Tool for AI-Assisted Study Selection in Systematic Rev"}
+{"t": 134.069, "ts": "14:25:05", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.27, "in_tokens": 845, "out_tokens": 376}
+{"t": 136.211, "ts": "14:25:07", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.07, "in_tokens": 702, "out_tokens": 369}
+{"t": 137.646, "ts": "14:25:08", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.4, "in_tokens": 623, "out_tokens": 218}
+{"t": 137.647, "ts": "14:25:08", "kind": "screening", "agent": "screeners", "id": "S024", "a": "include", "b": "include", "title": "A foundation model for human-AI collaboration in medical literature mining."}
+{"t": 139.594, "ts": "14:25:10", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.63, "in_tokens": 1098, "out_tokens": 340}
+{"t": 140.838, "ts": "14:25:11", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.77, "in_tokens": 933, "out_tokens": 208}
+{"t": 142.078, "ts": "14:25:13", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.86, "in_tokens": 702, "out_tokens": 199}
+{"t": 142.079, "ts": "14:25:13", "kind": "screening", "agent": "screeners", "id": "S026", "a": "include", "b": "include", "title": "Accelerating Discovery: Rapid Literature Screening with LLMs"}
+{"t": 143.803, "ts": "14:25:14", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.15, "in_tokens": 760, "out_tokens": 300}
+{"t": 145.116, "ts": "14:25:16", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.51, "in_tokens": 1098, "out_tokens": 204}
+{"t": 145.117, "ts": "14:25:16", "kind": "screening", "agent": "screeners", "id": "S027", "a": "include", "b": "include", "title": "Accuracy of Large Language Models for Literature Screening in Thoracic Surgery: Diagnostic"}
+{"t": 146.947, "ts": "14:25:17", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.1, "in_tokens": 845, "out_tokens": 320}
+{"t": 148.763, "ts": "14:25:19", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.68, "in_tokens": 726, "out_tokens": 318}
+{"t": 150.183, "ts": "14:25:21", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.37, "in_tokens": 760, "out_tokens": 223}
+{"t": 150.185, "ts": "14:25:21", "kind": "screening", "agent": "screeners", "id": "S028", "a": "exclude", "b": "exclude", "title": "Artificial Intelligence in Pancreatic Imaging: A Systematic Review."}
+{"t": 152.234, "ts": "14:25:23", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.11, "in_tokens": 869, "out_tokens": 359}
+{"t": 153.359, "ts": "14:25:24", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.41, "in_tokens": 934, "out_tokens": 182}
+{"t": 153.36, "ts": "14:25:24", "kind": "screening", "agent": "screeners", "id": "S025", "a": "include", "b": "exclude", "title": "AI Agents in Clinical Medicine: A Systematic Review."}
+{"t": 155.222, "ts": "14:25:26", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.45, "in_tokens": 726, "out_tokens": 299}
+{"t": 156.961, "ts": "14:25:27", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.77, "in_tokens": 978, "out_tokens": 300}
+{"t": 158.651, "ts": "14:25:29", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.41, "in_tokens": 869, "out_tokens": 290}
+{"t": 160.7, "ts": "14:25:31", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.33, "in_tokens": 726, "out_tokens": 339}
+{"t": 161.769, "ts": "14:25:32", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.55, "in_tokens": 815, "out_tokens": 175}
+{"t": 161.77, "ts": "14:25:32", "kind": "screening", "agent": "screeners", "id": "S029", "a": "exclude", "b": "exclude", "title": "Assessing ML classification algorithms and NLP techniques for depression detection: An exp"}
+{"t": 163.306, "ts": "14:25:34", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.34, "in_tokens": 978, "out_tokens": 234}
+{"t": 163.307, "ts": "14:25:34", "kind": "screening", "agent": "screeners", "id": "S031", "a": "include", "b": "include", "title": "Automation of Systematic Reviews with Large Language Models"}
+{"t": 164.382, "ts": "14:25:35", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.73, "in_tokens": 958, "out_tokens": 175}
+{"t": 164.383, "ts": "14:25:35", "kind": "screening", "agent": "screeners", "id": "S030", "a": "include", "b": "exclude", "title": "Assessing the Feasibility and Acceptability of a Bespoke Large Language Model Pipeline to "}
+{"t": 165.655, "ts": "14:25:36", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 4.95, "in_tokens": 726, "out_tokens": 196}
+{"t": 165.657, "ts": "14:25:36", "kind": "screening", "agent": "screeners", "id": "S032", "a": "include", "b": "include", "title": "Development and evaluation of prompts for a large language model to screen titles and abst"}
+{"t": 167.642, "ts": "14:25:38", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 5.86, "in_tokens": 917, "out_tokens": 352}
+{"t": 170.105, "ts": "14:25:41", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.79, "in_tokens": 862, "out_tokens": 419}
+{"t": 172.254, "ts": "14:25:43", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.86, "in_tokens": 715, "out_tokens": 363}
+{"t": 174.176, "ts": "14:25:45", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.51, "in_tokens": 747, "out_tokens": 347}
+{"t": 175.427, "ts": "14:25:46", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.78, "in_tokens": 917, "out_tokens": 193}
+{"t": 175.429, "ts": "14:25:46", "kind": "screening", "agent": "screeners", "id": "S033", "a": "include", "b": "include", "title": "Development of Prompt Templates for Large Language Model–Driven Screening in Systematic Re"}
+{"t": 176.886, "ts": "14:25:47", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.77, "in_tokens": 862, "out_tokens": 240}
+{"t": 176.888, "ts": "14:25:47", "kind": "screening", "agent": "screeners", "id": "S034", "a": "include", "b": "include", "title": "Do it faster with PICOS: Generative AI-Assisted systematic review screening."}
+{"t": 178.342, "ts": "14:25:49", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.08, "in_tokens": 715, "out_tokens": 221}
+{"t": 178.344, "ts": "14:25:49", "kind": "screening", "agent": "screeners", "id": "S035", "a": "include", "b": "include", "title": "Evaluating Large Language Models for Radiology Systematic Review Title and Abstract Screen"}
+{"t": 179.468, "ts": "14:25:50", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 5.29, "in_tokens": 835, "out_tokens": 180}
+{"t": 181.528, "ts": "14:25:52", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.09, "in_tokens": 755, "out_tokens": 346}
+{"t": 183.579, "ts": "14:25:54", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.69, "in_tokens": 754, "out_tokens": 344}
+{"t": 185.497, "ts": "14:25:56", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.15, "in_tokens": 503, "out_tokens": 325}
+{"t": 186.727, "ts": "14:25:57", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.25, "in_tokens": 747, "out_tokens": 192}
+{"t": 186.729, "ts": "14:25:57", "kind": "screening", "agent": "screeners", "id": "S036", "a": "include", "b": "include", "title": "Evaluating Prompting Strategies and Large Language Models in Systematic Literature Review "}
+{"t": 188.173, "ts": "14:25:59", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.64, "in_tokens": 755, "out_tokens": 231}
+{"t": 189.546, "ts": "14:26:00", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.96, "in_tokens": 754, "out_tokens": 193}
+{"t": 191.604, "ts": "14:26:02", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.1, "in_tokens": 503, "out_tokens": 331}
+{"t": 191.606, "ts": "14:26:02", "kind": "screening", "agent": "screeners", "id": "S039", "a": "include", "b": "include", "title": "GPT-3.5 Turbo and GPT-4 Turbo in Title and Abstract Screening for Systematic Reviews."}
+{"t": 193.858, "ts": "14:26:04", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.12, "in_tokens": 857, "out_tokens": 327}
+{"t": 195.224, "ts": "14:26:06", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.05, "in_tokens": 843, "out_tokens": 177}
+{"t": 195.225, "ts": "14:26:06", "kind": "screening", "agent": "screeners", "id": "S037", "a": "include", "b": "include", "title": "Evaluating large language models for title/abstract screening: a systematic review and met"}
+{"t": 196.521, "ts": "14:26:07", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.97, "in_tokens": 842, "out_tokens": 169}
+{"t": 196.522, "ts": "14:26:07", "kind": "screening", "agent": "screeners", "id": "S038", "a": "include", "b": "include", "title": "Evaluating the Efficacy and Efficiency of GPT-5 for Automated Title and Abstract Screening"}
+{"t": 198.834, "ts": "14:26:09", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.22, "in_tokens": 633, "out_tokens": 318}
+{"t": 200.385, "ts": "14:26:11", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.52, "in_tokens": 857, "out_tokens": 201}
+{"t": 200.386, "ts": "14:26:11", "kind": "screening", "agent": "screeners", "id": "S040", "a": "include", "b": "include", "title": "High-performance automated abstract screening with large language model ensembles"}
+{"t": 202.739, "ts": "14:26:13", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.51, "in_tokens": 735, "out_tokens": 337}
+{"t": 205.115, "ts": "14:26:16", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.59, "in_tokens": 899, "out_tokens": 382}
+{"t": 207.096, "ts": "14:26:18", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.25, "in_tokens": 633, "out_tokens": 311}
+{"t": 207.097, "ts": "14:26:18", "kind": "screening", "agent": "screeners", "id": "S041", "a": "exclude", "b": "exclude", "title": "Industrial applications of large language models"}
+{"t": 209.244, "ts": "14:26:20", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.85, "in_tokens": 802, "out_tokens": 336}
+{"t": 211.462, "ts": "14:26:22", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.72, "in_tokens": 735, "out_tokens": 308}
+{"t": 213.928, "ts": "14:26:24", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.8, "in_tokens": 899, "out_tokens": 377}
+{"t": 216.486, "ts": "14:26:27", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 9.38, "in_tokens": 594, "out_tokens": 347}
+{"t": 218.687, "ts": "14:26:29", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 9.44, "in_tokens": 802, "out_tokens": 336}
+{"t": 218.689, "ts": "14:26:29", "kind": "screening", "agent": "screeners", "id": "S044", "a": "exclude", "b": "exclude", "title": "Large Language Models for Cyber Security: A Systematic Literature Review"}
+{"t": 219.837, "ts": "14:26:30", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.37, "in_tokens": 824, "out_tokens": 168}
+{"t": 219.838, "ts": "14:26:30", "kind": "screening", "agent": "screeners", "id": "S042", "a": "exclude", "b": "exclude", "title": "Joint Selection for Large-Scale Pre-Training Data via Policy Gradient-based Mask Learning"}
+{"t": 220.987, "ts": "14:26:31", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.06, "in_tokens": 988, "out_tokens": 157}
+{"t": 220.988, "ts": "14:26:31", "kind": "screening", "agent": "screeners", "id": "S043", "a": "exclude", "b": "exclude", "title": "Large Language Models for Chatbot Health Advice Studies: A Systematic Review"}
+{"t": 222.854, "ts": "14:26:33", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.36, "in_tokens": 594, "out_tokens": 283}
+{"t": 222.855, "ts": "14:26:33", "kind": "screening", "agent": "screeners", "id": "S045", "a": "exclude", "b": "include", "title": "Large Language Models in Systematic Review Screening: Opportunities, Challenges, and Metho"}
+{"t": 225.138, "ts": "14:26:36", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.44, "in_tokens": 748, "out_tokens": 339}
+{"t": 227.242, "ts": "14:26:38", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.4, "in_tokens": 394, "out_tokens": 283}
+{"t": 230.215, "ts": "14:26:41", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 9.22, "in_tokens": 725, "out_tokens": 308}
+{"t": 233.36, "ts": "14:26:44", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 10.5, "in_tokens": 576, "out_tokens": 352}
+{"t": 235.263, "ts": "14:26:46", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 10.12, "in_tokens": 748, "out_tokens": 198}
+{"t": 238.062, "ts": "14:26:49", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 10.81, "in_tokens": 394, "out_tokens": 331}
+{"t": 238.063, "ts": "14:26:49", "kind": "screening", "agent": "screeners", "id": "S047", "a": "exclude", "b": "include", "title": "Large language models for the screening step in systematic reviews in dentistry"}
+{"t": 239.992, "ts": "14:26:50", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 9.77, "in_tokens": 725, "out_tokens": 202}
+{"t": 239.994, "ts": "14:26:50", "kind": "screening", "agent": "screeners", "id": "S048", "a": "exclude", "b": "exclude", "title": "Large language models streamline automated systematic review: A preliminary study"}
+{"t": 242.175, "ts": "14:26:53", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.81, "in_tokens": 576, "out_tokens": 285}
+{"t": 242.176, "ts": "14:26:53", "kind": "screening", "agent": "screeners", "id": "S049", "a": "include", "b": "include", "title": "Leveraging LLMs for Title and Abstract Screening for Systematic Review: A Cost-Effective D"}
+{"t": 243.771, "ts": "14:26:54", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.51, "in_tokens": 836, "out_tokens": 178}
+{"t": 243.773, "ts": "14:26:54", "kind": "screening", "agent": "screeners", "id": "S046", "a": "include", "b": "include", "title": "Large language model enhanced framework for systematic reviews and meta-analyses."}
+{"t": 246.388, "ts": "14:26:57", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.32, "in_tokens": 801, "out_tokens": 313}
+{"t": 249.045, "ts": "14:26:59", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 9.04, "in_tokens": 706, "out_tokens": 325}
+{"t": 252.013, "ts": "14:27:02", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 9.83, "in_tokens": 835, "out_tokens": 327}
+{"t": 254.828, "ts": "14:27:05", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 11.05, "in_tokens": 695, "out_tokens": 317}
+{"t": 257.493, "ts": "14:27:08", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 11.09, "in_tokens": 801, "out_tokens": 307}
+{"t": 257.494, "ts": "14:27:08", "kind": "screening", "agent": "screeners", "id": "S050", "a": "exclude", "b": "exclude", "title": "Machine learning for diabetic foot care: accuracy trends and emerging directions in health"}
+{"t": 259.455, "ts": "14:27:10", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 10.4, "in_tokens": 706, "out_tokens": 208}
+{"t": 259.456, "ts": "14:27:10", "kind": "screening", "agent": "screeners", "id": "S051", "a": "include", "b": "exclude", "title": "Optimal large language models to screen citations for systematic reviews."}
+{"t": 261.826, "ts": "14:27:12", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 9.8, "in_tokens": 835, "out_tokens": 306}
+{"t": 264.265, "ts": "14:27:15", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 9.42, "in_tokens": 695, "out_tokens": 325}
+{"t": 264.266, "ts": "14:27:15", "kind": "screening", "agent": "screeners", "id": "S053", "a": "exclude", "b": "exclude", "title": "Prompt Engineering in Large Language Models for Patient Education: A Systematic Review"}
+{"t": 266.697, "ts": "14:27:17", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 9.2, "in_tokens": 716, "out_tokens": 322}
+{"t": 269.323, "ts": "14:27:20", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 9.86, "in_tokens": 709, "out_tokens": 341}
+{"t": 270.687, "ts": "14:27:21", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.86, "in_tokens": 924, "out_tokens": 163}
+{"t": 270.689, "ts": "14:27:21", "kind": "screening", "agent": "screeners", "id": "S052", "a": "exclude", "b": "exclude", "title": "Performance of large language models in medical licensing examinations: a systematic revie"}
+{"t": 273.187, "ts": "14:27:24", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.91, "in_tokens": 663, "out_tokens": 320}
+{"t": 275.498, "ts": "14:27:26", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.79, "in_tokens": 716, "out_tokens": 306}
+{"t": 275.5, "ts": "14:27:26", "kind": "screening", "agent": "screeners", "id": "S054", "a": "exclude", "b": "exclude", "title": "Retrieval augmented generation for large language models in healthcare: A systematic revie"}
+{"t": 277.694, "ts": "14:27:28", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.36, "in_tokens": 709, "out_tokens": 288}
+{"t": 277.695, "ts": "14:27:28", "kind": "screening", "agent": "screeners", "id": "S055", "a": "include", "b": "include", "title": "SESR-Eval: Dataset for Evaluating LLMs in the Title-Abstract Screening of Systematic Revie"}
+{"t": 279.814, "ts": "14:27:30", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 9.12, "in_tokens": 901, "out_tokens": 336}
+{"t": 281.112, "ts": "14:27:32", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.92, "in_tokens": 663, "out_tokens": 178}
+{"t": 281.114, "ts": "14:27:32", "kind": "screening", "agent": "screeners", "id": "S056", "a": "exclude", "b": "exclude", "title": "Standardized Assessment Framework for Evaluations of Large Language Models in Medicine (SA"}
+{"t": 283.477, "ts": "14:27:34", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.97, "in_tokens": 722, "out_tokens": 347}
+{"t": 285.837, "ts": "14:27:36", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.14, "in_tokens": 798, "out_tokens": 378}
+{"t": 287.907, "ts": "14:27:38", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.09, "in_tokens": 901, "out_tokens": 325}
+{"t": 290.181, "ts": "14:27:41", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 9.06, "in_tokens": 702, "out_tokens": 347}
+{"t": 291.732, "ts": "14:27:42", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.25, "in_tokens": 722, "out_tokens": 207}
+{"t": 291.733, "ts": "14:27:42", "kind": "screening", "agent": "screeners", "id": "S058", "a": "include", "b": "include", "title": "Testing the utility of GPT for title and abstract screening in environmental systematic ev"}
+{"t": 294.027, "ts": "14:27:44", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.18, "in_tokens": 798, "out_tokens": 356}
+{"t": 295.048, "ts": "14:27:46", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.14, "in_tokens": 990, "out_tokens": 146}
+{"t": 295.049, "ts": "14:27:46", "kind": "screening", "agent": "screeners", "id": "S057", "a": "exclude", "b": "exclude", "title": "Testing and Evaluation of Health Care Applications of Large Language Models: A Systematic "}
+{"t": 296.953, "ts": "14:27:47", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.76, "in_tokens": 702, "out_tokens": 293}
+{"t": 299.308, "ts": "14:27:50", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.57, "in_tokens": 906, "out_tokens": 376}
+{"t": 300.445, "ts": "14:27:51", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.42, "in_tokens": 887, "out_tokens": 162}
+{"t": 300.447, "ts": "14:27:51", "kind": "screening", "agent": "screeners", "id": "S059", "a": "include", "b": "exclude", "title": "The emergence of large language models as tools in literature reviews: a large language mo"}
+{"t": 302.699, "ts": "14:27:53", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.64, "in_tokens": 692, "out_tokens": 333}
+{"t": 303.93, "ts": "14:27:54", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.98, "in_tokens": 790, "out_tokens": 178}
+{"t": 303.931, "ts": "14:27:54", "kind": "screening", "agent": "screeners", "id": "S060", "a": "include", "b": "include", "title": "Transforming literature screening: The emerging role of large language models in systemati"}
+{"t": 305.485, "ts": "14:27:56", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.17, "in_tokens": 906, "out_tokens": 219}
+{"t": 305.486, "ts": "14:27:56", "kind": "screening", "agent": "screeners", "id": "S061", "a": "include", "b": "include", "title": "Validation of automated paper screening for esophagectomy systematic review using large la"}
+{"t": 308.014, "ts": "14:27:58", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.56, "in_tokens": 665, "out_tokens": 373}
+{"t": 310.358, "ts": "14:28:01", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.65, "in_tokens": 692, "out_tokens": 343}
+{"t": 312.669, "ts": "14:28:03", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.73, "in_tokens": 626, "out_tokens": 331}
+{"t": 314.861, "ts": "14:28:05", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 9.37, "in_tokens": 769, "out_tokens": 338}
+{"t": 316.973, "ts": "14:28:07", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.95, "in_tokens": 665, "out_tokens": 317}
+{"t": 318.14, "ts": "14:28:09", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.78, "in_tokens": 781, "out_tokens": 172}
+{"t": 318.142, "ts": "14:28:09", "kind": "screening", "agent": "screeners", "id": "S062", "a": "exclude", "b": "exclude", "title": "A scoping review of empathy recognition in text using natural language processing."}
+{"t": 320.313, "ts": "14:28:11", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.64, "in_tokens": 626, "out_tokens": 328}
+{"t": 320.314, "ts": "14:28:11", "kind": "screening", "agent": "screeners", "id": "S064", "a": "exclude", "b": "exclude", "title": "Applications of large language models in psychiatry: a systematic review"}
+{"t": 321.709, "ts": "14:28:12", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.84, "in_tokens": 769, "out_tokens": 194}
+{"t": 321.71, "ts": "14:28:12", "kind": "screening", "agent": "screeners", "id": "S065", "a": "include", "b": "include", "title": "Assessing the performance of large language models in literature screening for pharmacovig"}
+{"t": 322.946, "ts": "14:28:13", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.97, "in_tokens": 754, "out_tokens": 177}
+{"t": 322.948, "ts": "14:28:13", "kind": "screening", "agent": "screeners", "id": "S063", "a": "include", "b": "exclude", "title": "Application of artificial intelligence in dental implant prognosis: A scoping review."}
+{"t": 325.469, "ts": "14:28:16", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.32, "in_tokens": 683, "out_tokens": 377}
+{"t": 327.57, "ts": "14:28:18", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.25, "in_tokens": 755, "out_tokens": 326}
+{"t": 329.196, "ts": "14:28:20", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.48, "in_tokens": 920, "out_tokens": 236}
+{"t": 331.269, "ts": "14:28:22", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.31, "in_tokens": 752, "out_tokens": 300}
+{"t": 332.89, "ts": "14:28:23", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.41, "in_tokens": 683, "out_tokens": 220}
+{"t": 332.892, "ts": "14:28:23", "kind": "screening", "agent": "screeners", "id": "S066", "a": "include", "b": "include", "title": "Can large language models replace humans in systematic reviews? Evaluating GPT ‐4's effica"}
+{"t": 334.385, "ts": "14:28:25", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.81, "in_tokens": 755, "out_tokens": 199}
+{"t": 334.387, "ts": "14:28:25", "kind": "screening", "agent": "screeners", "id": "S067", "a": "include", "b": "include", "title": "Evaluating the effectiveness of large language models in abstract screening: a comparative"}
+{"t": 336.734, "ts": "14:28:27", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.53, "in_tokens": 920, "out_tokens": 364}
+{"t": 336.736, "ts": "14:28:27", "kind": "screening", "agent": "screeners", "id": "S068", "a": "exclude", "b": "exclude", "title": "Examining the Role of Large Language Models in Orthopedics: Systematic Review."}
+{"t": 338.356, "ts": "14:28:29", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.08, "in_tokens": 752, "out_tokens": 236}
+{"t": 338.357, "ts": "14:28:29", "kind": "screening", "agent": "screeners", "id": "S069", "a": "exclude", "b": "include", "title": "Exploring the use of a Large Language Model for data extraction in systematic reviews: a r"}
+{"t": 340.514, "ts": "14:28:31", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.62, "in_tokens": 662, "out_tokens": 336}
+{"t": 342.48, "ts": "14:28:33", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.09, "in_tokens": 854, "out_tokens": 311}
+{"t": 344.476, "ts": "14:28:35", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.73, "in_tokens": 920, "out_tokens": 316}
+{"t": 346.577, "ts": "14:28:37", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.21, "in_tokens": 862, "out_tokens": 337}
+{"t": 348.201, "ts": "14:28:39", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.68, "in_tokens": 662, "out_tokens": 234}
+{"t": 348.202, "ts": "14:28:39", "kind": "screening", "agent": "screeners", "id": "S070", "a": "exclude", "b": "exclude", "title": "Impact of Large Language Models on Scholarly Publication Titles and Abstracts: A Comparati"}
+{"t": 349.959, "ts": "14:28:40", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.47, "in_tokens": 854, "out_tokens": 248}
+{"t": 349.962, "ts": "14:28:40", "kind": "screening", "agent": "screeners", "id": "S071", "a": "exclude", "b": "include", "title": "Large Language Model in Medical Information Extraction from Titles and Abstracts with Prom"}
+{"t": 351.724, "ts": "14:28:42", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.24, "in_tokens": 920, "out_tokens": 248}
+{"t": 351.725, "ts": "14:28:42", "kind": "screening", "agent": "screeners", "id": "S072", "a": "exclude", "b": "exclude", "title": "Large Language Models and Empathy: Systematic Review"}
+{"t": 353.957, "ts": "14:28:44", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.37, "in_tokens": 862, "out_tokens": 361}
+{"t": 353.958, "ts": "14:28:44", "kind": "screening", "agent": "screeners", "id": "S073", "a": "exclude", "b": "exclude", "title": "Large Language Models for Mental Health Applications: Systematic Review"}
+{"t": 356.024, "ts": "14:28:46", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.81, "in_tokens": 608, "out_tokens": 313}
+{"t": 358.267, "ts": "14:28:49", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.3, "in_tokens": 901, "out_tokens": 343}
+{"t": 360.249, "ts": "14:28:51", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.52, "in_tokens": 901, "out_tokens": 316}
+{"t": 362.514, "ts": "14:28:53", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.55, "in_tokens": 935, "out_tokens": 337}
+{"t": 364.749, "ts": "14:28:55", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.72, "in_tokens": 608, "out_tokens": 319}
+{"t": 366.369, "ts": "14:28:57", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.09, "in_tokens": 901, "out_tokens": 229}
+{"t": 366.371, "ts": "14:28:57", "kind": "screening", "agent": "screeners", "id": "S075", "a": "include", "b": "include", "title": "Large language models for abstract screening in systematic- and scoping reviews: A diagnos"}
+{"t": 367.744, "ts": "14:28:58", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.49, "in_tokens": 901, "out_tokens": 182}
+{"t": 367.746, "ts": "14:28:58", "kind": "screening", "agent": "screeners", "id": "S076", "a": "exclude", "b": "include", "title": "Natural language processing (NLP) to facilitate abstract review in medical research: the a"}
+{"t": 369.146, "ts": "14:29:00", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.62, "in_tokens": 935, "out_tokens": 191}
+{"t": 369.147, "ts": "14:29:00", "kind": "screening", "agent": "screeners", "id": "S077", "a": "include", "b": "include", "title": "Performance of a Large Language Model in Screening Citations."}
+{"t": 370.221, "ts": "14:29:01", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.47, "in_tokens": 697, "out_tokens": 160}
+{"t": 370.223, "ts": "14:29:01", "kind": "screening", "agent": "screeners", "id": "S074", "a": "exclude", "b": "exclude", "title": "Large language model for Bible sentiment analysis: Sermon on the Mount"}
+{"t": 372.284, "ts": "14:29:03", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 5.91, "in_tokens": 864, "out_tokens": 321}
+{"t": 374.316, "ts": "14:29:05", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.56, "in_tokens": 933, "out_tokens": 317}
+{"t": 376.599, "ts": "14:29:07", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.44, "in_tokens": 713, "out_tokens": 339}
+{"t": 378.947, "ts": "14:29:09", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.72, "in_tokens": 823, "out_tokens": 372}
+{"t": 381.031, "ts": "14:29:11", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.74, "in_tokens": 864, "out_tokens": 325}
+{"t": 382.974, "ts": "14:29:13", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.65, "in_tokens": 933, "out_tokens": 307}
+{"t": 382.975, "ts": "14:29:13", "kind": "screening", "agent": "screeners", "id": "S079", "a": "exclude", "b": "exclude", "title": "Preliminary Evidence of the Use of Generative AI in Health Care Clinical Services: Systema"}
+{"t": 384.723, "ts": "14:29:15", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.11, "in_tokens": 713, "out_tokens": 274}
+{"t": 386.027, "ts": "14:29:16", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.08, "in_tokens": 911, "out_tokens": 200}
+{"t": 387.167, "ts": "14:29:18", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.13, "in_tokens": 953, "out_tokens": 162}
+{"t": 387.168, "ts": "14:29:18", "kind": "screening", "agent": "screeners", "id": "S078", "a": "exclude", "b": "exclude", "title": "Potential of Large Language Models in Health Care: Delphi Study"}
+{"t": 389.298, "ts": "14:29:20", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.32, "in_tokens": 894, "out_tokens": 317}
+{"t": 390.482, "ts": "14:29:21", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.76, "in_tokens": 801, "out_tokens": 163}
+{"t": 390.484, "ts": "14:29:21", "kind": "screening", "agent": "screeners", "id": "S080", "a": "include", "b": "include", "title": "Streamlining Systematic Reviews: A Novel Application of Large Language Models"}
+{"t": 392.008, "ts": "14:29:22", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.97, "in_tokens": 823, "out_tokens": 230}
+{"t": 394.298, "ts": "14:29:25", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.12, "in_tokens": 542, "out_tokens": 356}
+{"t": 395.794, "ts": "14:29:26", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.49, "in_tokens": 894, "out_tokens": 203}
+{"t": 395.796, "ts": "14:29:26", "kind": "screening", "agent": "screeners", "id": "S082", "a": "include", "b": "include", "title": "Title and abstract screening for literature reviews using large language models: an explor"}
+{"t": 397.937, "ts": "14:29:28", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.45, "in_tokens": 553, "out_tokens": 329}
+{"t": 399.151, "ts": "14:29:30", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.14, "in_tokens": 911, "out_tokens": 176}
+{"t": 399.153, "ts": "14:29:30", "kind": "screening", "agent": "screeners", "id": "S081", "a": "include", "b": "include", "title": "The Promise and Challenges of Using LLMs to Accelerate the Screening Process of Systematic"}
+{"t": 400.815, "ts": "14:29:31", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.51, "in_tokens": 542, "out_tokens": 241}
+{"t": 400.816, "ts": "14:29:31", "kind": "screening", "agent": "screeners", "id": "S083", "a": "include", "b": "include", "title": "Zero-shot Generative Large Language Models for Systematic Review Screening Automation"}
+{"t": 403.074, "ts": "14:29:34", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.27, "in_tokens": 561, "out_tokens": 334}
+{"t": 405.27, "ts": "14:29:36", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.33, "in_tokens": 553, "out_tokens": 323}
+{"t": 407.638, "ts": "14:29:38", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.48, "in_tokens": 584, "out_tokens": 346}
+{"t": 409.71, "ts": "14:29:40", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.89, "in_tokens": 399, "out_tokens": 315}
+{"t": 411.272, "ts": "14:29:42", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.19, "in_tokens": 561, "out_tokens": 216}
+{"t": 411.273, "ts": "14:29:42", "kind": "screening", "agent": "screeners", "id": "S085", "a": "include", "b": "include", "title": "Automated title and abstract screening for scoping reviews using the GPT-4 Large Language "}
+{"t": 412.45, "ts": "14:29:43", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.18, "in_tokens": 642, "out_tokens": 173}
+{"t": 412.451, "ts": "14:29:43", "kind": "screening", "agent": "screeners", "id": "S084", "a": "exclude", "b": "exclude", "title": "A taxonomy and review of generalization research in NLP"}
+{"t": 414.419, "ts": "14:29:45", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.77, "in_tokens": 584, "out_tokens": 305}
+{"t": 414.421, "ts": "14:29:45", "kind": "screening", "agent": "screeners", "id": "S086", "a": "include", "b": "include", "title": "Bio-SIEVE: Exploring Instruction Tuning Large Language Models for Systematic Review Automa"}
+{"t": 416.609, "ts": "14:29:47", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.89, "in_tokens": 399, "out_tokens": 354}
+{"t": 416.61, "ts": "14:29:47", "kind": "screening", "agent": "screeners", "id": "S087", "a": "include", "b": "include", "title": "Enhancing title and abstract screening for systematic reviews with GPT-3.5 turbo"}
+{"t": 418.166, "ts": "14:29:49", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.89, "in_tokens": 653, "out_tokens": 220}
+{"t": 420.357, "ts": "14:29:51", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.9, "in_tokens": 565, "out_tokens": 328}
+{"t": 422.528, "ts": "14:29:53", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.1, "in_tokens": 827, "out_tokens": 332}
+{"t": 424.669, "ts": "14:29:55", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.05, "in_tokens": 652, "out_tokens": 329}
+{"t": 426.766, "ts": "14:29:57", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.59, "in_tokens": 653, "out_tokens": 314}
+{"t": 428.906, "ts": "14:29:59", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.54, "in_tokens": 565, "out_tokens": 327}
+{"t": 428.907, "ts": "14:29:59", "kind": "screening", "agent": "screeners", "id": "S089", "a": "exclude", "b": "exclude", "title": "NLP techniques for automating responses to customer queries: a systematic review"}
+{"t": 430.948, "ts": "14:30:01", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.41, "in_tokens": 827, "out_tokens": 323}
+{"t": 433.469, "ts": "14:30:04", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.79, "in_tokens": 652, "out_tokens": 395}
+{"t": 433.47, "ts": "14:30:04", "kind": "screening", "agent": "screeners", "id": "S091", "a": "exclude", "b": "exclude", "title": "Red Alarm for Pre-trained Models: Universal Vulnerability to Neuron-level Backdoor Attacks"}
+{"t": 434.727, "ts": "14:30:05", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.96, "in_tokens": 742, "out_tokens": 176}
+{"t": 434.728, "ts": "14:30:05", "kind": "screening", "agent": "screeners", "id": "S088", "a": "exclude", "b": "exclude", "title": "Impact of word embedding models on text analytics in deep learning environment: a review"}
+{"t": 436.925, "ts": "14:30:07", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.01, "in_tokens": 708, "out_tokens": 312}
+{"t": 438.151, "ts": "14:30:09", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.2, "in_tokens": 916, "out_tokens": 173}
+{"t": 438.152, "ts": "14:30:09", "kind": "screening", "agent": "screeners", "id": "S090", "a": "exclude", "b": "exclude", "title": "Practical and ethical challenges of large language models in education: A systematic scopi"}
+{"t": 440.465, "ts": "14:30:11", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.99, "in_tokens": 596, "out_tokens": 320}
+{"t": 442.674, "ts": "14:30:13", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.94, "in_tokens": 870, "out_tokens": 314}
+{"t": 444.703, "ts": "14:30:15", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.77, "in_tokens": 708, "out_tokens": 307}
+{"t": 446.966, "ts": "14:30:17", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.81, "in_tokens": 666, "out_tokens": 334}
+{"t": 449.12, "ts": "14:30:20", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.65, "in_tokens": 596, "out_tokens": 320}
+{"t": 451.273, "ts": "14:30:22", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.59, "in_tokens": 870, "out_tokens": 310}
+{"t": 451.275, "ts": "14:30:22", "kind": "screening", "agent": "screeners", "id": "S094", "a": "exclude", "b": "exclude", "title": "Deep learning for caries detection: A systematic review."}
+{"t": 452.514, "ts": "14:30:23", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.81, "in_tokens": 797, "out_tokens": 181}
+{"t": 452.515, "ts": "14:30:23", "kind": "screening", "agent": "screeners", "id": "S092", "a": "exclude", "b": "exclude", "title": "Risks Associated With Undiagnosed ADHD and/or Autism: A Mixed-Method Systematic Review"}
+{"t": 454.722, "ts": "14:30:25", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.75, "in_tokens": 666, "out_tokens": 323}
+{"t": 456.028, "ts": "14:30:26", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.91, "in_tokens": 685, "out_tokens": 192}
+{"t": 456.029, "ts": "14:30:26", "kind": "screening", "agent": "screeners", "id": "S093", "a": "exclude", "b": "exclude", "title": "A Complete Process of Text Classification System Using State-of-the-Art NLP Models"}
+{"t": 458.132, "ts": "14:30:29", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.85, "in_tokens": 550, "out_tokens": 324}
+{"t": 460.14, "ts": "14:30:31", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.62, "in_tokens": 629, "out_tokens": 323}
+{"t": 461.266, "ts": "14:30:32", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.54, "in_tokens": 755, "out_tokens": 172}
+{"t": 461.267, "ts": "14:30:32", "kind": "screening", "agent": "screeners", "id": "S095", "a": "exclude", "b": "exclude", "title": "Identifying Security and Privacy Violation Rules in Trigger-Action IoT Platforms With NLP "}
+{"t": 463.498, "ts": "14:30:34", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.46, "in_tokens": 610, "out_tokens": 339}
+{"t": 465.601, "ts": "14:30:36", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.46, "in_tokens": 550, "out_tokens": 318}
+{"t": 467.932, "ts": "14:30:38", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.78, "in_tokens": 629, "out_tokens": 359}
+{"t": 470.161, "ts": "14:30:41", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.89, "in_tokens": 771, "out_tokens": 321}
+{"t": 472.293, "ts": "14:30:43", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.79, "in_tokens": 610, "out_tokens": 311}
+{"t": 473.604, "ts": "14:30:44", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.0, "in_tokens": 639, "out_tokens": 197}
+{"t": 473.605, "ts": "14:30:44", "kind": "screening", "agent": "screeners", "id": "S096", "a": "exclude", "b": "exclude", "title": "Interpretation of Black Box NLP Models: A Survey"}
+{"t": 474.794, "ts": "14:30:45", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.86, "in_tokens": 718, "out_tokens": 173}
+{"t": 474.795, "ts": "14:30:45", "kind": "screening", "agent": "screeners", "id": "S097", "a": "exclude", "b": "exclude", "title": "Mental training for young athlete: A case of study of NLP practice"}
+{"t": 477.057, "ts": "14:30:48", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.89, "in_tokens": 771, "out_tokens": 324}
+{"t": 478.245, "ts": "14:30:49", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.95, "in_tokens": 699, "out_tokens": 174}
+{"t": 478.246, "ts": "14:30:49", "kind": "screening", "agent": "screeners", "id": "S098", "a": "exclude", "b": "exclude", "title": "NAS-Bench-NLP: Neural Architecture Search Benchmark for Natural Language Processing"}
+{"t": 480.465, "ts": "14:30:51", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.85, "in_tokens": 497, "out_tokens": 331}
+{"t": 482.57, "ts": "14:30:53", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.77, "in_tokens": 1057, "out_tokens": 320}
+{"t": 483.82, "ts": "14:30:54", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.76, "in_tokens": 860, "out_tokens": 175}
+{"t": 483.822, "ts": "14:30:54", "kind": "screening", "agent": "screeners", "id": "S099", "a": "exclude", "b": "exclude", "title": "On the Explainability of Natural Language Processing Deep Models"}
+{"t": 486.023, "ts": "14:30:56", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.77, "in_tokens": 644, "out_tokens": 331}
+{"t": 488.119, "ts": "14:30:59", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.65, "in_tokens": 497, "out_tokens": 317}
+{"t": 490.073, "ts": "14:31:01", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.49, "in_tokens": 1057, "out_tokens": 283}
+{"t": 492.301, "ts": "14:31:03", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.47, "in_tokens": 586, "out_tokens": 318}
+{"t": 494.434, "ts": "14:31:05", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.4, "in_tokens": 644, "out_tokens": 332}
+{"t": 495.774, "ts": "14:31:06", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.65, "in_tokens": 586, "out_tokens": 200}
+{"t": 495.776, "ts": "14:31:06", "kind": "screening", "agent": "screeners", "id": "S100", "a": "exclude", "b": "exclude", "title": "Pre-Trained Language Models and Their Applications"}
+{"t": 496.918, "ts": "14:31:07", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.84, "in_tokens": 1146, "out_tokens": 162}
+{"t": 496.919, "ts": "14:31:07", "kind": "screening", "agent": "screeners", "id": "S101", "a": "exclude", "b": "exclude", "title": "Screening for Atrial Fibrillation: Updated Evidence Report and Systematic Review for the U"}
+{"t": 499.132, "ts": "14:31:10", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.82, "in_tokens": 586, "out_tokens": 327}
+{"t": 500.304, "ts": "14:31:11", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.87, "in_tokens": 733, "out_tokens": 168}
+{"t": 500.306, "ts": "14:31:11", "kind": "screening", "agent": "screeners", "id": "S102", "a": "exclude", "b": "exclude", "title": "Barriers to screening, diagnosis and management of hyperglycaemia in pregnancy in Africa: "}
+{"t": 501.815, "ts": "14:31:12", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.03, "in_tokens": 624, "out_tokens": 202}
+{"t": 504.111, "ts": "14:31:15", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.18, "in_tokens": 901, "out_tokens": 348}
+{"t": 505.468, "ts": "14:31:16", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.33, "in_tokens": 675, "out_tokens": 181}
+{"t": 505.469, "ts": "14:31:16", "kind": "screening", "agent": "screeners", "id": "S103", "a": "exclude", "b": "exclude", "title": "Disembodied Machine Learning: On the Illusion of Objectivity in NLP"}
+{"t": 507.872, "ts": "14:31:18", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.56, "in_tokens": 598, "out_tokens": 329}
+{"t": 510.301, "ts": "14:31:21", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.48, "in_tokens": 624, "out_tokens": 329}
+{"t": 512.333, "ts": "14:31:23", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.21, "in_tokens": 901, "out_tokens": 301}
+{"t": 514.363, "ts": "14:31:25", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.89, "in_tokens": 1078, "out_tokens": 305}
+{"t": 516.415, "ts": "14:31:27", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.54, "in_tokens": 598, "out_tokens": 310}
+{"t": 516.417, "ts": "14:31:27", "kind": "screening", "agent": "screeners", "id": "S106", "a": "exclude", "b": "exclude", "title": "Neurodevelopmental disorders in youth justice: a systematic review of screening, assessmen"}
+{"t": 517.547, "ts": "14:31:28", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.24, "in_tokens": 713, "out_tokens": 159}
+{"t": 517.548, "ts": "14:31:28", "kind": "screening", "agent": "screeners", "id": "S104", "a": "exclude", "b": "exclude", "title": "Mandoline: Model Evaluation under Distribution Shift"}
+{"t": 518.724, "ts": "14:31:29", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.39, "in_tokens": 990, "out_tokens": 169}
+{"t": 518.726, "ts": "14:31:29", "kind": "screening", "agent": "screeners", "id": "S105", "a": "exclude", "b": "exclude", "title": "Natural Language Processing for Requirements Engineering: A Systematic Mapping Study"}
+{"t": 520.682, "ts": "14:31:31", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.31, "in_tokens": 1078, "out_tokens": 299}
+{"t": 522.868, "ts": "14:31:33", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 6.44, "in_tokens": 692, "out_tokens": 329}
+{"t": 524.966, "ts": "14:31:35", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.41, "in_tokens": 722, "out_tokens": 321}
+{"t": 527.126, "ts": "14:31:38", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 8.39, "in_tokens": 598, "out_tokens": 326}
+{"t": 528.299, "ts": "14:31:39", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.62, "in_tokens": 1167, "out_tokens": 160}
+{"t": 528.3, "ts": "14:31:39", "kind": "screening", "agent": "screeners", "id": "S107", "a": "exclude", "b": "exclude", "title": "Screening for Gestational Diabetes: Updated Evidence Report and Systematic Review for the "}
+{"t": 530.403, "ts": "14:31:41", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.53, "in_tokens": 692, "out_tokens": 309}
+{"t": 532.198, "ts": "14:31:43", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.22, "in_tokens": 722, "out_tokens": 249}
+{"t": 532.2, "ts": "14:31:43", "kind": "screening", "agent": "screeners", "id": "S109", "a": "exclude", "b": "exclude", "title": "The Accuracy of Visceral Adiposity Index for the Screening of Metabolic Syndrome: A System"}
+{"t": 534.459, "ts": "14:31:45", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.32, "in_tokens": 598, "out_tokens": 330}
+{"t": 535.988, "ts": "14:31:46", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.68, "in_tokens": 655, "out_tokens": 205}
+{"t": 537.358, "ts": "14:31:48", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.95, "in_tokens": 781, "out_tokens": 200}
+{"t": 537.36, "ts": "14:31:48", "kind": "screening", "agent": "screeners", "id": "S108", "a": "exclude", "b": "exclude", "title": "Sentiment Analysis of Students’ Feedback with NLP and Deep Learning: A Systematic Mapping "}
+{"t": 539.264, "ts": "14:31:50", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.06, "in_tokens": 402, "out_tokens": 287}
+{"t": 540.364, "ts": "14:31:51", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 5.9, "in_tokens": 687, "out_tokens": 168}
+{"t": 540.365, "ts": "14:31:51", "kind": "screening", "agent": "screeners", "id": "S110", "a": "exclude", "b": "exclude", "title": "The language of proteins: NLP, machine learning & protein sequences"}
+{"t": 542.576, "ts": "14:31:53", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 6.58, "in_tokens": 655, "out_tokens": 325}
+{"t": 544.957, "ts": "14:31:55", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.59, "in_tokens": 810, "out_tokens": 328}
+{"t": 547.481, "ts": "14:31:58", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.21, "in_tokens": 402, "out_tokens": 389}
+{"t": 547.482, "ts": "14:31:58", "kind": "screening", "agent": "screeners", "id": "S112", "a": "exclude", "b": "exclude", "title": "Deep Learning for Natural Language Processing in Radiology—Fundamentals and a Systematic R"}
+{"t": 549.752, "ts": "14:32:00", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 9.38, "in_tokens": 720, "out_tokens": 313}
+{"t": 551.064, "ts": "14:32:02", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.49, "in_tokens": 744, "out_tokens": 180}
+{"t": 551.065, "ts": "14:32:02", "kind": "screening", "agent": "screeners", "id": "S111", "a": "exclude", "b": "exclude", "title": "Adversarial Attacks on Deep-learning Models in Natural Language Processing: A Survey"}
+{"t": 553.699, "ts": "14:32:04", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 8.73, "in_tokens": 810, "out_tokens": 389}
+{"t": 555.253, "ts": "14:32:06", "kind": "llm_call", "agent": "screener_A", "model": "qwen3:8b", "seconds": 7.76, "in_tokens": 392, "out_tokens": 201}
+{"t": 556.782, "ts": "14:32:07", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 7.02, "in_tokens": 720, "out_tokens": 206}
+{"t": 558.133, "ts": "14:32:09", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 4.43, "in_tokens": 899, "out_tokens": 186}
+{"t": 558.135, "ts": "14:32:09", "kind": "screening", "agent": "screeners", "id": "S113", "a": "exclude", "b": "exclude", "title": "Global strategies and effectiveness for COVID-19 prevention through contact tracing, scree"}
+{"t": 559.569, "ts": "14:32:10", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 4.31, "in_tokens": 392, "out_tokens": 189}
+{"t": 559.571, "ts": "14:32:10", "kind": "screening", "agent": "screeners", "id": "S115", "a": "exclude", "b": "exclude", "title": "Pre-trained models for natural language processing: A survey"}
+{"t": 560.773, "ts": "14:32:11", "kind": "llm_call", "agent": "screener_B", "model": "qwen3:8b", "seconds": 3.99, "in_tokens": 809, "out_tokens": 172}
+{"t": 560.775, "ts": "14:32:11", "kind": "screening", "agent": "screeners", "id": "S114", "a": "exclude", "b": "exclude", "title": "Managing outbreaks of highly contagious diseases in prisons: a systematic review"}
+{"t": 560.775, "ts": "14:32:11", "kind": "decision", "agent": "screeners", "what": "dual screening done", "screened": 115, "conflicts": 13, "kappa": 0.767}
+{"t": 560.776, "ts": "14:32:11", "kind": "stage", "agent": "adjudicator", "status": "start", "title": "Conflict resolution: 13 disagreements"}
+{"t": 564.688, "ts": "14:32:15", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 3.91, "in_tokens": 1089, "out_tokens": 70}
+{"t": 564.689, "ts": "14:32:15", "kind": "decision", "agent": "adjudicator", "id": "S003", "final": "exclude", "reason": "The study does not evaluate the performance of large language models in title and abstract screening for systematic reviews. It focuses on ChatGPT’s accuracy in emergency department triage, which is unrelated to the systematic review question. Therefore, it fails inclusion criterion I1 and meets exclusion criterion E1."}
+{"t": 565.684, "ts": "14:32:16", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 0.99, "in_tokens": 893, "out_tokens": 66}
+{"t": 565.685, "ts": "14:32:16", "kind": "decision", "agent": "adjudicator", "id": "S007", "final": "exclude", "reason": "The study does not meet the mandatory inclusion criterion I3, which requires a comparison of the large language model with traditional screening methods (e.g., manual screening or rule‑based tools). Because I3 is not satisfied, the record is excluded from the systematic review."}
+{"t": 569.979, "ts": "14:32:20", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 4.29, "in_tokens": 1596, "out_tokens": 61}
+{"t": 569.979, "ts": "14:32:20", "kind": "decision", "agent": "adjudicator", "id": "S020", "final": "exclude", "reason": "The record does not meet the peer‑review requirement (I4). It is only available as an arXiv preprint, which is not a peer‑reviewed publication. Consequently, it fails the inclusion criteria and must be excluded."}
+{"t": 571.595, "ts": "14:32:22", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 1.61, "in_tokens": 1199, "out_tokens": 89}
+{"t": 571.596, "ts": "14:32:22", "kind": "decision", "agent": "adjudicator", "id": "S025", "final": "exclude", "reason": "The study does not evaluate large language models (LLMs) for title and abstract screening in systematic reviews. It focuses on AI agents for clinical tasks and compares them with baseline LLMs, but it does not report screening performance metrics (sensitivity, specificity, accuracy) for LLMs in a title/abstract screening context. Therefore it fails inclusion criteria I1–I3 and is excluded."}
+{"t": 573.074, "ts": "14:32:24", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 1.48, "in_tokens": 1217, "out_tokens": 75}
+{"t": 573.075, "ts": "14:32:24", "kind": "decision", "agent": "adjudicator", "id": "S030", "final": "exclude", "reason": "The study does not meet the inclusion criteria for title and abstract screening. It evaluates an LLM for data extraction, not for screening titles or abstracts, and it does not report the required performance metrics (sensitivity, specificity, or overall accuracy) for screening tasks. Therefore it should be excluded from the review."}
+{"t": 574.422, "ts": "14:32:25", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 1.35, "in_tokens": 902, "out_tokens": 91}
+{"t": 574.423, "ts": "14:32:25", "kind": "decision", "agent": "adjudicator", "id": "S045", "final": "exclude", "reason": "The abstract describes a review of challenges and methodological considerations for using LLMs in systematic review screening, but it does not report any empirical evaluation of LLM performance (e.g., sensitivity, specificity, accuracy) nor does it compare LLMs with traditional screening methods. Consequently, the study fails to meet inclusion criteria I1, I2, and I3, and should be excluded from the systematic review."}
+{"t": 575.974, "ts": "14:32:26", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 1.55, "in_tokens": 756, "out_tokens": 48}
+{"t": 575.974, "ts": "14:32:26", "kind": "decision", "agent": "adjudicator", "id": "S047", "final": "exclude", "reason": "The study does not report sensitivity, specificity, or overall accuracy metrics for large language models in title and abstract screening, violating inclusion criterion I2. Therefore it must be excluded from the systematic review."}
+{"t": 578.52, "ts": "14:32:29", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 2.55, "in_tokens": 1053, "out_tokens": 79}
+{"t": 578.521, "ts": "14:32:29", "kind": "decision", "agent": "adjudicator", "id": "S051", "final": "exclude", "reason": "The study does not meet inclusion criterion I3, which requires a comparison of LLMs with traditional screening methods (e.g., manual screening or rule‑based tools). The abstract reports comparisons only among the LLMs themselves and does not provide any comparison with conventional screening approaches. Therefore, the record is excluded from the review."}
+{"t": 580.596, "ts": "14:32:31", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 2.07, "in_tokens": 1249, "out_tokens": 102}
+{"t": 580.596, "ts": "14:32:31", "kind": "decision", "agent": "adjudicator", "id": "S059", "final": "exclude", "reason": "The article is a systematic review of the use of large language models in literature reviews, not an empirical study that evaluates the performance of LLMs in title and abstract screening. It does not report sensitivity, specificity, or overall accuracy metrics for LLMs in screening tasks, nor does it compare LLMs with traditional screening methods. Therefore, it fails to meet inclusion criteria I1, I2, and I3 and should be excluded."}
+{"t": 582.032, "ts": "14:32:32", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 1.43, "in_tokens": 996, "out_tokens": 103}
+{"t": 582.032, "ts": "14:32:32", "kind": "decision", "agent": "adjudicator", "id": "S063", "final": "exclude", "reason": "The cited study is a scoping review of AI applications in dental implant prognosis, not an evaluation of large language models (LLMs) for title‑and‑abstract screening in systematic reviews. It does not assess LLM performance on screening tasks, nor does it report sensitivity, specificity, or accuracy metrics for LLMs in that context. Consequently, it fails to meet inclusion criteria I1, I2, and I3, and should be excluded from the review. "}
+{"t": 583.43, "ts": "14:32:34", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 1.4, "in_tokens": 1015, "out_tokens": 102}
+{"t": 583.431, "ts": "14:32:34", "kind": "decision", "agent": "adjudicator", "id": "S069", "final": "exclude", "reason": "The study explicitly focuses on using GPT‑4 for **data extraction** from study characteristics and PICO elements, not on screening titles or abstracts. This violates exclusion criterion E2 (studies that focus on full‑text screening or data extraction rather than title and abstract screening). The paper does report accuracy metrics, but those pertain to extraction tasks, not to the screening task that is the focus of the systematic review question. Therefore the record must be excluded."}
+{"t": 585.246, "ts": "14:32:36", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 1.81, "in_tokens": 1203, "out_tokens": 122}
+{"t": 585.247, "ts": "14:32:36", "kind": "decision", "agent": "adjudicator", "id": "S071", "final": "exclude", "reason": "The study does not meet the mandatory inclusion criterion I3, which requires a comparison of LLMs with traditional screening methods (e.g., manual screening or rule‑based tools). While it evaluates GPT‑3.5 and GPT‑4 performance and reports sensitivity, specificity, and accuracy, it does not provide a comparison against conventional screening approaches. Additionally, the article appears to be a preprint (medRxiv) and therefore does not satisfy the peer‑reviewed publication requirement. Consequently, the record must be excluded from the systematic review."}
+{"t": 588.401, "ts": "14:32:39", "kind": "llm_call", "agent": "adjudicator", "model": "gpt-oss:latest", "seconds": 3.15, "in_tokens": 1503, "out_tokens": 72}
+{"t": 588.402, "ts": "14:32:39", "kind": "decision", "agent": "adjudicator", "id": "S076", "final": "exclude", "reason": "The study does not meet inclusion criterion I3, which requires a comparison of the large‑language‑model (LLM) performance with traditional screening methods (manual or rule‑based). All other inclusion and exclusion criteria are satisfied, but because I3 is mandatory, the record must be excluded from the review. "}
+{"t": 588.402, "ts": "14:32:39", "kind": "decision", "agent": "adjudicator", "what": "title/abstract screening", "screened": 115, "included": 41, "conflicts": 13, "kappa": 0.767}
+{"t": 588.403, "ts": "14:32:39", "kind": "coordinator", "agent": "coordinator", "decision": "proceed to full-text", "reason": "41 records included at title/abstract"}
+{"t": 588.404, "ts": "14:32:39", "kind": "stage", "agent": "fulltext", "status": "start", "title": "Full-text retrieval & eligibility: 15 reports"}
+{"t": 604.686, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S002", "result": "abstract only", "chars": 0}
+{"t": 604.687, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S008", "result": "full text", "chars": 23131}
+{"t": 604.688, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S009", "result": "full text", "chars": 39433}
+{"t": 604.688, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S010", "result": "abstract only", "chars": 0}
+{"t": 604.688, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S014", "result": "abstract only", "chars": 0}
+{"t": 604.695, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S024", "result": "full text", "chars": 57541}
+{"t": 604.696, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S027", "result": "abstract only", "chars": 0}
+{"t": 604.698, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S031", "result": "full text", "chars": 52329}
+{"t": 604.699, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S032", "result": "full text", "chars": 46455}
+{"t": 604.699, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S033", "result": "abstract only", "chars": 0}
+{"t": 604.699, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S034", "result": "abstract only", "chars": 0}
+{"t": 604.699, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S035", "result": "abstract only", "chars": 0}
+{"t": 604.7, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S036", "result": "full text", "chars": 49662}
+{"t": 604.7, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S037", "result": "abstract only", "chars": 0}
+{"t": 604.7, "ts": "14:32:55", "kind": "tool", "agent": "fulltext", "tool": "fetch_and_parse_pdf", "id": "S038", "result": "abstract only", "chars": 0}
+{"t": 606.079, "ts": "14:32:57", "kind": "tool", "agent": "rag", "tool": "build_hybrid_index", "chunks": 379, "studies": 15}
+{"t": 607.643, "ts": "14:32:58", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.31, "in_tokens": 929, "out_tokens": 186}
+{"t": 607.645, "ts": "14:32:58", "kind": "decision", "agent": "fulltext_screener", "id": "S002", "decision": "include", "code": "none", "reason": "Study S002 meets all inclusion criteria. It evaluates the performance of large language models (LLMs) in title and abstract screening for systematic reviews (I1). It reports sensitivity (recall), specificity, precision, NPV, and accuracy metrics for LLMs in screening tasks (I2). It compares LLMs with traditional screening methods (e.g., manual screening, rule-based tools) through the use of a hybrid approach (I3). It is published in English (I4) and from 2020 onwards (I5). It does not fall under any exclusion criteria (E1-E5)."}
+{"t": 609.689, "ts": "14:33:00", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.29, "in_tokens": 1117, "out_tokens": 182}
+{"t": 609.69, "ts": "14:33:00", "kind": "decision", "agent": "fulltext_screener", "id": "S008", "decision": "include", "code": "none", "reason": "Study S008 meets all inclusion criteria. It evaluates the performance of a large language model (GPT-4o mini) in title and abstract screening for systematic reviews (I1). It reports sensitivity (83.2%), specificity (85.2%), and overall accuracy (85.1%) metrics (I2). It compares the LLM with traditional screening methods (manual reviewers) (I3). It is published in English (I4) and from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5)."}
+{"t": 611.182, "ts": "14:33:02", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.14, "in_tokens": 1298, "out_tokens": 150}
+{"t": 611.183, "ts": "14:33:02", "kind": "decision", "agent": "fulltext_screener", "id": "S009", "decision": "include", "code": "none", "reason": "Study S009 meets all inclusion criteria. It evaluates the performance of LLMs in title and abstract screening for systematic reviews (I1), reports sensitivity, specificity, and overall accuracy metrics (I2), compares LLMs with traditional screening methods (I3), and is published in English (I4) from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5)."}
+{"t": 612.567, "ts": "14:33:03", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.27, "in_tokens": 992, "out_tokens": 172}
+{"t": 612.569, "ts": "14:33:03", "kind": "decision", "agent": "fulltext_screener", "id": "S010", "decision": "include", "code": "none", "reason": "Study S010 meets all inclusion criteria. It evaluates the performance of a large language model (LLM) in title and abstract screening for systematic reviews (I1). It reports sensitivity, specificity, and accuracy metrics (I2). It compares the LLM with traditional screening methods (e.g., manual or rule-based approaches) by evaluating its performance against adjudicated labels (I3). It is published in English (I4) and from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5)."}
+{"t": 613.81, "ts": "14:33:04", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.1, "in_tokens": 1000, "out_tokens": 155}
+{"t": 613.811, "ts": "14:33:04", "kind": "decision", "agent": "fulltext_screener", "id": "S014", "decision": "include", "code": "", "reason": "Study S014 meets all inclusion criteria. It evaluates the performance of LLMs in title and abstract screening (I1), reports performance metrics such as PPA and NPA (I2), compares LLMs with human reviewers (I3), and is published in a peer-reviewed journal in English (I4) from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5)."}
+{"t": 615.113, "ts": "14:33:06", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 0.95, "in_tokens": 1229, "out_tokens": 125}
+{"t": 615.114, "ts": "14:33:06", "kind": "decision", "agent": "fulltext_screener", "id": "S024", "decision": "exclude", "code": "E2", "reason": "Study S024 focuses on full-text screening and data extraction tasks (e.g., extracting study characteristics, arm design, participant statistics, and results) rather than title and abstract screening. This does not meet Inclusion Criterion I1, which requires studies that evaluate the performance of LLMs in title and abstract screening for systematic reviews."}
+{"t": 616.551, "ts": "14:33:07", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.31, "in_tokens": 1009, "out_tokens": 195}
+{"t": 616.552, "ts": "14:33:07", "kind": "decision", "agent": "fulltext_screener", "id": "S027", "decision": "include", "code": "none", "reason": "Study S027 meets all inclusion criteria: I1 (evaluates LLMs in title and abstract screening), I2 (reports sensitivity, specificity, and AUC metrics), I3 (compares LLMs with traditional tools like ASReview and Abstrackr), I4 (published in English), and I5 (published from 2020 onwards). It does not meet any exclusion criteria: E1 (it does use LLMs for screening), E2 (focuses on title and abstract screening), E3 (reports performance metrics), E4 (in English), and E5 (peer-reviewed and published post-2020)."}
+{"t": 618.779, "ts": "14:33:09", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.7, "in_tokens": 1066, "out_tokens": 258}
+{"t": 618.78, "ts": "14:33:09", "kind": "decision", "agent": "fulltext_screener", "id": "S031", "decision": "include", "code": "", "reason": "Study S031 meets all inclusion criteria. It evaluates the performance of large language models (LLMs) in title and abstract screening for systematic reviews (I1). It reports sensitivity, specificity, and overall accuracy metrics for LLMs in screening tasks (I2). It compares LLMs with traditional screening methods (e.g., human reviewers) (I3). It is published in a peer-reviewed journal in English (I4) and was published from 2020 onwards (I5). The study does not meet any exclusion criteria (E1-E5). Relevant chunks include: [S031#ab0], [S031#ab3], [S031#ft37], [S031#ft30], [S031#ft41], [S031#ft28]."}
+{"t": 620.598, "ts": "14:33:11", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.25, "in_tokens": 1210, "out_tokens": 178}
+{"t": 620.599, "ts": "14:33:11", "kind": "decision", "agent": "fulltext_screener", "id": "S032", "decision": "include", "code": "none", "reason": "Study S032 meets all inclusion criteria. It evaluates the performance of LLMs (GPT-4o) in title and abstract screening for systematic reviews (I1). It reports sensitivity, specificity, and overall accuracy metrics (I2). It compares LLMs with human reviewers (I3). It is published in English (I4) and from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5)."}
+{"t": 622.114, "ts": "14:33:13", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.4, "in_tokens": 815, "out_tokens": 209}
+{"t": 622.116, "ts": "14:33:13", "kind": "decision", "agent": "fulltext_screener", "id": "S033", "decision": "include", "code": "none", "reason": "Study S033 meets all inclusion criteria. It evaluates the performance of large language models (LLMs) in title and abstract screening for systematic reviews (I1). It reports sensitivity, specificity, and overall accuracy metrics for LLMs in screening tasks (I2). It compares LLMs with traditional screening methods (e.g., manual screening) by discussing cost and time efficiency (I3). It is published in a peer-reviewed journal in English (I4) and was published from 2020 onwards (I5). The study does not fall under any exclusion criteria (E1-E5) as it uses LLMs for title and abstract screening, reports performance metrics, is available in English, and is peer-reviewed with a publication date within the specified timeframe."}
+{"t": 623.488, "ts": "14:33:14", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.28, "in_tokens": 661, "out_tokens": 194}
+{"t": 623.49, "ts": "14:33:14", "kind": "decision", "agent": "fulltext_screener", "id": "S034", "decision": "include", "code": "none", "reason": "Study S034 meets all inclusion criteria. It evaluates the performance of LLMs (Mistral-Nemo-Instruct-2407) in title and abstract screening for systematic reviews (I1). It reports sensitivity metrics (100% for PICOS-assisted reviewers, 88.0% and 92.0% for others) (I2). It compares LLM-assisted screening with traditional methods (manual screening without PICOS assistance) (I3). It is published in a peer-reviewed journal in English (I4) and was published from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5)."}
+{"t": 624.485, "ts": "14:33:15", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 0.92, "in_tokens": 619, "out_tokens": 129}
+{"t": 624.486, "ts": "14:33:15", "kind": "decision", "agent": "fulltext_screener", "id": "S035", "decision": "include", "code": "none", "reason": "Study S035 meets all inclusion criteria. It evaluates the performance of LLMs in title and abstract screening for systematic reviews (I1), reports sensitivity, specificity, and accuracy metrics (I2), compares LLMs with traditional methods (I3), and is published in English (I4) from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5)."}
+{"t": 626.372, "ts": "14:33:17", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.5, "in_tokens": 1381, "out_tokens": 206}
+{"t": 626.373, "ts": "14:33:17", "kind": "decision", "agent": "fulltext_screener", "id": "S036", "decision": "include", "code": "none", "reason": "Study S036 meets all inclusion criteria: I1 (evaluates LLMs in title/abstract screening), I2 (reports sensitivity, specificity, and accuracy metrics), I3 (compares LLMs with traditional methods implicitly through performance metrics and comparison of prompting strategies), I4 (published in English), and I5 (published from 2020 onwards). It does not meet any exclusion criteria. Relevant chunks include [S036#ab0], [S036#ft0], [S036#ft5], [S036#ft20], and [S036#ft4]."}
+{"t": 627.68, "ts": "14:33:18", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.22, "in_tokens": 650, "out_tokens": 180}
+{"t": 627.681, "ts": "14:33:18", "kind": "decision", "agent": "fulltext_screener", "id": "S037", "decision": "include", "code": "none", "reason": "Study S037 meets all inclusion criteria: I1 (evaluates LLMs for title/abstract screening), I2 (reports sensitivity, specificity, and precision metrics), I3 (compares LLMs with traditional methods, including manual and rule-based tools), I4 (published in English), and I5 (published from 2020 onwards). It does not meet any exclusion criteria (E1-E5). The study is a systematic review and meta-analysis that directly addresses the performance of LLMs in title/abstract screening for systematic reviews, and it reports relevant metrics for comparison with existing models and traditional methods."}
+{"t": 628.957, "ts": "14:33:19", "kind": "llm_call", "agent": "fulltext_screener", "model": "qwen3:8b", "seconds": 1.21, "in_tokens": 652, "out_tokens": 175}
+{"t": 628.959, "ts": "14:33:19", "kind": "decision", "agent": "fulltext_screener", "id": "S038", "decision": "include", "code": "none", "reason": "Study S038 meets all inclusion criteria. It evaluates the performance of GPT-5 (an LLM) in title and abstract screening for systematic reviews (I1). It reports sensitivity, specificity, accuracy, PPV, NPV, and F1 scores (I2). It compares GPT-5 with human reviewers (implied comparison with traditional screening methods, I3). It is published in English (I4) and from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5). Relevant chunks: [S038#ab0], [S038#ab1]."}
+{"t": 628.96, "ts": "14:33:19", "kind": "stage", "agent": "extractor", "status": "start", "title": "Data extraction & risk of bias: 14 studies"}
+{"t": 638.554, "ts": "14:33:29", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 7.84, "in_tokens": 869, "out_tokens": 1332}
+{"t": 640.474, "ts": "14:33:31", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 1.91, "in_tokens": 853, "out_tokens": 312}
+{"t": 640.475, "ts": "14:33:31", "kind": "decision", "agent": "extractor", "id": "S002", "design": "AI-assisted literature screening: A hybrid approach using large language models ", "results": 3, "rob": "some concerns"}
+{"t": 652.342, "ts": "14:33:43", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 8.65, "in_tokens": 2964, "out_tokens": 1362}
+{"t": 654.552, "ts": "14:33:45", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.19, "in_tokens": 2949, "out_tokens": 320}
+{"t": 654.553, "ts": "14:33:45", "kind": "decision", "agent": "extractor", "id": "S008", "design": "S008#ab1", "results": 4, "rob": "some concerns"}
+{"t": 664.495, "ts": "14:33:55", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 7.3, "in_tokens": 3148, "out_tokens": 1119}
+{"t": 666.631, "ts": "14:33:57", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.12, "in_tokens": 3133, "out_tokens": 309}
+{"t": 666.633, "ts": "14:33:57", "kind": "decision", "agent": "extractor", "id": "S009", "design": "S009#ft1", "results": 1, "rob": "some concerns"}
+{"t": 679.424, "ts": "14:34:10", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 12.38, "in_tokens": 1033, "out_tokens": 1868}
+{"t": 681.578, "ts": "14:34:12", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.15, "in_tokens": 1018, "out_tokens": 360}
+{"t": 681.579, "ts": "14:34:12", "kind": "decision", "agent": "extractor", "id": "S010", "design": "Evaluation of a Prompt-Standardized LLM Pipeline for Title–Abstract Screening: C", "results": 3, "rob": "high"}
+{"t": 693.742, "ts": "14:34:24", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 11.59, "in_tokens": 1322, "out_tokens": 2005}
+{"t": 695.651, "ts": "14:34:26", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 1.9, "in_tokens": 1306, "out_tokens": 292}
+{"t": 695.652, "ts": "14:34:26", "kind": "decision", "agent": "extractor", "id": "S014", "design": "Systematic review", "results": 4, "rob": "some concerns"}
+{"t": 711.628, "ts": "14:34:42", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 15.41, "in_tokens": 1169, "out_tokens": 2607}
+{"t": 713.54, "ts": "14:34:44", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 1.9, "in_tokens": 1153, "out_tokens": 294}
+{"t": 713.541, "ts": "14:34:44", "kind": "decision", "agent": "extractor", "id": "S027", "design": "Diagnostic study comparing the accuracy of LLM-assisted screening versus manual ", "results": 3, "rob": "some concerns"}
+{"t": 723.132, "ts": "14:34:54", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 7.31, "in_tokens": 2982, "out_tokens": 1176}
+{"t": 725.503, "ts": "14:34:56", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.35, "in_tokens": 2967, "out_tokens": 348}
+{"t": 725.504, "ts": "14:34:56", "kind": "decision", "agent": "extractor", "id": "S031", "design": "not reported", "results": 4, "rob": "some concerns"}
+{"t": 733.705, "ts": "14:35:04", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 6.2, "in_tokens": 2777, "out_tokens": 962}
+{"t": 735.791, "ts": "14:35:06", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.07, "in_tokens": 2762, "out_tokens": 299}
+{"t": 735.792, "ts": "14:35:06", "kind": "decision", "agent": "extractor", "id": "S032", "design": "Development and evaluation of prompts for a large language model to screen title", "results": 4, "rob": "some concerns"}
+{"t": 760.06, "ts": "14:35:31", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 23.82, "in_tokens": 858, "out_tokens": 3604}
+{"t": 762.121, "ts": "14:35:33", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.05, "in_tokens": 843, "out_tokens": 287}
+{"t": 762.123, "ts": "14:35:33", "kind": "decision", "agent": "extractor", "id": "S033", "design": "Diagnostic test accuracy", "results": 3, "rob": "some concerns"}
+{"t": 778.545, "ts": "14:35:49", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 16.13, "in_tokens": 807, "out_tokens": 2529}
+{"t": 781.136, "ts": "14:35:52", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.58, "in_tokens": 791, "out_tokens": 387}
+{"t": 781.137, "ts": "14:35:52", "kind": "decision", "agent": "extractor", "id": "S034", "design": "Study: Do it faster with PICOS: Generative AI-Assisted systematic review screeni", "results": 5, "rob": "some concerns"}
+{"t": 787.59, "ts": "14:35:58", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 6.21, "in_tokens": 609, "out_tokens": 976}
+{"t": 789.646, "ts": "14:36:00", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.05, "in_tokens": 593, "out_tokens": 318}
+{"t": 789.647, "ts": "14:36:00", "kind": "decision", "agent": "extractor", "id": "S035", "design": "Evaluating Large Language Models for Radiology Systematic Review Title and Abstr", "results": 4, "rob": "some concerns"}
+{"t": 799.328, "ts": "14:36:10", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 7.67, "in_tokens": 2773, "out_tokens": 1171}
+{"t": 801.482, "ts": "14:36:12", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.15, "in_tokens": 2758, "out_tokens": 306}
+{"t": 801.483, "ts": "14:36:12", "kind": "decision", "agent": "extractor", "id": "S036", "design": "The study evaluates prompting strategies and large language models (LLMs) in sys", "results": 4, "rob": "high"}
+{"t": 809.522, "ts": "14:36:20", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 7.81, "in_tokens": 682, "out_tokens": 1286}
+{"t": 811.603, "ts": "14:36:22", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.07, "in_tokens": 667, "out_tokens": 331}
+{"t": 811.626, "ts": "14:36:22", "kind": "decision", "agent": "extractor", "id": "S037", "design": "Systematic review and meta-analysis with development of a new tool", "results": 4, "rob": "some concerns"}
+{"t": 828.662, "ts": "14:36:39", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 16.83, "in_tokens": 655, "out_tokens": 2870}
+{"t": 830.586, "ts": "14:36:41", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 1.92, "in_tokens": 639, "out_tokens": 286}
+{"t": 830.587, "ts": "14:36:41", "kind": "decision", "agent": "extractor", "id": "S038", "design": "Evaluating the Efficacy and Efficiency of GPT-5 for Automated Title and Abstract", "results": 4, "rob": "some concerns"}
+{"t": 830.587, "ts": "14:36:41", "kind": "decision", "agent": "extractor", "what": "quote verification", "verified": 107, "total": 116, "rate": 0.922}
+{"t": 830.588, "ts": "14:36:41", "kind": "stage", "agent": "writer", "status": "start", "title": "Synthesis & writing"}
+{"t": 839.137, "ts": "14:36:50", "kind": "llm_call", "agent": "writer", "model": "qwen3:8b", "seconds": 8.54, "in_tokens": 4869, "out_tokens": 1257}
+{"t": 839.139, "ts": "14:36:50", "kind": "stage", "agent": "critic", "status": "start", "title": "Quality assurance (critic)"}
+{"t": 863.429, "ts": "14:37:14", "kind": "llm_call", "agent": "critic", "model": "gpt-oss:latest", "seconds": 24.28, "in_tokens": 9435, "out_tokens": 987}
+{"t": 863.431, "ts": "14:37:14", "kind": "decision", "agent": "critic", "approve": false, "issues": 7, "majors": 6}
+{"t": 863.431, "ts": "14:37:14", "kind": "coordinator", "agent": "coordinator", "decision": "revise synthesis", "reason": "critic found major issues"}
+{"t": 863.432, "ts": "14:37:14", "kind": "stage", "agent": "writer", "status": "start", "title": "Synthesis & writing (revision 1)"}
+{"t": 870.302, "ts": "14:37:21", "kind": "llm_call", "agent": "writer", "model": "qwen3:8b", "seconds": 6.86, "in_tokens": 5937, "out_tokens": 1155}
+{"t": 870.304, "ts": "14:37:21", "kind": "stage", "agent": "critic", "status": "start", "title": "Quality assurance (critic)"}
+{"t": 918.957, "ts": "14:38:09", "kind": "llm_call", "agent": "critic", "model": "gpt-oss:latest", "seconds": 48.65, "in_tokens": 15836, "out_tokens": 11}
+{"t": 918.959, "ts": "14:38:09", "kind": "decision", "agent": "critic", "approve": true, "issues": 0, "majors": 0}
+{"t": 918.959, "ts": "14:38:09", "kind": "coordinator", "agent": "coordinator", "decision": "write report", "reason": "critic approved"}
+{"t": 918.96, "ts": "14:38:09", "kind": "stage", "agent": "reporter", "status": "start", "title": "Report generation"}
+{"t": 919.486, "ts": "14:38:10", "kind": "stage", "agent": "reporter", "status": "done", "title": "Report generated", "files": ["checkpoints.db", "checkpoints.db-shm", "checkpoints.db-wal", "evidence_map.png", "evidence_table.csv", "extractions.json", "manifest.json", "prisma_checklist.json", "prisma_flow.png", "prisma_flow.svg", "protocol.json", "references.bib", "report.docx", "report.md", "results_plot.png", "risk_of_bias.png", "screening_log.csv", "trace.jsonl"]}
+{"t": 0.025, "ts": "14:39:03", "kind": "run", "agent": "cli", "status": "replay", "from_node": "extraction", "checkpoint": "1f1e1018-0e86-6e79-8007-47cb842fd262"}
+{"t": 0.04, "ts": "14:39:03", "kind": "stage", "agent": "extractor", "status": "start", "title": "Data extraction & risk of bias: 14 studies"}
+{"t": 5.476, "ts": "14:39:08", "kind": "tool", "agent": "rag", "tool": "rebuild_hybrid_index", "chunks": 379, "studies": 15}
+{"t": 13.144, "ts": "14:39:16", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 7.16, "in_tokens": 869, "out_tokens": 1332}
+{"t": 14.893, "ts": "14:39:18", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 1.74, "in_tokens": 853, "out_tokens": 312}
+{"t": 14.895, "ts": "14:39:18", "kind": "decision", "agent": "extractor", "id": "S002", "design": "AI-assisted literature screening: A hybrid approach using large language models ", "results": 3, "rob": "some concerns"}
+{"t": 26.342, "ts": "14:39:29", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 7.98, "in_tokens": 2964, "out_tokens": 1362}
+{"t": 28.394, "ts": "14:39:31", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.04, "in_tokens": 2949, "out_tokens": 320}
+{"t": 28.395, "ts": "14:39:31", "kind": "decision", "agent": "extractor", "id": "S008", "design": "Results The model screened a total of 15,605 records. It included a higher perce", "results": 4, "rob": "some concerns"}
+{"t": 37.641, "ts": "14:39:41", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 6.77, "in_tokens": 3148, "out_tokens": 1119}
+{"t": 39.66, "ts": "14:39:43", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.0, "in_tokens": 3133, "out_tokens": 309}
+{"t": 39.662, "ts": "14:39:43", "kind": "decision", "agent": "extractor", "id": "S009", "design": "Objective: To assess LLM performance and variability in screening, quantify the ", "results": 1, "rob": "some concerns"}
+{"t": 50.14, "ts": "14:39:53", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 10.02, "in_tokens": 1033, "out_tokens": 1868}
+{"t": 52.155, "ts": "14:39:55", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.01, "in_tokens": 1018, "out_tokens": 360}
+{"t": 52.156, "ts": "14:39:55", "kind": "decision", "agent": "extractor", "id": "S010", "design": "Evaluation of a Prompt-Standardized LLM Pipeline for Title–Abstract Screening: C", "results": 3, "rob": "high"}
+{"t": 63.398, "ts": "14:40:06", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 10.62, "in_tokens": 1322, "out_tokens": 2005}
+{"t": 65.087, "ts": "14:40:08", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 1.68, "in_tokens": 1306, "out_tokens": 292}
+{"t": 65.089, "ts": "14:40:08", "kind": "decision", "agent": "extractor", "id": "S014", "design": "Systematic review", "results": 4, "rob": "some concerns"}
+{"t": 79.393, "ts": "14:40:22", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 13.76, "in_tokens": 1169, "out_tokens": 2607}
+{"t": 81.097, "ts": "14:40:24", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 1.7, "in_tokens": 1153, "out_tokens": 294}
+{"t": 81.098, "ts": "14:40:24", "kind": "decision", "agent": "extractor", "id": "S027", "design": "Diagnostic study comparing the accuracy of LLM-assisted screening versus manual ", "results": 3, "rob": "some concerns"}
+{"t": 90.209, "ts": "14:40:33", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 7.03, "in_tokens": 2982, "out_tokens": 1176}
+{"t": 92.871, "ts": "14:40:36", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.64, "in_tokens": 2967, "out_tokens": 348}
+{"t": 92.872, "ts": "14:40:36", "kind": "decision", "agent": "extractor", "id": "S031", "design": "not reported", "results": 4, "rob": "some concerns"}
+{"t": 101.912, "ts": "14:40:45", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 6.9, "in_tokens": 2777, "out_tokens": 962}
+{"t": 104.135, "ts": "14:40:47", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.2, "in_tokens": 2762, "out_tokens": 299}
+{"t": 104.136, "ts": "14:40:47", "kind": "decision", "agent": "extractor", "id": "S032", "design": "Development and evaluation of prompts for a large language model to screen title", "results": 4, "rob": "some concerns"}
+{"t": 131.336, "ts": "14:41:14", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 26.66, "in_tokens": 858, "out_tokens": 3604}
+{"t": 133.8, "ts": "14:41:17", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.45, "in_tokens": 843, "out_tokens": 287}
+{"t": 133.801, "ts": "14:41:17", "kind": "decision", "agent": "extractor", "id": "S033", "design": "Diagnostic test accuracy", "results": 3, "rob": "some concerns"}
+{"t": 155.213, "ts": "14:41:38", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 21.08, "in_tokens": 807, "out_tokens": 2529}
+{"t": 158.354, "ts": "14:41:41", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 3.13, "in_tokens": 791, "out_tokens": 387}
+{"t": 158.359, "ts": "14:41:41", "kind": "decision", "agent": "extractor", "id": "S034", "design": "Study: Do it faster with PICOS: Generative AI-Assisted systematic review screeni", "results": 5, "rob": "some concerns"}
+{"t": 167.42, "ts": "14:41:50", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 8.15, "in_tokens": 609, "out_tokens": 976}
+{"t": 169.997, "ts": "14:41:53", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.56, "in_tokens": 593, "out_tokens": 318}
+{"t": 170.0, "ts": "14:41:53", "kind": "decision", "agent": "extractor", "id": "S035", "design": "Evaluating Large Language Models for Radiology Systematic Review Title and Abstr", "results": 4, "rob": "some concerns"}
+{"t": 182.867, "ts": "14:42:06", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 9.07, "in_tokens": 2773, "out_tokens": 1171}
+{"t": 185.17, "ts": "14:42:08", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.25, "in_tokens": 2758, "out_tokens": 306}
+{"t": 185.172, "ts": "14:42:08", "kind": "decision", "agent": "extractor", "id": "S036", "design": "The study evaluates prompting strategies and large language models (LLMs) in sys", "results": 4, "rob": "high"}
+{"t": 193.402, "ts": "14:42:16", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 7.9, "in_tokens": 682, "out_tokens": 1286}
+{"t": 195.493, "ts": "14:42:18", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 2.08, "in_tokens": 667, "out_tokens": 331}
+{"t": 195.494, "ts": "14:42:18", "kind": "decision", "agent": "extractor", "id": "S037", "design": "Systematic review and meta-analysis with development of a new tool", "results": 4, "rob": "some concerns"}
+{"t": 213.243, "ts": "14:42:36", "kind": "llm_call", "agent": "extractor", "model": "qwen3:8b", "seconds": 17.45, "in_tokens": 655, "out_tokens": 2870}
+{"t": 215.123, "ts": "14:42:38", "kind": "llm_call", "agent": "appraiser", "model": "qwen3:8b", "seconds": 1.87, "in_tokens": 639, "out_tokens": 286}
+{"t": 215.125, "ts": "14:42:38", "kind": "decision", "agent": "extractor", "id": "S038", "design": "Evaluating the Efficacy and Efficiency of GPT-5 for Automated Title and Abstract", "results": 4, "rob": "some concerns"}
+{"t": 215.125, "ts": "14:42:38", "kind": "decision", "agent": "extractor", "what": "quote verification", "verified": 107, "total": 116, "rate": 0.922}
+{"t": 215.126, "ts": "14:42:38", "kind": "stage", "agent": "writer", "status": "start", "title": "Synthesis & writing"}
+{"t": 222.437, "ts": "14:42:45", "kind": "llm_call", "agent": "writer", "model": "qwen3:8b", "seconds": 7.3, "in_tokens": 5152, "out_tokens": 1032}
+{"t": 222.439, "ts": "14:42:45", "kind": "stage", "agent": "critic", "status": "start", "title": "Quality assurance (critic)"}
+{"t": 245.855, "ts": "14:43:09", "kind": "llm_call", "agent": "critic", "model": "gpt-oss:latest", "seconds": 23.41, "in_tokens": 9272, "out_tokens": 891}
+{"t": 245.856, "ts": "14:43:09", "kind": "decision", "agent": "critic", "approve": false, "issues": 6, "majors": 6}
+{"t": 245.857, "ts": "14:43:09", "kind": "coordinator", "agent": "coordinator", "decision": "revise synthesis", "reason": "critic found major issues"}
+{"t": 245.857, "ts": "14:43:09", "kind": "stage", "agent": "writer", "status": "start", "title": "Synthesis & writing (revision 1)"}
+{"t": 253.274, "ts": "14:43:16", "kind": "llm_call", "agent": "writer", "model": "qwen3:8b", "seconds": 7.41, "in_tokens": 6111, "out_tokens": 1077}
+{"t": 253.276, "ts": "14:43:16", "kind": "stage", "agent": "critic", "status": "start", "title": "Quality assurance (critic)"}
+{"t": 282.654, "ts": "14:43:46", "kind": "llm_call", "agent": "critic", "model": "gpt-oss:latest", "seconds": 29.37, "in_tokens": 10770, "out_tokens": 612}
+{"t": 282.655, "ts": "14:43:46", "kind": "decision", "agent": "critic", "approve": false, "issues": 6, "majors": 6}
+{"t": 282.656, "ts": "14:43:46", "kind": "coordinator", "agent": "coordinator", "decision": "write report", "reason": "max revision rounds reached (issues reported)"}
+{"t": 282.656, "ts": "14:43:46", "kind": "stage", "agent": "reporter", "status": "start", "title": "Report generation"}
+{"t": 283.12, "ts": "14:43:46", "kind": "stage", "agent": "reporter", "status": "done", "title": "Report generated", "files": ["checkpoints.db", "checkpoints.db-shm", "checkpoints.db-wal", "evidence_map.png", "evidence_table.csv", "extractions.json", "manifest.json", "prisma_checklist.json", "prisma_flow.png", "prisma_flow.svg", "protocol.json", "references.bib", "report.docx", "report.md", "results_plot.png", "risk_of_bias.png", "screening_log.csv", "trace.jsonl"]}
+{"t": 0.049, "ts": "14:44:13", "kind": "run", "agent": "cli", "status": "replay", "from_node": "synthesis", "checkpoint": "1f1e102e-0298-686a-800b-b8bcf9316d6b", "overrides": ["max_critic_rounds=4"]}
+{"t": 0.055, "ts": "14:44:13", "kind": "stage", "agent": "writer", "status": "start", "title": "Synthesis & writing (revision 1)"}
+{"t": 7.178, "ts": "14:44:20", "kind": "llm_call", "agent": "writer", "model": "qwen3:8b", "seconds": 7.12, "in_tokens": 6111, "out_tokens": 1035}
+{"t": 7.18, "ts": "14:44:20", "kind": "stage", "agent": "critic", "status": "start", "title": "Quality assurance (critic)"}
+{"t": 20.458, "ts": "14:44:34", "kind": "llm_call", "agent": "critic", "model": "gpt-oss:latest", "seconds": 13.27, "in_tokens": 7630, "out_tokens": 494}
+{"t": 20.459, "ts": "14:44:34", "kind": "decision", "agent": "critic", "approve": false, "issues": 4, "majors": 2}
+{"t": 20.46, "ts": "14:44:34", "kind": "coordinator", "agent": "coordinator", "decision": "revise synthesis", "reason": "critic found major issues"}
+{"t": 20.461, "ts": "14:44:34", "kind": "stage", "agent": "writer", "status": "start", "title": "Synthesis & writing (revision 2)"}
+{"t": 29.199, "ts": "14:44:43", "kind": "llm_call", "agent": "writer", "model": "qwen3:8b", "seconds": 8.73, "in_tokens": 5621, "out_tokens": 1306}
+{"t": 29.201, "ts": "14:44:43", "kind": "stage", "agent": "critic", "status": "start", "title": "Quality assurance (critic)"}
+{"t": 59.486, "ts": "14:45:13", "kind": "llm_call", "agent": "critic", "model": "gpt-oss:latest", "seconds": 30.28, "in_tokens": 11439, "out_tokens": 11}
+{"t": 59.487, "ts": "14:45:13", "kind": "decision", "agent": "critic", "approve": true, "issues": 0, "majors": 0}
+{"t": 59.488, "ts": "14:45:13", "kind": "coordinator", "agent": "coordinator", "decision": "write report", "reason": "critic approved"}
+{"t": 59.488, "ts": "14:45:13", "kind": "stage", "agent": "reporter", "status": "start", "title": "Report generation"}
+{"t": 60.041, "ts": "14:45:13", "kind": "stage", "agent": "reporter", "status": "done", "title": "Report generated", "files": ["checkpoints.db", "checkpoints.db-shm", "checkpoints.db-wal", "evidence_map.png", "evidence_table.csv", "extractions.json", "manifest.json", "prisma_checklist.json", "prisma_flow.png", "prisma_flow.svg", "protocol.json", "references.bib", "report.docx", "report.md", "results_plot.png", "risk_of_bias.png", "screening_log.csv", "trace.jsonl"]}

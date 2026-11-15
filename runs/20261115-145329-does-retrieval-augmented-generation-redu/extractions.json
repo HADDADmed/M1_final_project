@@ -1,0 +1,685 @@
+{
+  "extractions": {
+    "S006": {
+      "study_design": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "",
+        "verified": false
+      },
+      "population_or_dataset": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "",
+        "verified": false
+      },
+      "intervention_or_method": {
+        "value": "ISO-RAG (ISOperimetric Retrieval-Augmented Generation)",
+        "quote": "we propose ISO-RAG (ISOperimetric Retrieval-Augmented Generation), a geometry-aware local graph retrieval framework for multi-hop QA.",
+        "chunk": "S006#ft6",
+        "verified": true
+      },
+      "comparator": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "",
+        "verified": false
+      },
+      "outcomes": [
+        "reduction_in_hallucination_rates",
+        "improvement_in_factual_accuracy",
+        "enhanced_coherence_and_relevance",
+        "user_satisfaction_or_perceived_accuracy"
+      ],
+      "results": [
+        {
+          "outcome": "reduction_in_hallucination_rates",
+          "metric": "F1 score",
+          "value": "42.8",
+          "comparator": "HippoRAG2",
+          "quote": "Evaluated with Qwen-Plus, the framework peaks at an F1 score of 42.8, securing an approximate 25% relative gain over HippoRAG2.",
+          "chunk": "S006#ft34",
+          "verified": true
+        },
+        {
+          "outcome": "improvement_in_factual_accuracy",
+          "metric": "F1 score",
+          "value": "84.7",
+          "comparator": "HippoRAG2",
+          "quote": "QA evaluation using Qwen3-Max yields an F1 score of 84.7 and an EM score of 80.7.",
+          "chunk": "S006#ft33",
+          "verified": true
+        },
+        {
+          "outcome": "enhanced_coherence_and_relevance",
+          "metric": "R@5 and P@5",
+          "value": "88.05 and 40.10",
+          "comparator": "HippoRAG2",
+          "quote": "ISO-RAG achieves peak results by pruning only 32%. This proves multi-hop retrieval requires topology-aware filtering, not indiscriminate pruning.",
+          "chunk": "S006#ft39",
+          "verified": true
+        },
+        {
+          "outcome": "user_satisfaction_or_perceived_accuracy",
+          "metric": "EM score",
+          "value": "80.7",
+          "comparator": "HippoRAG2",
+          "quote": "QA evaluation using Qwen3-Max yields an F1 score of 84.7 and an EM score of 80.7.",
+          "chunk": "S006#ft33",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "ISO-RAG reduces hallucinations and improves factual accuracy, coherence, and relevance of generated responses compared to existing methods.",
+        "quote": "These results confirm the efficacy of ISO-RAG in structured multi-hop scenarios, where preserving valid intermediate hops and suppressing spurious diffusion are critical.",
+        "chunk": "S006#ft33",
+        "verified": true
+      },
+      "limitations": {
+        "value": "not reported",
+        "quote": "not reported",
+        "chunk": "",
+        "verified": false
+      }
+    },
+    "S008": {
+      "study_design": {
+        "value": "Crossover study",
+        "quote": "A 2-period crossover design was used: 2 pharmacists independently reviewed 213 outpatient prescriptions under both unaided and AI-assisted conditions, yielding paired unaided and collaborative results for each prescription.",
+        "chunk": "S008#ab1",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "2 pharmacists reviewing 213 outpatient prescriptions",
+        "quote": "2 pharmacists independently reviewed 213 outpatient prescriptions under both unaided and AI-assisted conditions, yielding paired unaided and collaborative results for each prescription.",
+        "chunk": "S008#ab1",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "Knowledge-augmented LLM with exact-match injection",
+        "quote": "A structured knowledge base derived from drug package inserts served as the principal reference and supported lightweight knowledge augmentation through exact-match injection.",
+        "chunk": "S008#ab1",
+        "verified": true
+      },
+      "comparator": {
+        "value": "Unaided pharmacist review and stand-alone AI review",
+        "quote": "Plain AI review and knowledge-augmented AI review were also run on the same 213-prescription test set to quantify hallucination rates, and stand-alone AI performance was assessed against the reference standard.",
+        "chunk": "S008#ab1",
+        "verified": true
+      },
+      "outcomes": [
+        "reduction_in_hallucination_rates",
+        "improvement_in_factual_accuracy",
+        "enhanced_coherence_and_relevance",
+        "user_satisfaction_or_perceived_accuracy"
+      ],
+      "results": [
+        {
+          "outcome": "reduction_in_hallucination_rates",
+          "metric": "Absolute reduction in hallucination rate",
+          "value": "15.0 percentage points",
+          "comparator": "Stand-alone AI review",
+          "quote": "Knowledge augmentation reduced the model hallucination rate from 19.7% (42/213 prescriptions) to 4.7% (10/213), an absolute reduction of 15.0 percentage points (relative reduction 76.2%; P<.001).",
+          "chunk": "S008#ab3",
+          "verified": true
+        },
+        {
+          "outcome": "improvement_in_factual_accuracy",
+          "metric": "Accuracy",
+          "value": "97.2% (human-AI collaborative) vs 82.6% (pharmacist-alone)",
+          "comparator": "Pharmacist-alone review",
+          "quote": "Overall review accuracy was 97.2% (207/213, 95% CI 94.0%-98.7%) in the human-AI collaborative condition vs 82.6% (176/213, 95% CI 77.0%-87.1%) in the pharmacist-alone condition (P<.001).",
+          "chunk": "S008#ab2",
+          "verified": true
+        },
+        {
+          "outcome": "enhanced_coherence_and_relevance",
+          "metric": "Sensitivity",
+          "value": "98% (human-AI collaborative) vs 55% (pharmacist-alone)",
+          "comparator": "Pharmacist-alone review",
+          "quote": "Sensitivity was 98% (61/62) vs 55% (34/62), and the false-negative rate fell from 45% to 2% (P<.001).",
+          "chunk": "S008#ab2",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "Knowledge-augmented LLM significantly reduced hallucination rates and improved factual accuracy and sensitivity in pharmacist-led outpatient prescription review.",
+        "quote": "Knowledge-augmented LLM used as a pharmacist-supervised prescreening tool was associated with substantially higher accuracy and sensitivity in outpatient retrospective prescription review, while keeping all prescription data within the hospital network.",
+        "chunk": "S008#ab3",
+        "verified": true
+      },
+      "limitations": {
+        "value": "Not reported",
+        "quote": "not reported",
+        "chunk": "none",
+        "verified": false
+      }
+    },
+    "S009": {
+      "study_design": {
+        "value": "Private LLM and RAG Chatbot (2026)",
+        "quote": "Private LLM and RAG Chatbot. While Large Language Models (LLMs) have transformed conversational AI, enterprise settings present significant challenges: cloud-based processing raises data privacy concerns, hallucinations can introduce factually incorrect information, and proprietary enterprise knowledge may go unused. In this paper, we introduce a comprehensive Retrieval-Augmented Generation (RAG) system that combines a publicly deployed LLM with semantic document retrieval, enabling organizations to create safe, reliable, and verifiable knowledge assistants.",
+        "chunk": "S009#ab0",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "Not reported",
+        "quote": "not reported",
+        "chunk": "none",
+        "verified": false
+      },
+      "intervention_or_method": {
+        "value": "Retrieval-Augmented Generation (RAG) system combining a publicly deployed LLM with semantic document retrieval",
+        "quote": "In this paper, we introduce a comprehensive Retrieval-Augmented Generation (RAG) system that combines a publicly deployed LLM with semantic document retrieval, enabling organizations to create safe, reliable, and verifiable knowledge assistants.",
+        "chunk": "S009#ab0",
+        "verified": true
+      },
+      "comparator": {
+        "value": "Not reported",
+        "quote": "not reported",
+        "chunk": "none",
+        "verified": false
+      },
+      "outcomes": [
+        "reduction_in_hallucination_rates",
+        "improvement_in_factual_accuracy",
+        "enhanced_coherence_and_relevance",
+        "user_satisfaction_or_perceived_accuracy"
+      ],
+      "results": [
+        {
+          "outcome": "reduction_in_hallucination_rates",
+          "metric": "Reduction in hallucinations",
+          "value": "Reported as part of a controlled comparison against three baseline systems, with direct measurement of the reduction in hallucinations on a curated set of 300 queries from an enterprise corpus consisting of 500 documents",
+          "comparator": "vanilla LLM, dense-only RAG, and BM25-only RAG",
+          "quote": "We propose a hybrid retrieval fusion mechanism, which is tie-break-aware and calibrated with a confidence score, and report exact quantitative results from a controlled comparison against three baseline systems (vanilla LLM, dense-only RAG, and BM23-only RAG), as well as direct measurement of the reduction in hallucinations on a curated set of 300 queries from an enterprise corpus consisting of 500 documents.",
+          "chunk": "S009#ab1",
+          "verified": true
+        },
+        {
+          "outcome": "improvement_in_factual_accuracy",
+          "metric": "Accuracy",
+          "value": "93.5%",
+          "comparator": "Not reported",
+          "quote": "The experimental results indicate that the recommended hybrid RAG system reaches an accuracy of 93.5%, reflecting trustworthy and factually accurate replies for business knowledge retrieval.",
+          "chunk": "S009#ab1",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "The hybrid RAG system significantly reduces hallucinations and improves factual accuracy, achieving an accuracy of 93.5% in business knowledge retrieval.",
+        "quote": "The experimental results indicate that the recommended hybrid RAG system reaches an accuracy of 93.5%, reflecting trustworthy and factually accurate replies for business knowledge retrieval.",
+        "chunk": "S009#ab1",
+        "verified": true
+      },
+      "limitations": {
+        "value": "Not reported",
+        "quote": "not reported",
+        "chunk": "none",
+        "verified": false
+      }
+    },
+    "S011": {
+      "study_design": {
+        "value": "Retrieval-Augmented Generation (RAG) framework with graph-based reasoning.",
+        "quote": "ugmented generation framework. When constructing the graph, AGRAG substitutes the widely used LLM entity extraction method with a statistics-based method, avoiding hallucination and error propagation.",
+        "chunk": "ab1",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "Qwen3-4B-Instruct-2507 LLM on 2080Ti GPU, with low resource setting (-L) and four datasets (Novel, Medical, WOS, IFS-Rel).",
+        "quote": "52 / 306 Table V: Low resource experiment effectiveness with Qwen3-4B-Instruct-2507 LLM on 2080Ti GPU, where model with -L denotes low resource setting.",
+        "chunk": "ft71",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "AGRAG: Advanced Graph-based Retrieval-Augmented Generation with MCMI subgraph generation and statistics-based entity extraction.",
+        "quote": "ugmented generation framework. When constructing the graph, AGRAG substitutes the widely used LLM entity extraction method with a statistics-based method, avoiding hallucination and error propagation.",
+        "chunk": "ab1",
+        "verified": true
+      },
+      "comparator": {
+        "value": "SiReRAG-L, HippoRAG2-L, and other baselines.",
+        "quote": "52 / 306 Table V: Low resource experiment effectiveness with Qwen3-4B-Instruct-2507 LLM on 2080Ti GPU, where model with -L denotes low resource setting. Task Creative Gen. Contextual Sum. Complex Rea. Fact Retrieval Dataset Novel Medical Novel Medical Novel Medical Novel Medical Metric FS. ACC. COV. FS. ACC. COV. COV. ACC. COV. ACC. ROG. ACC. ROG. ACC. ROG. ACC. ROG. ACC. SiReRAG-L 0.324 0.412 0.299 0.421 0.758 0.475 0.647 0.673 0.536 0.738 0.260 0.426 0.308 0.698 0.271 0.416 0.343 0.661 HippoRAG2-L 0.433 0.481 0.335 0.425 0.755 0.433 0.696 0.657 0.522 0.731 0.280 0.507 0.298 0.681 0.288 0.513 0.338 0.654 AGRAG-L 0.441 0.519 0.354 0.436 0.777 0.490 0.745 0.706 0.545 0.751 0.293 0.552 0.312 0.739 0.297 0.560 0.351 0.701",
+        "chunk": "ft71",
+        "verified": true
+      },
+      "outcomes": [
+        "reduction_in_hallucination_rates",
+        "improvement_in_factual_accuracy",
+        "enhanced_coherence_and_relevance",
+        "user_satisfaction_or_perceived_accuracy"
+      ],
+      "results": [
+        {
+          "outcome": "reduction_in_hallucination_rates",
+          "metric": "Hallucinated prediction rate",
+          "value": "AGRAG achieves the lowest rate by leveraging MCMI subgraphs to provide explicit evidence for retrieved chunks.",
+          "comparator": "SiReRAG-L, HippoRAG2-L",
+          "quote": "Furthermore, Table III presents the hallucinated prediction rate, defined as the percentage of classifications out of the label set. AGRAG achieves the lowest rate by leveraging MCMI subgraphs to provide explicit evidence for retrieved chunks.",
+          "chunk": "ft61",
+          "verified": true
+        },
+        {
+          "outcome": "improvement_in_factual_accuracy",
+          "metric": "ACC (Accuracy)",
+          "value": "AGRAG-L achieves higher ACC than SiReRAG-L and HippoRAG2-L across multiple tasks.",
+          "comparator": "SiReRAG-L, HippoRAG2-L",
+          "quote": "52 / 306 Table V: Low resource experiment effectiveness with Qwen3-4B-Instruct-2507 LLM on 2080Ti GPU, where model with -L denotes low resource setting. Task Creative Gen. Contextual Sum. Complex Rea. Fact Retrieval Dataset Novel Medical Novel Medical Novel Medical Novel Medical Metric FS. ACC. COV. FS. ACC. COV. COV. ACC. COV. ACC. ROG. ACC. ROG. ACC. ROG. ACC. ROG. ACC. SiReRAG-L 0.324 0.412 0.299 0.421 0.758 0.475 0.647 0.673 0.536 0.738 0.260 0.426 0.308 0.698 0.271 0.416 0.343 0.661 HippoRAG2-L 0.433 0.481 0.335 0.425 0.755 0.433 0.696 0.657 0.522 0.731 0.280 0.507 0.298 0.681 0.288 0.513 0.338 0.654 AGRAG-L 0.441 0.519 0.354 0.436 0.777 0.490 0.745 0.706 0.545 0.751 0.293 0.552 0.312 0.739 0.297 0.560 0.351 0.701",
+          "chunk": "ft71",
+          "verified": true
+        },
+        {
+          "outcome": "enhanced_coherence_and_relevance",
+          "metric": "ROG (ROUGE-L)",
+          "value": "AGRAG-L achieves higher ROG than SiReRAG-L and HippoRAG2-L across multiple tasks.",
+          "comparator": "SiReRAG-L, HippoRAG2-L",
+          "quote": "52 / 306 Table V: Low resource experiment effectiveness with Qwen3-4B-Instruct-2507 LLM on 2080Ti GPU, where model with -L denotes low resource setting. Task Creative Gen. Contextual Sum. Complex Rea. Fact Retrieval Dataset Novel Medical Novel Medical Novel Medical Novel Medical Metric FS. ACC. COV. FS. ACC. COV. COV. ACC. COV. ACC. ROG. ACC. ROG. ACC. ROG. ACC. ROG. ACC. SiReRAG-L 0.324 0.412 0.299 0.421 0.758 0.475 0.647 0.673 0.536 0.738 0.260 0.426 0.308 0.698 0.271 0.416 0.343 0.661 HippoRAG2-L 0.433 0.481 0.335 0.425 0.755 0.433 0.696 0.657 0.522 0.731 0.280 0.507 0.298 0.681 0.288 0.513 0.338 0.654 AGRAG-L 0.441 0.519 0.354 0.436 0.777 0.490 0.745 0.706 0.545 0.751 0.293 0.552 0.312 0.739 0.297 0.560 0.351 0.701",
+          "chunk": "ft71",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "AGRAG reduces hallucinations and improves factual accuracy, coherence, and relevance of generated text compared to SiReRAG-L and HippoRAG2-L.",
+        "quote": "ugmented generation framework. When constructing the graph, AGRAG substitutes the widely used LLM entity extraction method with a statistics-based method, avoiding hallucination and error propagation.",
+        "chunk": "ab1",
+        "verified": true
+      },
+      "limitations": {
+        "value": "Not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      }
+    },
+    "S012": {
+      "study_design": {
+        "value": "Retrieval-Augmented Generation (RAG) integration with Large Language Models (LLMs) in Arabic medical question-answering (QA) systems.",
+        "quote": "Advancing Arabic Medical Question Answering Systems with RAG and LLMs Integration. The integration of large language models (LLMs) in healthcare represents a crucial advancement in utilizing cutting-edge technology for patient care and medical research.",
+        "chunk": "S012#ab0",
+        "verified": true
+      },
+      "population_or_dataset": {
+        "value": "Arabic medical question-answering (QA) dataset.",
+        "quote": "The experiments done using the jais-13b LLM, evaluating its base performance, fine-tuned version, and RAG-enhanced implementation on an Arabic medical QA dataset.",
+        "chunk": "S012#ab0",
+        "verified": true
+      },
+      "intervention_or_method": {
+        "value": "Integration of Retrieval-Augmented Generation (RAG) with Large Language Models (LLMs) for Arabic medical QA systems.",
+        "quote": "This study addresses these limitations by enhancing the performance of medical question-answering (QA) systems through the integration of the Retrieval-Augmented Generation (RAG) technique with LLMs.",
+        "chunk": "S012#ab0",
+        "verified": true
+      },
+      "comparator": {
+        "value": "Base model performance, fine-tuned version of the model.",
+        "quote": "The experiments done using the jais-13b LLM, evaluating its base performance, fine-tuned version, and RAG-enhanced implementation on an Arabic medical QA dataset.",
+        "chunk": "S012#ab0",
+        "verified": true
+      },
+      "outcomes": [
+        "reduction_in_hallucination_rates",
+        "improvement_in_factual_accuracy",
+        "enhanced_coherence_and_relevance",
+        "user_satisfaction_or_perceived_accuracy"
+      ],
+      "results": [
+        {
+          "outcome": "improvement_in_factual_accuracy",
+          "metric": "Accuracy",
+          "value": "95.6% (base model) to 97.8% (fine-tuned) to 98.7% (RAG-enhanced)",
+          "comparator": "base model",
+          "quote": "The base model attaining 95.6% accuracy and an F-measure of 90.4%, which improved to 97.8% accuracy and 93.7% F-measure after fine-tuning.",
+          "chunk": "S012#ab0",
+          "verified": true
+        },
+        {
+          "outcome": "enhanced_coherence_and_relevance",
+          "metric": "F-measure",
+          "value": "90.4% (base model) to 93.7% (fine-tuned) to 97.6% (RAG-enhanced)",
+          "comparator": "base model",
+          "quote": "The base model attaining 95.6% accuracy and an F-measure of 90.4%, which improved to 97.8% accuracy and 93.7% F-measure after fine-tuning.",
+          "chunk": "S012#ab0",
+          "verified": true
+        }
+      ],
+      "main_finding": {
+        "value": "RAG integration with LLMs significantly improves accuracy and F-measure in Arabic medical QA systems, suggesting a reduction in hallucinations and enhanced factual consistency.",
+        "quote": "Integration RAG further improved the results, attaining 98.7% accuracy and 97.6% F-measure. Furthermore, integrating RAG strategies with the JAIS LLM outperformed previous studies in terms of accuracy and F-score. These findings highlight the potential of RAG in mitigating hallucinations and enhancing factual consistency in Arabic medical QA system.",
+        "chunk": "S012#ab1",
+        "verified": true
+      },
+      "limitations": {
+        "value": "Not reported",
+        "quote": "not reported",
+        "chunk": "not reported",
+        "verified": false
+      }
+    }
+  },
+  "risk_of_bias": {
+    "S006": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "high",
+          "justification": "The study uses standard multi-hop QA benchmarks (HotpotQA, 2WikiMultihopQA, MuSiQue) with varying reasoning complexities, which are representative of real-world scenarios and relevant to the target application of multi-hop QA."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "some concerns",
+          "justification": "The study does not explicitly mention the use of a gold standard dataset or human annotations for assessing hallucinations, though it uses benchmark datasets for evaluation."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "high",
+          "justification": "The study clearly states that validation and test sets are completely excluded from the graph construction phase, ensuring no data leakage between training and testing phases."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports on hallucination-related metrics such as F1, EM, and recall/precision scores, and provides sufficient detail for reproducibility."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some details about the model architecture and evaluation setup, but it does not explicitly mention the availability of code, data, or full model specifications for replication."
+        }
+      ],
+      "overall": "high"
+    },
+    "S008": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study uses a dataset of 213 outpatient prescriptions, which may not be fully representative of all real-world scenarios or diverse prescription types."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "A clear reference standard was established through independent consensus between pharmacists, with disagreements resolved by a deputy chief pharmacist."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "low",
+          "justification": "There is no evidence of data leakage, as the model was locally deployed and the evaluation was conducted on a separate test set."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports detailed hallucination metrics, including reduction rates, and provides statistical tests and confidence intervals for all reported results."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study mentions the use of the Qwen3-14B model and Ollama framework, but does not provide sufficient detail on code, data, or model architecture for full reproducibility."
+        },
+        {
+          "domain": "Overall",
+          "judgement": "some concerns",
+          "justification": "While the study has strong reference standard and reporting of metrics, concerns exist regarding dataset representativeness and reproducibility."
+        }
+      ],
+      "overall": "high"
+    },
+    "S009": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study uses a curated set of 300 queries from an enterprise corpus, but it is unclear whether this dataset is representative of real-world scenarios or diverse enough to reflect the full range of potential use cases."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The study does not explicitly mention the use of a gold standard dataset or human annotations to assess hallucinations, which is a critical component for validating the accuracy of the system."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "some concerns",
+          "justification": "There is no explicit mention of measures to prevent data leakage between training and testing phases, which could potentially inflate the reported performance."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "some concerns",
+          "justification": "The study reports accuracy as a metric but does not provide specific hallucination metrics (e.g., factuality, coherence) or sufficient detail on how these metrics were calculated, limiting the ability to assess the system's performance on hallucination-related tasks."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some architectural details but does not clearly describe the exact implementation, code, or data sources needed to fully replicate the RAG system and its evaluation."
+        }
+      ],
+      "overall": "high"
+    },
+    "S011": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study reports on multiple datasets (Novel, Medical, WOS, IFS-Rel), but it is unclear whether these datasets are representative of real-world scenarios or relevant to the target application of hallucination assessment."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "high",
+          "justification": "The study reports on hallucinated prediction rates and uses metrics like accuracy and ROUGE-L, which are based on gold standard labels, indicating a clear reference standard for assessing hallucinations."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "some concerns",
+          "justification": "There is no explicit mention of whether there was any data leakage between training and testing phases, which could have inflated performance metrics."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "high",
+          "justification": "The study reports on multiple hallucination-related metrics (FS, ACC, COV, ROG) and provides sufficient detail for reproducibility, including metric definitions and results across different datasets and tasks."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study provides some details about the model and datasets, but it lacks explicit information about code, model architecture, and full data availability, which are necessary for full reproducibility."
+        }
+      ],
+      "overall": "high"
+    },
+    "S012": {
+      "domains": [
+        {
+          "domain": "Dataset representativeness",
+          "judgement": "some concerns",
+          "justification": "The study mentions an Arabic medical QA dataset but does not specify whether it is representative of real-world scenarios or relevant to the target application in healthcare."
+        },
+        {
+          "domain": "Reference standard",
+          "judgement": "low",
+          "justification": "The study does not explicitly mention the use of a gold standard dataset or human annotations to assess hallucinations, which is critical for validating the reference standard."
+        },
+        {
+          "domain": "Leakage",
+          "judgement": "some concerns",
+          "justification": "There is no clear information provided about whether there was data leakage between training and testing phases, which could affect the validity of the results."
+        },
+        {
+          "domain": "Reporting of metrics",
+          "judgement": "some concerns",
+          "justification": "The study reports accuracy and F-measure metrics but does not provide sufficient detail on hallucination-specific metrics (e.g., factuality, coherence) or how these were calculated."
+        },
+        {
+          "domain": "Reproducibility",
+          "judgement": "some concerns",
+          "justification": "The study does not provide sufficient detail on code, data, or model architecture to allow replication of the RAG implementation and evaluation."
+        }
+      ],
+      "overall": "some concerns"
+    }
+  },
+  "fulltext_decisions": [
+    {
+      "id": "S006",
+      "availability": "full text",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S006 meets all inclusion criteria. It evaluates the impact of retrieval-augmented generation (RAG) on hallucination rates in large language models (I1). It reports on hallucination metrics such as factuality (I2). It compares RAG-enhanced models (ISO-RAG) with standard LLMs in terms of hallucination reduction (I3). It is published in a technical report (grey literature) in English (I4), and it was published from 2020 onwards (I5). The study does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S006#ab0",
+        "S006#ft0",
+        "S006#ft2",
+        "S006#ft42",
+        "S006#ft6",
+        "S006#ft13",
+        "S006#ft13"
+      ]
+    },
+    {
+      "id": "S008",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S008 meets all inclusion criteria. It evaluates the impact of retrieval-augmented generation (RAG) on hallucination rates in large language models (I1), reports on hallucination metrics (e.g., hallucination rate reduction from 19.7% to 4.7%) (I2), compares RAG-enhanced models with standard LLMs (I3), and is published in English in a peer-reviewed journal (I4) from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S008#ab1",
+        "S008#ab2",
+        "S008#ab3"
+      ]
+    },
+    {
+      "id": "S009",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S009 meets all inclusion criteria. It evaluates the impact of Retrieval-Augmented Generation (RAG) on hallucination rates in large language models (I1). It reports on hallucination metrics through a controlled comparison and direct measurement of hallucination reduction (I2). It compares RAG-enhanced models with standard LLMs (vanilla LLM) and other RAG variants (dense-only RAG, BM25-only RAG) in terms of hallucination reduction (I3). The study is published in a technical report (grey literature) in English (I4), and it was published from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S009#ab0",
+        "S009#ab1"
+      ]
+    },
+    {
+      "id": "S011",
+      "availability": "full text",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S011 meets all inclusion criteria. It evaluates the impact of retrieval-augmented generation (RAG) on hallucination rates in large language models (I1). It reports on hallucination metrics such as error propagation and hallucination during graph construction (I2). It compares RAG-enhanced models (AG Rag) with standard LLMs, showing improvements in reducing hallucination and error propagation (I3). It is published in a peer-reviewed journal in English (I4) and was published in 2020 or later (I5). It does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S011#ab0",
+        "S011#ft0",
+        "S011#ft1",
+        "S011#ft8",
+        "S011#ft11"
+      ]
+    },
+    {
+      "id": "S012",
+      "availability": "abstract only",
+      "decision": "include",
+      "exclusion_code": "none",
+      "reason": "Study S012 meets all inclusion criteria. It evaluates the impact of Retrieval-Augmented Generation (RAG) on hallucination rates in large language models (I1). It reports on hallucination-related outcomes such as factual consistency and accuracy (I2). It compares RAG-enhanced models with standard LLMs in terms of hallucination reduction (I3). The study is published in a peer-reviewed journal (I4) and was published from 2020 onwards (I5). It does not meet any exclusion criteria (E1-E5).",
+      "evidence_chunks": [
+        "S012#ab0",
+        "S012#ab1"
+      ]
+    }
+  ],
+  "synthesis": {
+    "themes": [
+      {
+        "theme": "Reduction in hallucination rates",
+        "summary": "Several studies report improvements in hallucination-related metrics, though none provide explicit numeric reductions in hallucination rates. S006 shows an F1 score of 42.8 for hallucination reduction, and S011 reports a lower hallucinated prediction rate compared to baselines. S008 provides a 15.0-percentage-point absolute reduction in hallucination rates. However, S009 and S012 do not report hallucination-specific metrics, relying instead on accuracy and F-measure improvements.",
+        "studies": [
+          "S006",
+          "S008",
+          "S011"
+        ],
+        "certainty": "low",
+        "certainty_reason": "High risk of bias (RoB: high in S006, S008, S011; RoB: some concerns in S012), inconsistency in metrics (some studies report relative improvements, others lack explicit hallucination metrics), and imprecision (no numeric reduction in hallucination rates for most studies)."
+      },
+      {
+        "theme": "Improvement in factual accuracy",
+        "summary": "Multiple studies demonstrate significant improvements in factual accuracy through RAG integration. S008 reports a 97.2% accuracy in human-AI collaboration versus 82.6% for pharmacists alone. S009 achieves 93.5% accuracy in business knowledge retrieval. S012 shows accuracy increasing from 95.6% (base model) to 98.7% (RAG-enhanced). S011 reports higher ACC (Accuracy) for AGRAG-L compared to SiReRAG-L and HippoRAG2-L.",
+        "studies": [
+          "S008",
+          "S009",
+          "S011",
+          "S012"
+        ],
+        "certainty": "low",
+        "certainty_reason": "High risk of bias (RoB: high in S008, S009, S011; RoB: some concerns in S012), inconsistency in metrics (some studies use different accuracy benchmarks), and imprecision (no standardization of accuracy measurement across studies)."
+      },
+      {
+        "theme": "Enhanced coherence and relevance",
+        "summary": "RAG is associated with improved coherence and relevance of generated responses. S006 reports enhanced coherence and relevance with R@5=88.05 and P@5=40.10. S008 shows improved sensitivity (98% vs 55%) in pharmacist-led prescription review. S011 reports higher ROG (ROUGE-L) scores for AGRAG-L compared to SiReRAG-L and HippoRAG2-L. S012 reports enhanced coherence and relevance through improved F-measure (97.6% for RAG-enhanced).",
+        "studies": [
+          "S006",
+          "S008",
+          "S011",
+          "S012"
+        ],
+        "certainty": "low",
+        "certainty_reason": "High risk of bias (RoB: high in S006, S008, S011; RoB: some concerns in S012), inconsistency in metrics (different coherence and relevance benchmarks), and imprecision (no standardization of measurement across studies)."
+      },
+      {
+        "theme": "User satisfaction and perceived accuracy",
+        "summary": "Some studies report improved user satisfaction or perceived accuracy through RAG integration. S006 reports an EM score of 80.7 for user satisfaction or perceived accuracy. S012 shows improved perceived accuracy through higher F-measure and accuracy scores.",
+        "studies": [
+          "S006",
+          "S012"
+        ],
+        "certainty": "very low",
+        "certainty_reason": "High risk of bias (RoB: high in S006; RoB: some concerns in S012), inconsistency in metrics (no standardized user satisfaction or perceived accuracy measurement), and imprecision (no direct measurement of user satisfaction)."
+      }
+    ],
+    "overall_answer": "Retrieval-augmented generation (RAG) appears to reduce hallucinations of large language models, with the strongest evidence from S008, which reports a 15.0-percentage-point absolute reduction in hallucination rates. Other studies (S006, S011) show improved hallucination-related metrics (e.g., F1 score, hallucinated prediction rate) without explicit numeric reductions. S009 and S012 lack explicit hallucination metrics, instead reporting improvements in accuracy and F-measure. The evidence for hallucination reduction is limited to S008 and relative improvements in S006 and S011. Due to high risk of bias, inconsistent metrics, and imprecision, the certainty of these findings is low.",
+    "research_gaps": [
+      "Lack of standardized hallucination metrics across studies",
+      "Limited direct measurement of hallucination rates in most studies",
+      "Need for more diverse domains and larger sample sizes to improve generalizability",
+      "Insufficient exploration of RAG effectiveness in low-resource or non-English settings"
+    ],
+    "meta_analysis_feasible": false,
+    "meta_analysis_note": "A meta-analysis is not feasible due to the lack of a common outcome metric for hallucination reduction. Only S008 provides a numeric reduction in hallucination rates, while other studies report relative improvements or accuracy/F-measure gains. The heterogeneity in metrics and study designs further limits the ability to pool effect sizes across studies."
+  },
+  "critiques": [
+    {
+      "round": 1,
+      "issues": [
+        {
+          "severity": "major",
+          "section": "Theme 1 \u2013 Reduction in hallucination rates",
+          "problem": "The synthesis claims that studies S009 and S012 demonstrate significant reductions in hallucination rates through improved accuracy and F\u2011measure. Neither study reports a hallucination\u2011specific metric; S009 reports only a reduction in hallucinations relative to baselines (no numeric value) and S012 reports only accuracy/F\u2011measure improvements. Thus the claim is unsupported by the evidence table.",
+          "fix": "Remove the statement that S009 and S012 show hallucination\u2011rate reductions, or qualify it with the fact that no explicit hallucination metric was reported."
+        },
+        {
+          "severity": "major",
+          "section": "Theme 1 \u2013 Reduction in hallucination rates",
+          "problem": "The synthesis states that S006 and S011 report relative reductions through improved F1 scores and hallucinated prediction rates. While S006 provides an F1 score of 42.8 for hallucination reduction, it does not give a numeric reduction in hallucination rate; S011 reports a lower hallucinated prediction rate but no numeric value. The wording implies a quantified reduction that is not present in the table.",
+          "fix": "Rephrase to indicate that S006 and S011 show improved hallucination\u2011related metrics (F1 score and hallucinated prediction rate) without implying a specific numeric reduction."
+        },
+        {
+          "severity": "minor",
+          "section": "Overall synthesis",
+          "problem": "The overall answer states that \u201cRAG reduces hallucinations of large language models\u201d and cites a 15.0\u2011percentage\u2011point reduction from S008. While this is supported, the synthesis does not explicitly acknowledge that the remaining studies (S006, S011) provide only relative or non\u2011numeric evidence, and that S009 and S012 do not report hallucination metrics. This omission may overstate the consistency of the evidence.",
+          "fix": "Add a caveat that the evidence for hallucination reduction is limited to S008 and relative improvements in S006 and S011, and that S009 and S012 lack explicit hallucination metrics."
+        },
+        {
+          "severity": "minor",
+          "section": "Limitations",
+          "problem": "The synthesis does not explicitly list study limitations such as high risk of bias, small sample sizes, and lack of standardized hallucination metrics. These limitations are important for interpreting the low certainty ratings.",
+          "fix": "Include a brief limitations paragraph summarizing the high risk of bias, domain\u2011specificity, and metric heterogeneity."
+        }
+      ],
+      "approve": false
+    },
+    {
+      "round": 2,
+      "issues": [
+        {
+          "severity": "minor",
+          "section": "Theme 1 \u2013 Reduction in hallucination rates",
+          "problem": "The synthesis states that \"S009 and S012 lack explicit hallucination metrics,\" whereas the evidence table indicates that S009 does report a reduction in hallucinations (though no numeric value is provided). This is a minor inaccuracy in wording.",
+          "fix": "Rephrase to: \"S009 reports a reduction in hallucinations but does not provide a numeric value; S012 does not report hallucination metrics at all.\""
+        }
+      ],
+      "approve": true
+    }
+  ]
+}

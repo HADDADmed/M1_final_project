@@ -1,0 +1,136 @@
+% =============================================================================
+% icicic.sty  --  ICICIC 2026 full-paper format (single column), running header adapted for this review
+% Re-creates the look of the official ICICIC2026-Sample (Full Paper).doc:
+%   A4, 12pt, Times, single column, run-in numbered section headings,
+%   3-line running header + copyright, Definition/Theorem/Remark environments,
+%   "TABLE n." above tables, "FIGURE n." below figures, numbered references.
+% Constraint: full paper = up to 8 single-column pages, abstract <= 150 words.
+% =============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{icicic}[2026/06/26 ICICIC 2026 full-paper format]
+
+% --- page geometry (room for the 3-line running header) ---
+\RequirePackage[a4paper,top=0.9in,bottom=0.95in,left=1.05in,right=1.05in,%
+                headheight=42pt,headsep=12pt]{geometry}
+
+% --- Times text + math ---
+\RequirePackage[T1]{fontenc}
+\RequirePackage{mathptmx}
+\RequirePackage{amsmath,amssymb,amsthm}
+\RequirePackage{graphicx}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{caption}
+\RequirePackage{titlesec}
+\RequirePackage{fancyhdr}
+\RequirePackage{enumitem}
+\RequirePackage[hidelinks]{hyperref}
+% --- diagrams: paper-level TikZ figures (soft shadows, filled bg nodes) + subfigures ---
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shadows.blur,backgrounds,fit,calc}
+\RequirePackage{subcaption}
+
+\setlength{\parindent}{1.5em}
+\setcounter{secnumdepth}{3}
+
+% --- 3-line running header (right aligned), no rule ---
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\scriptsize\itshape
+  \begin{tabular}[t]{@{}r@{}}
+  Systematic Literature Review, PRISMA 2020 reporting\\
+  Faculty of Sciences and Techniques of Tangier, November 2026\\
+  Generated with PRISMA-Agent, an agentic AI review pipeline
+  \end{tabular}}
+
+% --- run-in numbered section headings: "1. Introduction. <text>" ---
+\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{0.4em}{}[.]
+\titlespacing*{\section}{0pt}{1.05ex plus .2ex}{0.55em}
+\titleformat{\subsection}[runin]{\normalfont\bfseries}{\thesubsection.}{0.4em}{}[.]
+\titlespacing*{\subsection}{0pt}{0.85ex plus .2ex}{0.55em}
+
+% --- Tier-1 compactness (moderate; layout only, no wording/figure/margin change) ---
+\setlength{\abovedisplayskip}{6pt plus 2pt minus 1pt}
+\setlength{\belowdisplayskip}{6pt plus 2pt minus 1pt}
+\setlength{\abovedisplayshortskip}{3pt plus 1pt}
+\setlength{\belowdisplayshortskip}{4pt plus 1pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\floatsep}{11pt plus 2pt minus 2pt}
+\setlength{\intextsep}{11pt plus 2pt minus 2pt}
+
+% page-tracking labels at each \section start (consumed by the live Structure view).
+% Keep the starred form working: thebibliography calls \section*{\refname}, and a
+% one-argument redefinition would otherwise swallow the * and emit a spurious numbered
+% "8. *." heading. \@ifstar routes \section* to the original unlabelled section.
+\let\icicoldsection\section
+\renewcommand{\section}{\@ifstar\icic@starsection\icic@numsection}
+\newcommand{\icic@numsection}[1]{\icicoldsection{#1}\label{struct:\arabic{section}}}
+\newcommand{\icic@starsection}[1]{\icicoldsection*{#1}}
+
+% --- ICIC theorem style: "Definition 2.1. <italic body>" run-in ---
+\newtheoremstyle{icic}{\topsep}{\topsep}{\itshape}{0pt}{\bfseries}{.}{0.5em}{}
+\theoremstyle{icic}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+
+% --- captions: "TABLE 1." above, "FIGURE 1." below (small caps label) ---
+\captionsetup{labelsep=period,justification=centering,skip=6pt}
+\captionsetup[table]{labelfont=sc,name=Table}
+\captionsetup[figure]{labelfont=sc,name=Figure}
+
+% --- title block / abstract / keywords macros ---
+% \papermeta{title}{authors}{affiliations(block, use \\ for lines)}{received line}
+\newcommand{\papermeta}[4]{%
+  \thispagestyle{fancy}%
+  \begin{center}
+    {\large\bfseries #1}\par\vspace{1.0em}
+    {\normalsize #2}\par\vspace{0.7em}
+    {\small #3}\par\vspace{0.7em}
+    {\small #4}
+  \end{center}\vspace{0.5em}}
+% \paperabstract{...} -- indented on BOTH sides (the official template's quote block)
+\newcommand{\paperabstract}[1]{%
+  \par\begingroup \leftskip=2.5em \rightskip=2.5em \parindent=0pt
+  {\footnotesize\textsc{Abstract.}\ \textit{#1}\par}\endgroup\vspace{0.25em}}
+% \paperkeywords{...} -- same both-sides indent
+\newcommand{\paperkeywords}[1]{%
+  \par\begingroup \leftskip=2.5em \rightskip=2.5em \parindent=0pt
+  {\footnotesize\textbf{Keywords:}\ #1\par}\endgroup\vspace{1.0em}}
+
+% references heading centered (ICIC style)
+\renewcommand{\refname}{\centerline{\normalsize REFERENCES}}
+
+% compact reference list (small font + tight inter-entry spacing) to match the template
+\let\OLDthebibliography\thebibliography
+\renewcommand{\thebibliography}[1]{%
+  \OLDthebibliography{#1}\footnotesize
+  \setlength{\itemsep}{1pt plus 0.3ex}%
+  \setlength{\parsep}{0pt}%
+  \setlength{\parskip}{0pt}}
+
+% --- references, template-matched (overrides the block above) ---
+% \small like the official sample (not footnotesize), labels flush at the left
+% text edge, entries full width; heading printed manually so the run-in section
+% style cannot append its trailing period.
+\renewcommand{\thebibliography}[1]{%
+  \par\vspace{0.2ex}\linespread{0.94}%
+  {\centering\normalfont\normalsize REFERENCES\par}%
+  \vspace{0.3ex}%
+  \small
+  \list{\@biblabel{\@arabic\c@enumiv}}%
+       {\settowidth\labelwidth{\@biblabel{#1}}%
+        \setlength\labelsep{0.35em}%
+        \leftmargin\labelwidth
+        \advance\leftmargin\labelsep
+        \setlength\itemsep{0pt plus 0.05ex}%
+        \setlength\parsep{0pt}\setlength\parskip{0pt}%
+        \usecounter{enumiv}%
+        \let\p@enumiv\@empty
+        \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+  \sloppy\clubpenalty4000\widowpenalty4000\sfcode`\.\@m}

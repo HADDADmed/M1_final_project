@@ -1,0 +1,359 @@
+{
+ "run_id": "demo-llm-screening",
+ "question": "How accurate are large language models at title and abstract screening for systematic reviews?",
+ "tiles": [
+  [
+   "27/27",
+   "PRISMA 2020 items reported"
+  ],
+  [
+   "92%",
+   "extracted quotes verified in source"
+  ],
+  [
+   "\u03ba = 0.767",
+   "screener agreement (89% raw)"
+  ],
+  [
+   "\u00d7107.3",
+   "faster (15.6 min vs ~27.9 h)"
+  ],
+  [
+   "100%",
+   "identical decisions on re-run"
+  ],
+  [
+   "83%",
+   "agreement with silver standard (n=30)"
+  ],
+  [
+   "2/4",
+   "known key papers retrieved"
+  ],
+  [
+   "383",
+   "LLM calls, all logged"
+  ]
+ ],
+ "sections": [
+  {
+   "title": "Accuracy vs silver standard",
+   "note": "Independent reference decisions by gpt-oss:20b on a random sample of screened records.",
+   "head": [
+    "ID",
+    "Title",
+    "PRISMA-Agent",
+    "Reference",
+    "Match"
+   ],
+   "rows": [
+    [
+     "S042",
+     "Joint Selection for Large-Scale Pre-Training Data via Policy Gradient-",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S020",
+     "Systematic Literature Reviews With Two Multi-Agentic Systems And Human",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S051",
+     "Optimal large language models to screen citations for systematic revie",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S084",
+     "A taxonomy and review of generalization research in NLP",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S007",
+     "Automated Analysis Framework for Multilingual Climate-Health Literatur",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S010",
+     "Evaluation of a Prompt-Standardized LLM Pipeline for Title\u2013Abstract Sc",
+     "include",
+     "exclude",
+     "\u2717"
+    ],
+    [
+     "S106",
+     "Neurodevelopmental disorders in youth justice: a systematic review of ",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S069",
+     "Exploring the use of a Large Language Model for data extraction in sys",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S013",
+     "Large language models meet NLP: a survey",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S047",
+     "Large language models for the screening step in systematic reviews in ",
+     "exclude",
+     "include",
+     "\u2717"
+    ],
+    [
+     "S075",
+     "Large language models for abstract screening in systematic- and scopin",
+     "include",
+     "include",
+     "\u2713"
+    ],
+    [
+     "S008",
+     "Automating Screening of Titles and Abstracts in Systematic Reviews: An",
+     "include",
+     "include",
+     "\u2713"
+    ],
+    [
+     "S065",
+     "Assessing the performance of large language models in literature scree",
+     "include",
+     "exclude",
+     "\u2717"
+    ],
+    [
+     "S028",
+     "Artificial Intelligence in Pancreatic Imaging: A Systematic Review.",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S005",
+     "An overview of artificial intelligence approaches for automating evide",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S012",
+     "Fine-Tuning A Large Language Model for Systematic Review Screening",
+     "include",
+     "include",
+     "\u2713"
+    ],
+    [
+     "S056",
+     "Standardized Assessment Framework for Evaluations of Large Language Mo",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S054",
+     "Retrieval augmented generation for large language models in healthcare",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S009",
+     "Beyond Accuracy: LLM Variability in Evidence Screening for Software En",
+     "include",
+     "include",
+     "\u2713"
+    ],
+    [
+     "S031",
+     "Automation of Systematic Reviews with Large Language Models",
+     "include",
+     "include",
+     "\u2713"
+    ],
+    [
+     "S100",
+     "Pre-Trained Language Models and Their Applications",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S071",
+     "Large Language Model in Medical Information Extraction from Titles and",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S055",
+     "SESR-Eval: Dataset for Evaluating LLMs in the Title-Abstract Screening",
+     "include",
+     "exclude",
+     "\u2717"
+    ],
+    [
+     "S104",
+     "Mandoline: Model Evaluation under Distribution Shift",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S073",
+     "Large Language Models for Mental Health Applications: Systematic Revie",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S016",
+     "SciLitBench: Benchmark and Design Principles for LLM-Powered Systemati",
+     "include",
+     "exclude",
+     "\u2717"
+    ],
+    [
+     "S029",
+     "Assessing ML classification algorithms and NLP techniques for depressi",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S081",
+     "The Promise and Challenges of Using LLMs to Accelerate the Screening P",
+     "include",
+     "include",
+     "\u2713"
+    ],
+    [
+     "S088",
+     "Impact of word embedding models on text analytics in deep learning env",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ],
+    [
+     "S105",
+     "Natural Language Processing for Requirements Engineering: A Systematic",
+     "exclude",
+     "exclude",
+     "\u2713"
+    ]
+   ]
+  },
+  {
+   "title": "Known-item test",
+   "note": "Key studies on the topic that a good search should find.",
+   "head": [
+    "Study",
+    "Record",
+    "Outcome"
+   ],
+   "rows": [
+    [
+     "Automated paper screening for clinical reviews using large language models",
+     "\u2014",
+     "not retrieved"
+    ],
+    [
+     "Assessing the ability of ChatGPT to screen articles for systematic reviews",
+     "\u2014",
+     "not retrieved"
+    ],
+    [
+     "Can large language models replace humans in systematic reviews? Evaluating GPT-4",
+     "S066",
+     "passed screening"
+    ],
+    [
+     "Title and abstract screening for literature reviews using large language models:",
+     "S082",
+     "passed screening"
+    ]
+   ]
+  },
+  {
+   "title": "Stage timings",
+   "note": "Seconds per pipeline stage.",
+   "head": [
+    "Stage",
+    "Seconds"
+   ],
+   "rows": [
+    [
+     "protocol",
+     4.7
+    ],
+    [
+     "search_strategy_r1",
+     2.0
+    ],
+    [
+     "retrieval",
+     24.0
+    ],
+    [
+     "ta_screening",
+     530.0
+    ],
+    [
+     "conflict_resolution",
+     27.6
+    ],
+    [
+     "fulltext",
+     40.6
+    ],
+    [
+     "extraction_appraisal",
+     215.1
+    ],
+    [
+     "synthesis_r0",
+     7.3
+    ],
+    [
+     "critic_r1",
+     23.4
+    ],
+    [
+     "synthesis_r1",
+     7.1
+    ],
+    [
+     "critic_r2",
+     13.3
+    ],
+    [
+     "synthesis_r2",
+     8.7
+    ],
+    [
+     "critic_r3",
+     30.3
+    ]
+   ]
+  }
+ ],
+ "figures": [
+  "/static/evaluation.png"
+ ]
+}

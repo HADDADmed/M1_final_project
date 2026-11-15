@@ -1,0 +1,88 @@
+{
+  "run_id": "demo-llm-screening",
+  "created": "2026-11-15 14:45:13",
+  "config": {
+    "question": "How accurate are large language models at title and abstract screening for systematic reviews?",
+    "sources": [
+      "openalex",
+      "pubmed",
+      "arxiv",
+      "semanticscholar"
+    ],
+    "max_per_query": 25,
+    "year_from": 2020,
+    "worker_model": "qwen3:8b",
+    "judge_model": "gpt-oss:latest",
+    "embed_model": "nomic-embed-text",
+    "seed": 42,
+    "temperature": 0.0,
+    "max_fulltext": 15,
+    "hitl": "auto",
+    "max_critic_rounds": 4
+  },
+  "config_fingerprint": "5000d5927447",
+  "model_digests": {
+    "nomic-embed-text:latest": "0a109f422b47",
+    "qwen3:8b": "500a1f067a9f",
+    "gpt-oss:latest": "17052f91a42e"
+  },
+  "packages": {
+    "langgraph": "1.2.22",
+    "langchain-core": "1.8.0",
+    "langchain-ollama": "1.1.0",
+    "faiss-cpu": "1.16.0",
+    "flashrank": "0.2.10",
+    "pymupdf": "2.1"
+  },
+  "timings_seconds": {
+    "protocol": 4.7,
+    "search_strategy_r1": 2.0,
+    "retrieval": 24.0,
+    "ta_screening": 530.0,
+    "conflict_resolution": 27.6,
+    "fulltext": 40.6,
+    "extraction_appraisal": 215.1,
+    "synthesis_r0": 7.3,
+    "critic_r1": 23.4,
+    "synthesis_r1": 7.1,
+    "critic_r2": 13.3,
+    "synthesis_r2": 8.7,
+    "critic_r3": 30.3
+  },
+  "prisma": {
+    "identified": {
+      "openalex": 75,
+      "pubmed": 25,
+      "arxiv": 23
+    },
+    "identified_total": 123,
+    "duplicates": 8,
+    "screened": 115,
+    "excluded_ta": 74,
+    "sought": 15,
+    "not_retrieved": 26,
+    "abstract_only": 9,
+    "assessed": 15,
+    "excluded_ft": 1,
+    "reasons": {
+      "E2": 1
+    },
+    "included": 14
+  },
+  "metrics": {
+    "records_screened": 115,
+    "included": 14,
+    "cohen_kappa": 0.767,
+    "conflicts": 13,
+    "quote_grounding_rate": 0.922,
+    "prisma_checklist_coverage": 1.0,
+    "critic_rounds": 3,
+    "critic_approved": true,
+    "llm_calls": 383,
+    "llm_seconds": 2748.1,
+    "pipeline_minutes": 15.6,
+    "manual_estimate_hours": 27.9,
+    "manual_estimate_basis": "2 reviewers \u00d7 (0.5 min per abstract + 10 min per full text + 45 min per extraction/appraisal)"
+  },
+  "prisma_checklist_coverage": 1.0
+}

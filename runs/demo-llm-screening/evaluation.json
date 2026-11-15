@@ -1,0 +1,48 @@
+{
+  "run_id": "demo-llm-screening",
+  "question": "How accurate are large language models at title and abstract screening for systematic reviews?",
+  "date": "2026-11-15",
+  "completeness": {
+    "prisma_items": 27,
+    "prisma_total": 27,
+    "stages_completed": 10,
+    "extraction_fields_filled": 0.857
+  },
+  "accuracy": {
+    "quote_grounding": 0.922,
+    "silver": {
+      "n": 30,
+      "tp": 6,
+      "fp": 4,
+      "fn": 1,
+      "tn": 19,
+      "sensitivity": 0.8571428571428571,
+      "specificity": 0.8260869565217391,
+      "accuracy": 0.8333333333333334
+    },
+    "known_items": {
+      "total": 4,
+      "retrieved": 2,
+      "passed_screening": 2
+    }
+  },
+  "consistency": {
+    "kappa": 0.767,
+    "raw_agreement": 0.887,
+    "conflicts": 13,
+    "reproducibility": {
+      "n": 20,
+      "identical": 20,
+      "rate": 1.0
+    },
+    "critic_rounds": 3,
+    "critic_approved": true
+  },
+  "time": {
+    "pipeline_minutes": 15.6,
+    "manual_estimate_hours": 27.9,
+    "basis": "2 reviewers \u00d7 (0.5 min per abstract + 10 min per full text + 45 min per extraction/appraisal)",
+    "llm_calls": 383,
+    "speedup": 107.3
+  }
+}

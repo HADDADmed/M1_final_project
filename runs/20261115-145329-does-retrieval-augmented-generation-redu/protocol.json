@@ -1,0 +1,77 @@
+{
+  "title": "Retrieval-Augmented Generation for Reducing Hallucinations in Large Language Models: A Systematic Review",
+  "objective": "To evaluate the effectiveness of retrieval-augmented generation (RAG) in reducing hallucinations in large language models (LLMs).",
+  "framework": "PICO",
+  "population": "Large language models (LLMs) used in natural language processing tasks.",
+  "intervention_or_concept": "Retrieval-augmented generation (RAG), where LLMs are augmented with external knowledge sources during the generation process.",
+  "comparator": "Standard large language models without retrieval augmentation.",
+  "outcomes": [
+    "Reduction in hallucination rates (e.g., percentage of generated text that is factually incorrect or fabricated).",
+    "Improvement in factual accuracy of generated text.",
+    "Enhanced coherence and relevance of generated responses.",
+    "User satisfaction or perceived accuracy of generated content."
+  ],
+  "context": "Applications of LLMs in domains such as customer service, education, healthcare, and information retrieval.",
+  "inclusion": [
+    {
+      "id": "I1",
+      "text": "Studies that evaluate the impact of retrieval-augmented generation (RAG) on hallucination rates in large language models."
+    },
+    {
+      "id": "I2",
+      "text": "Studies that report on hallucination metrics (e.g., factuality, coherence, or alignment with ground truth)."
+    },
+    {
+      "id": "I3",
+      "text": "Studies that compare RAG-enhanced models with standard LLMs in terms of hallucination reduction."
+    },
+    {
+      "id": "I4",
+      "text": "Studies published in peer-reviewed journals, conference proceedings, or grey literature (e.g., technical reports) in English."
+    },
+    {
+      "id": "I5",
+      "text": "Studies published from 2020 onwards."
+    }
+  ],
+  "exclusion": [
+    {
+      "id": "E1",
+      "text": "Studies that do not report on hallucination rates or related outcomes."
+    },
+    {
+      "id": "E2",
+      "text": "Studies that focus on non-LLM systems or do not involve large language models."
+    },
+    {
+      "id": "E3",
+      "text": "Studies that do not compare RAG with standard LLMs or other interventions."
+    },
+    {
+      "id": "E4",
+      "text": "Studies that are not available in English."
+    },
+    {
+      "id": "E5",
+      "text": "Studies that are not peer-reviewed or are not published in the specified timeframe."
+    }
+  ],
+  "study_designs": [
+    "Randomized controlled trials (RCTs) or quasi-experimental studies",
+    "Comparative studies",
+    "Experimental studies",
+    "Simulation studies",
+    "Empirical evaluations"
+  ],
+  "languages": [
+    "English"
+  ],
+  "rob_domains": [
+    "Dataset representativeness: Whether the training or evaluation datasets are representative of real-world scenarios and relevant to the target application.",
+    "Reference standard: Whether a clear and valid reference standard (e.g., gold standard dataset, human annotations) is used to assess hallucinations.",
+    "Leakage: Whether there is any evidence of data leakage between training and testing phases, which could artificially inflate performance.",
+    "Reporting of metrics: Whether the study reports on hallucination metrics (e.g., factuality, coherence, alignment with ground truth) and provides sufficient detail for reproducibility.",
+    "Reproducibility: Whether the study provides sufficient detail (e.g., code, data, model architecture) to allow replication of the RAG implementation and evaluation."
+  ],
+  "synthesis_plan": "A meta-analysis will be conducted to synthesize the effect sizes of RAG on hallucination reduction. If heterogeneity is high, subgroup analyses will be performed based on model type, domain of application, and evaluation metrics. Narrative synthesis will also be used to summarize qualitative findings and contextual factors influencing the effectiveness of RAG."
+}
