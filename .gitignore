@@ -26,3 +26,5 @@ scripts/build_video.py
 scripts/demo_video.py
 scripts/build_docs.py
 scripts/export_run.py
+runs/2026*-does-retrieval-augmented-generation-redu/
+!runs/20261115-145329-does-retrieval-augmented-generation-redu/

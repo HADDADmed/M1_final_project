@@ -4,6 +4,8 @@
 
 ### An agentic AI pipeline for rigorous, transparent and reproducible systematic reviews on any topic
 
+**Mohammed HADDAD** · **Ouail LAAMIRI**
+
 *Research question in → PRISMA 2020 systematic review out: protocol, multi-database search, dual screening, full-text RAG, verified extraction, risk of bias, synthesis, critique and manuscript.*
 
 `LangGraph` · `multi-agent` · `human-in-the-loop` · `hybrid RAG` · `MCP` · `100 % local LLMs`
@@ -236,7 +238,12 @@ M1_final_project/
 
 ## Team and individual contribution
 
-Team: **1 member, HADDADmed (Mohammed Haddad)**, responsible for the whole project: design, implementation of every agent and of the RAG pipeline, web app, evaluation, documentation, presentation and video.
+Team: **Mohammed HADDAD** (HADDADmed) and **Ouail LAAMIRI**.
+
+| Member | Contribution |
+|---|---|
+| Mohammed HADDAD | Design and implementation of the agents, the LangGraph workflow, the RAG pipeline, the web app, the evaluation, the documentation, the paper and the video |
+| Ouail LAAMIRI | *to be completed* |
 
 ## Video and presentation
 
